@@ -1,0 +1,51 @@
+import { NextRequest, NextResponse } from 'next/server';
+
+// Middleware to handle environment-specific redirects in a Next.js application
+export function middleware(request: NextRequest) {
+    let environment = '';
+
+    // Use VERCEL_ENV and NODE_ENV to correctly determine the environment
+    const vercelEnv = process.env.VERCEL_ENV;
+    const nodeEnv = process.env.NODE_ENV;
+
+    if (vercelEnv === 'production') {
+        environment = 'production';
+    } else if (vercelEnv === 'preview') {
+        environment = 'preview';
+    } else if (nodeEnv === 'development') {
+        environment = 'local';
+    } else {
+        environment = 'unknown';
+    }
+
+    // Get the production and preview domains from environment variables
+    const productionDomain = process.env.VERCEL_PRODUCTION_URL;
+    const previewDomain = process.env.VERCEL_PREVIEW_URL;
+
+    // Log the environment and request URL for debugging
+    console.log(`Environment: ${environment}`);
+    console.log(`Request URL: ${request.nextUrl.pathname}`);
+    console.log(`Host: ${request.headers.get('host')}`);
+
+    // Get the host from the request headers
+    const host = request.headers.get('host');
+
+    // Redirect if the host does not match the expected domain for the environment
+    if (environment === 'production' && host !== productionDomain) {
+        return NextResponse.redirect(`https://${productionDomain}${request.nextUrl.pathname}`);
+    }
+
+    //
+    if (environment === 'preview' && host !== previewDomain) {
+        return NextResponse.redirect(`https://${previewDomain}${request.nextUrl.pathname}`);
+    }
+    // If the environment is local, no redirection is needed
+    return NextResponse.next();
+}
+
+export const config = {
+    matcher: [
+        // Apply middleware to all paths except for static files and API routes
+        '/((?!_next/static|_next/image|favicon.ico|api/).*)',
+    ],
+};
