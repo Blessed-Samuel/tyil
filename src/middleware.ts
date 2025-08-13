@@ -13,7 +13,7 @@ export function middleware(request: NextRequest) {
     } else if (vercelEnv === 'preview') {
         environment = 'preview';
     } else if (nodeEnv === 'development') {
-        environment = 'local';
+        environment = 'development';
     } else {
         environment = 'unknown';
     }
@@ -30,12 +30,12 @@ export function middleware(request: NextRequest) {
     // Get the host from the request headers
     const host = request.headers.get('host');
 
-    // Redirect if the host does not match the expected domain for the environment
+    // Redirect if the host does not match the expected domain for the production environment
     if (environment === 'production' && host !== productionDomain) {
         return NextResponse.redirect(`https://${productionDomain}${request.nextUrl.pathname}`);
     }
 
-    //
+    // Redirect if the host does not match the expected domain for the preview environment
     if (environment === 'preview' && host !== previewDomain) {
         return NextResponse.redirect(`https://${previewDomain}${request.nextUrl.pathname}`);
     }
