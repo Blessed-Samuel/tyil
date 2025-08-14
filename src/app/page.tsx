@@ -1,4 +1,8 @@
+"use client";
+
+import Button from "@/components/Button";
 import Image from "next/image";
+import { HiArrowUp } from "react-icons/hi";
 
 export default function Home() {
   return (
@@ -49,6 +53,14 @@ export default function Home() {
           >
             Read our docs
           </a>
+
+          <Button
+            primaryText="Join our Community"
+            hoverText="Join our Community"
+            icon={HiArrowUp}
+            iconPosition="right"
+            onClick={() => alert("Button Clicked!")}
+          />
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
