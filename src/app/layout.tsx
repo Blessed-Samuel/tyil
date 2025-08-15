@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
@@ -72,6 +72,18 @@ const webpageSchema = {
   },
 };
 
+// NEW: Separate viewport export
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
+  colorScheme: "light dark",
+};
+
 export const metadata: Metadata = {
   title: {
     default:
@@ -82,6 +94,9 @@ export const metadata: Metadata = {
     "Transform your leadership potential with TYIL's comprehensive leadership development programs. Expert executive coaching, organizational leadership training, and professional development courses for emerging and established leaders in Nigeria and beyond.",
   keywords: [
     "leadership development",
+    "youth empowerment",
+    "youth leadership",
+    "youth training",
     "leadership training",
     "executive leadership",
     "leadership program",
@@ -132,16 +147,7 @@ export const metadata: Metadata = {
       "en-NG": "/en-NG",
     },
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
-  ],
-  colorScheme: "light dark",
+  // REMOVED: viewport, themeColor, and colorScheme (moved to viewport export above)
   robots: {
     index: true,
     follow: true,
@@ -157,16 +163,16 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/tyil-logo.svg", sizes: "any" },
+      { url: "/tyil-logo.svg", sizes: "16x16", type: "image/svg" },
+      { url: "/tyil-logo.svg", sizes: "32x32", type: "image/svg" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
     other: [
       { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#5bbad5" },
     ],
   },
-  manifest: "/manifest.json",
+  manifest: "/site.manifest.json",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -178,39 +184,32 @@ export const metadata: Metadata = {
       "Transform your leadership potential with TYIL's comprehensive leadership development programs. Expert executive coaching and organizational leadership training.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/tyil-logo.svg",
         width: 1200,
         height: 630,
         alt: "TYIL Leadership Development Programs",
         type: "image/jpeg",
       },
       {
-        url: "/og-image-square.jpg",
+        url: "/tyil-logo.svg",
         width: 1200,
         height: 1200,
         alt: "TYIL Leadership Development",
-        type: "image/jpeg",
+        type: "image/svg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@tyil_leadership",
-    creator: "@tyil_leadership",
+    site: "@tyil_community",
+    creator: "@tyil_community",
     title: "TYIL Leadership Development | Executive Training & Coaching",
     description:
       "Transform your leadership potential with TYIL's comprehensive leadership development programs and executive coaching.",
-    images: ["/twitter-image.jpg"],
+    images: ["/tyil-logo.svg"],
   },
   verification: {
     google: "your-google-site-verification-code",
-    yandex: "your-yandex-verification-code",
-    yahoo: "your-yahoo-verification-code",
-    other: {
-      bing: "your-bing-verification-code",
-      facebook: "your-facebook-domain-verification",
-      pinterest: "your-pinterest-verification-code",
-    },
   },
   category: "Education",
   classification: "Leadership Development",
@@ -226,8 +225,6 @@ export const metadata: Metadata = {
     "msapplication-TileColor": "#2b5797",
     "msapplication-config": "/browserconfig.xml",
     "google-site-verification": "your-google-verification-code",
-    "p:domain_verify": "your-pinterest-verification-code",
-    "fb:app_id": "your-facebook-app-id",
     "mobile-web-app-capable": "yes",
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "black-translucent",
@@ -271,7 +268,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter_tight.className} antialiased`}>
+      <body
+        className={`${inter_tight.className} antialiased`}
+        cz-shortcut-listen="true"
+      >
         {/* Skip to main content for accessibility */}
         <a
           href="#main-content"
