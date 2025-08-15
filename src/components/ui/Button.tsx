@@ -31,9 +31,10 @@ const Button = ({
       }
       aria-disabled={props.disabled}
       className={`
-        bg-gradient-to-r from-red-500 to-orange-500
-        inline-flex items-center px-10 py-3 h-12 rounded-full
-        cursor-pointer text-white font-medium text-medium
+        bg-primaryRed hover:bg-primaryRed/90
+        dark:bg-primaryRed dark:hover:bg-primaryRed/90
+        inline-flex items-center px-6 py-3 h-12 rounded-full
+        cursor-pointer text-white font-medium text-base
         transition-all duration-300 ease-out hover:-translate-y-0.5
         focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/20
         relative overflow-hidden
@@ -48,14 +49,9 @@ const Button = ({
       {...props}
     >
       {/* Static Icon */}
-      {Icon && (
-        <Icon
-          size={20}
-          className="flex-shrink-0 relative z-10 animate-bounce rotate-90"
-        />
-      )}
+      {Icon && <Icon size={20} className="flex-shrink-0 relative z-10" />}
 
-      {/* Rolling Text Container - Same height as button */}
+      {/* Rolling Text Container */}
       <div className="relative overflow-hidden h-12" aria-live="polite">
         <div
           className={`
