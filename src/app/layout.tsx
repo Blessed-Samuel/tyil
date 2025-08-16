@@ -4,22 +4,22 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Script from "next/script";
 
-const inter_tight = Inter_Tight({
-  // variable: "--font-inter_tight",
+const interTight = Inter_Tight({
   subsets: ["latin"],
+  display: "swap",
 });
 
-// Structured Data Schema
+// Moved schemas outside to avoid re-declaring
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "TYIL Leadership Development",
   alternateName: "TYIL",
   description:
-    "Premier leadership development and executive training organization offering comprehensive programs for emerging and established leaders",
-  url: "https://tyil-leadership.com",
-  logo: "https://tyil-leadership.com/logo.png",
-  image: "https://tyil-leadership.com/og-image.jpg",
+    "Premier leadership development and teens training organization offering comprehensive programs for emerging and young leaders",
+  url: "https://tyil.org.ng",
+  logo: "https://tyil.org.ng/tyil-logo.svg",
+  image: "https://tyil.org.ng/og-image.jpg",
   foundingDate: "2020",
   address: {
     "@type": "PostalAddress",
@@ -43,7 +43,7 @@ const organizationSchema = {
   hasCredential: "ISO 9001:2015 Certified Training Provider",
   areaServed: ["Nigeria", "West Africa", "Global"],
   serviceType: [
-    "Executive Leadership Training",
+    "Teenagers Leadership Training",
     "Management Development",
     "Leadership Coaching",
     "Organizational Development",
@@ -57,12 +57,12 @@ const webpageSchema = {
   name: "TYIL Leadership Development | Executive Training & Coaching Programs",
   description:
     "Transform your leadership potential with TYIL's comprehensive leadership development programs",
-  url: "https://tyil-leadership.com",
+  url: "https://tyil.org.ng",
   mainEntity: {
     "@type": "Course",
     name: "Leadership Development Program",
     description:
-      "Comprehensive leadership training for executives and emerging leaders",
+      "Comprehensive leadership training for teens and emerging leaders",
     provider: {
       "@type": "Organization",
       name: "TYIL Leadership",
@@ -72,7 +72,7 @@ const webpageSchema = {
   },
 };
 
-// NEW: Separate viewport export
+// Viewport
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -84,52 +84,105 @@ export const viewport: Viewport = {
   colorScheme: "light dark",
 };
 
+// Metadata
 export const metadata: Metadata = {
   title: {
-    default:
-      "TYIL Leadership Development | Executive Training & Coaching Programs",
+    default: "TYIL Leadership Development | Teens Training & Coaching Programs",
     template: "%s | TYIL Leadership",
   },
   description:
-    "Transform your leadership potential with TYIL's comprehensive leadership development programs. Expert executive coaching, organizational leadership training, and professional development courses for emerging and established leaders in Nigeria and beyond.",
+    "Transform your leadership potential with TYIL's comprehensive leadership development programs. Expert teens coaching, organizational leadership training, and professional development courses for emerging and young leaders in Nigeria and beyond.",
   keywords: [
-    "leadership development",
-    "youth empowerment",
-    "youth leadership",
-    "youth training",
-    "leadership training",
-    "executive leadership",
-    "leadership program",
-    "leadership skills",
-    "organizational leadership",
-    "leadership coaching",
-    "management training",
-    "leadership certification",
-    "professional development",
-    "team leadership",
-    "corporate training",
-    "leadership workshop",
-    "executive development",
-    "leadership course",
-    "thought leadership",
-    "leadership excellence",
-    "leadership success",
-    "TYIL leadership",
-    "leadership development program",
-    "executive coaching certification",
-    "management development programs",
-    "leadership skills development",
-    "corporate leadership training",
-    "leadership communication",
-    "digital leadership",
-    "remote team leadership",
-    "leadership impact",
-    "transform leadership",
-    "build leadership skills",
-    "Nigeria leadership training",
-    "Lagos executive coaching",
-    "West Africa leadership development",
-    "African leadership programs",
+    // Core Youth Leadership
+    "youth leadership development",
+    "teen leadership training",
+    "youth empowerment programs",
+    "student leadership",
+    "young leaders",
+    "teen empowerment",
+    "youth mentorship",
+    "leadership for teens",
+    "teenage leadership skills",
+    "youth development programs",
+
+    // Age-Specific Programs
+    "high school leadership",
+    "middle school leadership",
+    "college leadership",
+    "young adult leadership",
+    "student council training",
+    "peer leadership",
+    "youth ambassador program",
+    "teen mentor training",
+    "junior leadership academy",
+    "emerging young leaders",
+
+    // Skills & Development
+    "youth leadership skills",
+    "teen communication skills",
+    "youth public speaking",
+    "student leadership training",
+    "youth confidence building",
+    "teen team building",
+    "youth project management",
+    "student entrepreneurship",
+    "youth innovation",
+    "teen problem solving",
+
+    // Programs & Initiatives
+    "youth leadership camp",
+    "teen leadership workshop",
+    "student leadership retreat",
+    "youth leadership summit",
+    "teen empowerment conference",
+    "youth leadership certification",
+    "student leadership program",
+    "teen leadership academy",
+    "youth development initiative",
+    "young leaders network",
+
+    // Modern Focus Areas
+    "digital youth leadership",
+    "social media leadership for teens",
+    "youth environmental leadership",
+    "teen social justice leadership",
+    "youth community organizing",
+    "student activism training",
+    "youth advocacy skills",
+    "teen civic engagement",
+    "youth volunteer leadership",
+    "student change makers",
+
+    // Regional & Cultural
+    "Nigeria youth leadership",
+    "Lagos teen programs",
+    "West Africa youth development",
+    "African youth empowerment",
+    "Nigerian student leaders",
+    "Lagos youth mentorship",
+    "African teen leadership",
+    "Nigeria youth training",
+    "West African youth programs",
+    "Lagos student development",
+
+    // Outcome-Focused
+    "build teen confidence",
+    "develop youth leaders",
+    "empower young people",
+    "transform teen potential",
+    "youth leadership impact",
+    "teen success programs",
+    "youth leadership excellence",
+    "student leadership growth",
+    "teen empowerment success",
+    "youth leadership transformation",
+
+    // TYIL Specific
+    "TYIL youth programs",
+    "TYIL teen training",
+    "TYIL student development",
+    "TYIL youth empowerment",
+    "TYIL young leaders",
   ],
   authors: [{ name: "TYIL Leadership Team", url: "https://tyil.org.ng/about" }],
   creator: "TYIL Leadership Organization",
@@ -147,7 +200,6 @@ export const metadata: Metadata = {
       "en-NG": "/en-NG",
     },
   },
-  // REMOVED: viewport, themeColor, and colorScheme (moved to viewport export above)
   robots: {
     index: true,
     follow: true,
@@ -176,12 +228,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://tyil-leadership.com",
+    url: "https://tyil.org.ng",
     siteName: "TYIL Leadership Development",
-    title:
-      "TYIL Leadership Development | Executive Training & Coaching Programs",
+    title: "TYIL Leadership Development | Teens Training & Coaching Programs",
     description:
-      "Transform your leadership potential with TYIL's comprehensive leadership development programs. Expert executive coaching and organizational leadership training.",
+      "Transform your leadership potential with TYIL's comprehensive leadership development programs. Expert teens coaching and young leadership training.",
     images: [
       {
         url: "/tyil-logo.svg",
@@ -203,9 +254,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@tyil_community",
     creator: "@tyil_community",
-    title: "TYIL Leadership Development | Executive Training & Coaching",
+    title: "TYIL Leadership Development | Teens Training & Coaching",
     description:
-      "Transform your leadership potential with TYIL's comprehensive leadership development programs and executive coaching.",
+      "Transform your leadership potential with TYIL's comprehensive leadership development programs and teenage coaching.",
     images: ["/tyil-logo.svg"],
   },
   verification: {
@@ -233,25 +284,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" className={interTight.className}>
       <head>
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-
-        {/* DNS Prefetch */}
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-
         {/* Structured Data */}
         <Script
           id="organization-schema"
@@ -263,16 +301,11 @@ export default function RootLayout({
         <Script
           id="webpage-schema"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(webpageSchema),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }}
         />
       </head>
-      <body
-        className={`${inter_tight.className} antialiased`}
-        cz-shortcut-listen="true"
-      >
-        {/* Skip to main content for accessibility */}
+      <body className="antialiased" cz-shortcut-listen="true">
+        {/* Accessibility Skip Link */}
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50"
@@ -297,7 +330,7 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Microsoft Clarity */}
+        {/* Microsoft Clarity
         <Script id="microsoft-clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
@@ -306,7 +339,7 @@ export default function RootLayout({
                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "YOUR_CLARITY_ID");
           `}
-        </Script>
+        </Script> */}
       </body>
     </html>
   );

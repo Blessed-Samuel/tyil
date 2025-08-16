@@ -1,9 +1,13 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap'); */
 @import "tailwindcss";
-
+/* ==============================
+   Root variables (Light mode default)
+   ============================== */
 :root {
-  /* default background & foreground colors */
   --background: #ffffff;
   --foreground: #181818;
+
+   /* --font-inter: 'Inter Tight', sans-serif; */
 
   /* custom colors */
   --primaryRed: #D91D1D;
@@ -11,14 +15,21 @@
   --primaryWhite: #fdfdfd;
 }
 
+/* ==============================
+   Tailwind Theme Mapping
+   ============================== */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primaryRed: var(--primaryRed);
   --color-primaryBlack: var(--primaryBlack);
   --color-primaryWhite: var(--primaryWhite);
+  --font-primaryFont: var(--font-inter);
 }
 
+/* ==============================
+   Dark Mode Overrides
+   ============================== */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -26,30 +37,35 @@
   }
 }
 
+/* ==============================
+   Global HTML Styles
+   ============================== */
 html {
   scroll-behavior: smooth;
-
-   /* For WebKit-based browsers */
-  ::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #f0f0f0; /* Track color */
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: var(--color-primaryRed); /* Thumb color */
-  } 
 }
 
+/* ==============================
+   Custom Scrollbar Styling
+   ============================== */
+html::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Track color */
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--primaryRed); /* Thumb color */
+  border-radius: 10px;
+}
+
+/* ==============================
+   Global Body Styles
+   ============================== */
 body {
-  /* background & foreground colors */
   background: var(--background);
   color: var(--foreground);
-
-  /* fall back fonts */
-  font-family: Arial, sans-serif;
   overflow-x: hidden;
 }
