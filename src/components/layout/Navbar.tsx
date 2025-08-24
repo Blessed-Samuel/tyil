@@ -7,7 +7,8 @@ import Button from "../ui/Button";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { PiHandHeartFill } from "react-icons/pi";
-import { HiMenuAlt1, HiX } from "react-icons/hi";
+// import { HiMenuAlt1, HiX } from "react-icons/hi";
+import { Cross1Icon, TextAlignLeftIcon } from "@radix-ui/react-icons";
 
 const Navbar: React.FC = () => {
   const pathname = usePathname();
@@ -76,8 +77,8 @@ const Navbar: React.FC = () => {
       {/* Desktop & Tablet Navbar */}
       <nav
         className={`
-          bg-primaryWhite fixed top-6 left-1/2 transform -translate-x-1/2 z-50
-          py-3 flex justify-between rounded-full items-center px-4 sm:px-6 lg:px-6 
+          bg-primaryWhite fixed left-1/2 transform -translate-x-1/2 z-50
+          py-3 flex justify-between items-center px-4 sm:px-6 lg:px-6 
           border border-gray-200 dark:bg-primaryBlack dark:border-gray-700
           transition-all duration-300 ease-in-out
           ${
@@ -85,7 +86,7 @@ const Navbar: React.FC = () => {
               ? "translate-y-0 opacity-100"
               : "-translate-y-full opacity-0 pointer-events-none"
           }
-          w-[calc(100%-2rem)] sm:w-[calc(100%-4rem)] lg:w-[calc(100%-14rem)] max-w-5xl
+          w-[calc(100%-2rem)] sm:w-[calc(100%-4rem)] lg:w-[calc(100%)]
           backdrop-blur-sm
           hidden md:flex
         `}
@@ -113,10 +114,10 @@ const Navbar: React.FC = () => {
               <Link
                 href={link.href}
                 key={link.label}
-                className={`mx-2 text-sm font-normal relative transition-all duration-300 ease-out ${
+                className={`mx-2 text-xs relative transition-all duration-300 ease-out ${
                   isActive
-                    ? "text-white rounded-full font-black bg-primaryBlack px-4 py-2 dark:bg-white dark:text-primaryBlack"
-                    : "text-primaryBlack/90 hover:text-gray-900 dark:text-primaryWhite/70 dark:hover:text-white"
+                    ? "text-white font-bold bg-primaryRed px-4 py-3"
+                    : "font-normal hover:text-primaryRed"
                 }`}
               >
                 <span
@@ -131,7 +132,7 @@ const Navbar: React.FC = () => {
           })}
         </div>
 
-        {/* Desktop Donate button */}
+        {/* Desktop Donate button
         <Button
           primaryText="Donate Now"
           hoverText="Donate Now"
@@ -140,15 +141,15 @@ const Navbar: React.FC = () => {
           onClick={() => alert("Button Clicked!")}
           className="gap-2"
           aria-label="Donation button"
-        />
+        /> */}
       </nav>
 
       {/* Mobile Navbar */}
       <nav
         className={`
-          bg-primaryWhite backdrop-blur-md fixed top-4 left-4 right-4 z-50
-          py-2 px-4 flex justify-between items-center rounded-full
-          border border-gray-200/20 dark:bg-primaryBlack dark:border-gray-700
+          bg-primaryWhite backdrop-blur-md fixed w-full z-50
+          py-4 px-4 flex justify-between items-center
+          border border-gray-200/20
           transition-all duration-300 ease-in-out
           ${
             isVisible
@@ -177,14 +178,14 @@ const Navbar: React.FC = () => {
         {/* Mobile menu button */}
         <button
           onClick={toggleMobileMenu}
-          className="p-2 cursor-pointer rounded-lg text-primaryBlack dark:text-primaryWhite hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+          className="p-2 cursor-pointer rounded-lg text-primaryBlack hover:bg-gray-100 transition-colors duration-200"
           aria-label="Toggle mobile menu"
           aria-expanded={isMobileMenuOpen}
         >
           {isMobileMenuOpen ? (
-            <HiX className="w-6 h-6" />
+            <Cross1Icon className="w-8 h-8" />
           ) : (
-            <HiMenuAlt1 className="w-6 h-6" />
+            <TextAlignLeftIcon className="w-8 h-8" />
           )}
         </button>
       </nav>
@@ -207,41 +208,26 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu Panel */}
       <div
         className={`
-          fixed top-0 right-0 h-full w-98 max-w-[90vw] z-50
-          bg-primaryWhite dark:bg-primaryBlack
-          border-l border-gray-200 dark:border-gray-700
+          fixed top-0 h-screen w-full z-50
+          bg-primaryRed dark:bg-primaryBlack
           transform transition-transform duration-300 ease-in-out
           md:hidden
           ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}
         `}
       >
         {/* Mobile menu header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
-          <Link
-            href="/"
-            className="font-black tracking-tighter text-lg flex items-center gap-2"
-            onClick={handleLinkClick}
-          >
-            {/* <Image
-              src="/tyil-logo.svg"
-              alt="TYIL Logo"
-              priority
-              width={32}
-              height={32}
-            /> */}
-            {/* TYIL */}
-          </Link>
+        <div className="flex items-center justify-between p-8 border-b border-white/50">
           <button
             onClick={toggleMobileMenu}
-            className="p-2 cursor-pointer rounded-lg text-primaryBlack dark:text-primaryWhite hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+            className="p-2 cursor-pointer right-0 rounded-lg text-primaryWhite hover:bg-red-700 transition-colors duration-200"
             aria-label="Close mobile menu"
           >
-            <HiX className="w-6 h-6" />
+            <Cross1Icon className="w-8 h-8" />
           </button>
         </div>
 
         {/* Mobile navigation links */}
-        <div className="flex flex-col p-6 space-y-1">
+        <div className="flex flex-col space-y-3">
           {navLinks.map(link => {
             const isActive = pathname === link.href;
 
@@ -251,12 +237,11 @@ const Navbar: React.FC = () => {
                 key={link.label}
                 onClick={handleLinkClick}
                 className={`
-                  px-4 py-3 rounded-full text-base font-medium
-                  transition-all duration-200 ease-out
+                   py-5 px-8 text-base transition-all duration-200 ease-out border-b border-b-white/50
                   ${
                     isActive
-                      ? "bg-primaryBlack text-white dark:bg-white dark:text-primaryBlack font-bold"
-                      : "text-primaryBlack/90 hover:text-gray-900 hover:bg-gray-50 dark:text-primaryWhite/70 dark:hover:text-white dark:hover:bg-gray-800"
+                      ? "font-medium hover:text-white/70 text-white"
+                      : "text-primaryWhite hover:text-white/70"
                   }
                 `}
               >
@@ -264,22 +249,6 @@ const Navbar: React.FC = () => {
               </Link>
             );
           })}
-        </div>
-
-        {/* Mobile donate button */}
-        <div className="p-6 border-t border-gray-200 dark:border-gray-700 mt-auto">
-          <Button
-            primaryText="Donate Now"
-            hoverText="Donate Now"
-            icon={PiHandHeartFill}
-            iconPosition="left"
-            onClick={() => {
-              alert("Button Clicked!");
-              setIsMobileMenuOpen(false);
-            }}
-            className="w-full gap-2 justify-center"
-            aria-label="Donation button"
-          />
         </div>
       </div>
     </>

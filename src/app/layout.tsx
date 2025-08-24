@@ -1,8 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
+import "@radix-ui/themes/styles.css";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import Script from "next/script";
+import { Theme } from '@radix-ui/themes'
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
@@ -306,15 +309,17 @@ export default function RootLayout({
       </head>
       <body className="antialiased" cz-shortcut-listen="true">
         {/* Accessibility Skip Link */}
-        <a
+        {/* <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50"
         >
           Skip to main content
-        </a>
-
-        <Navbar />
-        <main id="main-content">{children}</main>
+        </a> */}
+        <Theme>
+          <Navbar />
+          <main id="main-content">{children}</main>
+          <Footer />
+        </Theme>
 
         {/* Google Analytics */}
         <Script

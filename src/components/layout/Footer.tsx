@@ -1,0 +1,157 @@
+import React from "react";
+import Link from "next/link";
+import { footerLinks, socialLinks } from "@/constants/footer";
+// import { FooterLinkSection } from "@/types/footer";
+import {
+  InstagramLogoIcon,
+  TwitterLogoIcon,
+  LinkedInLogoIcon,
+} from "@radix-ui/react-icons";
+import * as Tooltip from "@radix-ui/react-tooltip";
+import { FaWhatsapp } from "react-icons/fa";
+import Image from "next/image";
+
+const Footer = () => {
+  return (
+    <footer className="bg-primaryWhite py-5 text-sm text-primaryBlack">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-10 px-4 sm:px-6 lg:px-8 py-26">
+        {/* brand logo */}
+        <Image
+          src="/tyil-logo.svg"
+          alt="tyil-logo"
+          width={60}
+          height={60}
+          priority
+          draggable="false"
+        />
+
+        {footerLinks.map(links => (
+          <div key={links.title}>
+            <h4 className="text-primaryRed font-bold mb-4">{links.title}</h4>
+
+            {/* If socials section, show icons instead of links */}
+            {links.title === "Socials" ? (
+              <Tooltip.Provider>
+                <div className="flex space-x-4">
+                  <Tooltip.Root>
+                    <Tooltip.Trigger asChild>
+                      <a
+                        href={socialLinks.twitter}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Twitter"
+                        className="hover:text-primaryPurple transition-transform hover:-translate-y-1"
+                      >
+                        <TwitterLogoIcon className="w-4 h-4" />
+                      </a>
+                    </Tooltip.Trigger>
+                    <Tooltip.Portal>
+                      <Tooltip.Content
+                        side="top"
+                        className="bg-gray-800 text-white text-xs px-2 py-1 rounded-md shadow-md z-50"
+                        sideOffset={5}
+                      >
+                        Twitter
+                        <Tooltip.Arrow className="fill-gray-800" />
+                      </Tooltip.Content>
+                    </Tooltip.Portal>
+                  </Tooltip.Root>
+
+                  <Tooltip.Root>
+                    <Tooltip.Trigger asChild>
+                      <a
+                        href={socialLinks.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                        className="hover:text-primaryPurple transition-transform hover:-translate-y-1"
+                      >
+                        <InstagramLogoIcon className="w-4 h-4" />
+                      </a>
+                    </Tooltip.Trigger>
+                    <Tooltip.Portal>
+                      <Tooltip.Content
+                        side="top"
+                        className="bg-gray-800 text-white text-xs px-2 py-1 rounded-md shadow-md z-50"
+                        sideOffset={5}
+                      >
+                        Instagram
+                        <Tooltip.Arrow className="fill-gray-800" />
+                      </Tooltip.Content>
+                    </Tooltip.Portal>
+                  </Tooltip.Root>
+
+                  <Tooltip.Root>
+                    <Tooltip.Trigger asChild>
+                      <a
+                        href={socialLinks.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                        className="hover:text-primaryPurple transition-transform hover:-translate-y-1"
+                      >
+                        <LinkedInLogoIcon className="w-4 h-4" />
+                      </a>
+                    </Tooltip.Trigger>
+                    <Tooltip.Portal>
+                      <Tooltip.Content
+                        side="top"
+                        className="bg-gray-800 text-white text-xs px-2 py-1 rounded-md shadow-md z-50"
+                        sideOffset={5}
+                      >
+                        LinkedIn
+                        <Tooltip.Arrow className="fill-gray-800" />
+                      </Tooltip.Content>
+                    </Tooltip.Portal>
+                  </Tooltip.Root>
+                  <Tooltip.Root>
+                    <Tooltip.Trigger asChild>
+                      <a
+                        href={socialLinks.whatsApp}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                        className="hover:text-primaryPurple transition-transform hover:-translate-y-1"
+                      >
+                        <FaWhatsapp className="w-4 h-4" />
+                      </a>
+                    </Tooltip.Trigger>
+                    <Tooltip.Portal>
+                      <Tooltip.Content
+                        side="top"
+                        className="bg-gray-800 text-white text-xs px-2 py-1 rounded-md shadow-md z-50"
+                        sideOffset={5}
+                      >
+                        WhatsApp
+                        <Tooltip.Arrow className="fill-gray-800" />
+                      </Tooltip.Content>
+                    </Tooltip.Portal>
+                  </Tooltip.Root>
+                </div>
+              </Tooltip.Provider>
+            ) : (
+              <ul className="space-y-2">
+                {links.links.map(link => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="inline-block transition-all duration-300 hover:translate-x-1 hover:text-primaryPurple font-mono hover:underline"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-5 border-t border-gray-200 pt-6 font-mono text-center text-xs text-gray-500 px-4">
+        &copy; {new Date().getFullYear()} TYIL. All rights reserved.
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

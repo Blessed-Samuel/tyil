@@ -6,6 +6,7 @@ import { heroContent } from "@/constants/hero";
 import Button from "./ui/Button";
 import { PiHandHeartFill } from "react-icons/pi";
 import { HiArrowRight } from "react-icons/hi2";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 // type heroContentProps = {
 //   title: string;
@@ -143,10 +144,10 @@ const Hero: React.FC = () => {
             <Button
               primaryText="Join Our Community"
               hoverText="Join Our Community"
-              icon={HiArrowRight}
+              icon={ArrowRightIcon}
               iconPosition="right"
               onClick={() => alert("Button Clicked!")}
-              className="gap-2 w-full md:w-64 bg-primaryBlack hover:bg-primaryBlack/90"
+              className="gap-2 w-full md:w-64"
               aria-label="Join button"
               variant="black"
             />
