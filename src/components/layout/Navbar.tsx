@@ -6,9 +6,8 @@ import Link from "next/link";
 import Button from "../ui/Button";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { PiHandHeartFill } from "react-icons/pi";
-// import { HiMenuAlt1, HiX } from "react-icons/hi";
 import { Cross1Icon, TextAlignLeftIcon } from "@radix-ui/react-icons";
+import { HiExternalLink } from "react-icons/hi";
 
 const Navbar: React.FC = () => {
   const pathname = usePathname();
@@ -116,7 +115,7 @@ const Navbar: React.FC = () => {
                 key={link.label}
                 className={`mx-2 text-xs relative transition-all duration-300 ease-out ${
                   isActive
-                    ? "text-white font-bold bg-primaryRed px-4 py-3"
+                    ? "text-white font-bold rounded-full bg-primaryRed px-8 py-3"
                     : "font-normal hover:text-primaryRed"
                 }`}
               >
@@ -132,16 +131,16 @@ const Navbar: React.FC = () => {
           })}
         </div>
 
-        {/* Desktop Donate button
+        {/* Desktop waitList button */}
         <Button
-          primaryText="Donate Now"
-          hoverText="Donate Now"
-          icon={PiHandHeartFill}
-          iconPosition="left"
+          primaryText="Join the WaitList"
+          hoverText="Join the WaitList"
+          icon={HiExternalLink}
+          iconPosition="right"
           onClick={() => alert("Button Clicked!")}
           className="gap-2"
-          aria-label="Donation button"
-        /> */}
+          aria-label="WaitList button"
+        />
       </nav>
 
       {/* Mobile Navbar */}
@@ -237,7 +236,7 @@ const Navbar: React.FC = () => {
                 key={link.label}
                 onClick={handleLinkClick}
                 className={`
-                   py-5 px-8 text-base transition-all duration-200 ease-out border-b border-b-white/50
+                   py-5 px-8 text-base transition-all duration-200 ease-out border-b border-b-white/30
                   ${
                     isActive
                       ? "font-medium hover:text-white/70 text-white"

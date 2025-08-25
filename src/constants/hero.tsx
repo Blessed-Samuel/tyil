@@ -2,47 +2,46 @@
     Hero Section Images
 ==================================
 */
-
 export const HERO_IMAGES = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    url: "/hero/HERO_IMG_0.jpg",
     alt: "Modern Aluminum Windows - Large residential windows",
     title: "Residential Windows",
   },
   {
     id: 2,
-    url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    url: "/hero/HERO_IMG_1.jpg",
     alt: "Commercial Glass Facade - Modern office building",
     title: "Commercial Facades",
   },
   {
     id: 3,
-    url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1973&q=80",
+    url: "/hero/HERO_IMG_2.jpg",
     alt: "Aluminum Door Installation - Professional storefront",
     title: "Door Systems",
   },
   {
     id: 4,
-    url: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    url: "/hero/HERO_IMG_3.jpg",
     alt: "Metal Roofing System - Industrial roofing",
     title: "Roofing Solutions",
   },
   {
     id: 5,
-    url: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80",
+    url: "/hero/HERO_IMG_4.jpg",
     alt: "Modern Office Interior - Suspended ceiling visible",
     title: "Ceiling Systems",
   },
   {
     id: 6,
-    url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2006&q=80",
+    url: "/hero/HERO_IMG_5.jpg",
     alt: "Residential Aluminum Windows - Contemporary home",
     title: "Custom Windows",
   },
   {
     id: 7,
-    url: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    url: "/hero/HERO_IMG_6.jpg",
     alt: "Commercial Building Facade - Glass and aluminum",
     title: "Building Solutions",
   },
@@ -66,51 +65,66 @@ export const HERO_IMAGES = [
   },
 ] as const;
 
-export type heroProps = (typeof HERO_IMAGES)[number];
+export type HeroImage = (typeof HERO_IMAGES)[number];
 
 /* =======================================================
     Hero Section Content
-=======================================================
-*/
+======================================================= */
+import { ReactNode } from "react";
 
-// hero section content
-export const heroContent = {
-  title: "We Are Redefining What Leadership Means To African Youths.",
+export interface HeroContent {
+  title: ReactNode;
+  description: string;
+  images: readonly HeroImage[];
+}
+
+export const heroContent: HeroContent = {
+  title: (
+    <>
+      We Are Redefining What{" "}
+      <span className="bg-gradient-to-r from-white to-red-600 bg-clip-text text-transparent">
+        Leadership
+      </span>{" "}
+      Means To{" "}
+      <span className="font-secondaryFont italic normal-case">
+        African Youths
+      </span>
+      .
+    </>
+  ),
   description:
     "We are an African-based foundation dedicated to empowering the next generation of leaders. Through our programs and initiatives, we provide the tools and community you need to make a lasting impact.",
   images: HERO_IMAGES,
-} as const;
+};
 
 // about us hero section content
-export const aboutHeroContent = {
+export const aboutHeroContent: HeroContent = {
   title: "We Are Redefining What Leadership Means To African Youth.",
   description:
     "We are an African-based foundation dedicated to empowering the next generation of leaders. Through our programs and initiatives, we provide the tools and community you need to make a lasting impact.",
   images: HERO_IMAGES,
-} as const;
+};
 
 // programmes hero section content
-export const programmesHeroContent = {
+export const programmesHeroContent: HeroContent = {
   title: "We Are Redefining What Leadership Means To African Youth.",
   description:
     "We are an African-based foundation dedicated to empowering the next generation of leaders. Through our programs and initiatives, we provide the tools and community you need to make a lasting impact.",
   images: HERO_IMAGES,
-} as const;
+};
 
 // publications hero section content
-export const publicationsHeroContent = {
+export const publicationsHeroContent: HeroContent = {
   title: "We Are Redefining What Leadership Means To African Youth.",
   description:
     "We are an African-based foundation dedicated to empowering the next generation of leaders. Through our programs and initiatives, we provide the tools and community you need to make a lasting impact.",
   images: HERO_IMAGES,
-} as const;
+};
 
 // leadquest hero section content
-export const leadquestHeroContent = {
+export const leadquestHeroContent: HeroContent = {
   title: "We Are Redefining What Leadership Means To African Youth.",
   description:
     "We are an African-based foundation dedicated to empowering the next generation of leaders. Through our programs and initiatives, we provide the tools and community you need to make a lasting impact.",
   images: HERO_IMAGES,
-} as const;
-
-export type heroContentProps = (typeof heroContent)[keyof typeof heroContent];
+};

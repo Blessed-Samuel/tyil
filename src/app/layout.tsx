@@ -5,7 +5,8 @@ import "@radix-ui/themes/styles.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Script from "next/script";
-import { Theme } from '@radix-ui/themes'
+import { Theme } from "@radix-ui/themes";
+import BackToTop from "@/components/ui/BackToTop";
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
@@ -227,7 +228,7 @@ export const metadata: Metadata = {
       { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#5bbad5" },
     ],
   },
-  manifest: "/site.manifest.json",
+  manifest: "/site.webmanifest.json",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -318,6 +319,8 @@ export default function RootLayout({
         <Theme>
           <Navbar />
           <main id="main-content">{children}</main>
+          {/* scroll back to top button */}
+          <BackToTop />
           <Footer />
         </Theme>
 
@@ -334,17 +337,6 @@ export default function RootLayout({
             gtag('config', 'GA_MEASUREMENT_ID');
           `}
         </Script>
-
-        {/* Microsoft Clarity
-        <Script id="microsoft-clarity" strategy="afterInteractive">
-          {`
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "YOUR_CLARITY_ID");
-          `}
-        </Script> */}
       </body>
     </html>
   );

@@ -5,6 +5,12 @@ export const footerLinks = [
     title: "Socials",
     links: [],
   },
+
+  {
+    title: "Contacts",
+    links: [],
+  },
+
   {
     title: "Company",
     links: [
@@ -19,29 +25,24 @@ export const footerLinks = [
     title: "Helpful Links",
     links: [
       { label: "Podcasts", href: "/podcasts" },
-      { label: "Pricing", href: "/pricing" },
       { label: "Integrations", href: "/integrations" },
-    ],
-  },
-  {
-    title: "Support",
-    links: [
-      { label: "Help Center", href: "/help" },
-      { label: "Contact Us", href: "/contact" },
-      // { label: "Status", href: "/status" },
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
-      { label: "Terms of Service", href: "/terms" },
-      { label: "Privacy Policy", href: "/privacy" },
-      { label: "Cookie Policy", href: "/cookies" },
     ],
   },
 ] as const;
 
 export type FooterLinkSection = (typeof footerLinks)[number];
+
+export const contactLinks = {
+  email: {
+    email: "tyilcommunity@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=tyilcommunity@gmail.com",
+  },
+  phoneNumber: {
+    label: "Phone",
+    number: "+234-8162-0125-05",
+    href: "tel:+2348162012505",
+  },
+};
 
 export const socialLinks = {
   twitter: "https://x.com/tyil_community",

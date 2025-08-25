@@ -8,27 +8,17 @@ import { PiHandHeartFill } from "react-icons/pi";
 import { HiArrowRight } from "react-icons/hi2";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
-// type heroContentProps = {
-//   title: string;
-//   description: string;
-//   images: {
-//     id: number;
-//     url: string;
-//     alt: string;
-//   }[];
-// };
-
 // Animation keyframes for zoom effect
 const zoomAnimation: string = `
-  @keyframes zoomInOut {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.08); }
-    100% { transform: scale(1); }
-  }
-  .zoom-animation {
-    animation: zoomInOut 8s infinite ease-in-out;
-  }
-`;
+    @keyframes zoomInOut {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+    .zoom-animation {
+      animation: zoomInOut 8s infinite ease-in-out;
+    }
+  `;
 
 const Hero: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
@@ -81,17 +71,17 @@ const Hero: React.FC = () => {
     goToSlide(index);
   };
 
-  const progressWidth: string = `${
-    ((currentSlide + 1) / heroContent.images.length) * 100
-  }%`;
+  // const progressWidth: string = `${
+  //   ((currentSlide + 1) / heroContent.images.length) * 100
+  // }%`;
 
   return (
     <>
-      {/* Inject CSS animation */}
+      {/* Inject my CSS animation */}
       <style jsx>{zoomAnimation}</style>
 
       <section
-        className="relative h-screen w-full overflow-hidden flex items-center justify-center"
+        className="relative h-screen w-full overflow-hidden flex flex-col md:flex-row items-center justify-center md:justify-start px-4 sm:px-6 md:px-8"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -120,85 +110,86 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/70 via-slate-800/70 to-slate-900/100 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-800/20 via-slate-800/50 to-slate-900 z-10" />
 
         {/* Hero Content */}
-        <div className="relative mt-0 md:mt-40 z-20 text-center text-white max-w-4xl px-6 md:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in-up">
+        <div className="relative z-20 text-center md:text-left text-white lg:max-w-8xl max-w-4xl mt-16 md:mt-20">
+          <h1 className="text-4xl sm:text-5xl tracking-tight md:text-7xl lg:text-7xl uppercase leading-tight sm:leading-20 font-bold mb-6 animate-fade-in-up">
             {heroContent.title}
           </h1>
-          <p className="text-lg md:text-lg font-light leading-6 mb-8 animate-fade-in-up animation-delay-300 max-w-2xl mx-auto">
+
+          <p className="text-lg md:hidden sm:text-lg md:text-xl font-light leading-relaxed mb-8 animate-fade-in-up animation-delay-300 px-2 sm:px-0">
             {heroContent.description}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animation-delay-600">
+
+          <div className="flex flex-col md:mt-10 sm:flex-row gap-4 justify-center md:justify-start items-center animate-fade-in-up animation-delay-600">
             <Button
               primaryText="Donate Now"
               hoverText="Donate Now"
               icon={PiHandHeartFill}
               iconPosition="left"
-              onClick={() => alert("Button Clicked!")}
-              className="gap-2 w-full md:w-auto bg-primaryRed hover:bg-primaryRed/90"
+              onClick={() =>
+                window.open(
+                  "https://flutterwave.com/donate/lbl9iwpnhpyw",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+              className="gap-2 w-full sm:w-auto bg-primaryRed hover:bg-primaryRed/90"
               aria-label="Donation button"
               variant="red"
             />
+
             <Button
               primaryText="Join Our Community"
               hoverText="Join Our Community"
               icon={ArrowRightIcon}
               iconPosition="right"
-              onClick={() => alert("Button Clicked!")}
-              className="gap-2 w-full md:w-64"
+              onClick={() => alert("Button Clicked")}
+              className="gap-2 w-full sm:w-64"
               aria-label="Join button"
               variant="black"
             />
           </div>
         </div>
 
-        {/* Navigation Controls */}
-        <div className="absolute bottom-6 left-6 z-30 flex gap-4 md:bottom-8 md:left-8">
-          <button
-            type="button"
-            onClick={prevSlide}
-            className="w-12 cursor-pointer h-12 md:w-10 md:h-10 bg-white/20 backdrop-blur-md border-2 border-white/30 rounded-full flex items-center justify-center text-white text-xl font-bold hover:bg-white/30 hover:border-white/50 hover:scale-110 active:scale-95 transition-all duration-300"
-            aria-label="Previous slide"
-          >
-            ‹
-          </button>
-          <button
-            type="button"
-            onClick={nextSlide}
-            className="w-12 cursor-pointer h-12 md:w-10 md:h-10 bg-white/20 backdrop-blur-md border-2 border-white/30 rounded-full flex items-center justify-center text-white text-xl font-bold hover:bg-white/30 hover:border-white/50 hover:scale-110 active:scale-95 transition-all duration-300"
-            aria-label="Next slide"
-          >
-            ›
-          </button>
-        </div>
-
-        {/* Slide Indicators */}
-        <div className="absolute bottom-6 right-6 z-30 flex gap-2 md:bottom-8 md:right-8">
-          {heroContent.images.map((_, index: number) => (
+        {/* Controls */}
+        <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 z-30">
+          <div className="flex gap-3 mb-4 justify-end">
             <button
-              key={index}
               type="button"
-              onClick={() => handleSlideClick(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentSlide
-                  ? "bg-primaryRed scale-125"
-                  : "bg-white/40 hover:bg-white/60"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+              onClick={prevSlide}
+              className="w-12 h-6 sm:w-14 cursor-pointer sm:h-6 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center text-white text-sm sm:text-lg font-bold hover:bg-white/30 hover:border-white/50 hover:scale-110 active:scale-95 transition-all duration-300"
+              aria-label="Previous slide"
+            >
+              ⟵
+            </button>
+            <button
+              type="button"
+              onClick={nextSlide}
+              className="w-12 h-6 sm:w-14 cursor-pointer sm:h-6 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center text-white text-lg sm:text-lg font-bold hover:bg-white/30 hover:border-white/50 hover:scale-110 active:scale-95 transition-all duration-300"
+              aria-label="Next slide"
+            >
+              ⟶
+            </button>
+          </div>
 
-        {/* Progress Bar */}
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-white/20 z-30">
-          <div
-            className="h-full bg-primaryRed transition-all duration-300 ease-linear"
-            style={{
-              width: progressWidth,
-            }}
-          />
+          {/* Slide Indicators */}
+          <div className="flex gap-2 justify-end">
+            {heroContent.images.map((_, index: number) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => handleSlideClick(index)}
+                className={`w-1 h-1 rounded-full transition-all duration-300 ${
+                  index === currentSlide
+                    ? "bg-primaryRed scale-125 w-4"
+                    : "bg-white/40 hover:bg-white/60"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </section>
     </>
