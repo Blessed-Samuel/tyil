@@ -99,32 +99,73 @@ export const heroContent: HeroContent = {
 
 // about us hero section content
 export const aboutHeroContent: HeroContent = {
-  title: "We Are Redefining What Leadership Means To African Youth.",
+  title: (
+    <>
+      <span className="bg-gradient-to-r from-white to-red-600 bg-clip-text text-transparent">
+        Nuturing
+      </span>{" "}
+      Tomorrow{" "}
+      <span className="font-secondaryFont italic normal-case">
+        Leaders Today.
+      </span>
+    </>
+  ),
   description:
-    "We are an African-based foundation dedicated to empowering the next generation of leaders. Through our programs and initiatives, we provide the tools and community you need to make a lasting impact.",
+    "At TYIL, we believe that leadership is not a title, but a journey. Our mission is to empower individuals to find their unique leadership voice and make a lasting impact.",
   images: HERO_IMAGES,
 };
 
 // programmes hero section content
 export const programmesHeroContent: HeroContent = {
-  title: "We Are Redefining What Leadership Means To African Youth.",
+  title: (
+    <>
+      Our{" "}
+      <span className="bg-gradient-to-r from-white to-red-600 bg-clip-text text-transparent">
+        Programmes
+      </span>{" "}
+      Are Focused On{" "}
+      <span className="font-secondaryFont italic normal-case">
+        Building Leaders who inspire change.
+      </span>
+    </>
+  ),
   description:
-    "We are an African-based foundation dedicated to empowering the next generation of leaders. Through our programs and initiatives, we provide the tools and community you need to make a lasting impact.",
+    "Empowering the next generation of leaders and raising young people for positive transformation.",
   images: HERO_IMAGES,
 };
 
 // publications hero section content
 export const publicationsHeroContent: HeroContent = {
-  title: "We Are Redefining What Leadership Means To African Youth.",
+  title: (
+    <>
+      Insights that matters{" "}
+      <span className="bg-gradient-to-r from-white to-red-600 bg-clip-text text-transparent">
+        publications
+      </span>{" "}
+      <span className="font-secondaryFont italic normal-case">
+        That Inspire.
+      </span>
+    </>
+  ),
   description:
-    "We are an African-based foundation dedicated to empowering the next generation of leaders. Through our programs and initiatives, we provide the tools and community you need to make a lasting impact.",
+    "Empowering the next generation of leaders and raising young people for positive transformation.",
   images: HERO_IMAGES,
 };
 
 // leadquest hero section content
 export const leadquestHeroContent: HeroContent = {
-  title: "We Are Redefining What Leadership Means To African Youth.",
+  title: (
+    <>
+      The journey to{" "}
+      <span className="bg-gradient-to-r from-white to-red-600 bg-clip-text text-transparent">
+        better leadership
+      </span>{" "}
+      <span className="font-secondaryFont italic normal-case">
+        Starts Here.
+      </span>
+    </>
+  ),
   description:
-    "We are an African-based foundation dedicated to empowering the next generation of leaders. Through our programs and initiatives, we provide the tools and community you need to make a lasting impact.",
+    "Empowering the next generation of leaders and raising young people for positive transformation.",
   images: HERO_IMAGES,
 };

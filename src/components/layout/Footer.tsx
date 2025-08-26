@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { footerLinks, socialLinks, contactLinks } from "@/constants/footer";
-// import { FooterLinkSection } from "@/types/footer";
 import {
   InstagramLogoIcon,
   TwitterLogoIcon,
@@ -13,7 +12,7 @@ import Image from "next/image";
 import { MdCall, MdMarkEmailUnread } from "react-icons/md";
 
 const Footer = () => {
-  // Separate socials from other links
+  // Separate socials and Contacts from other links
   const nonSocialLinks = footerLinks.filter(
     links => links.title !== "Socials" && links.title !== "Contacts"
   );
