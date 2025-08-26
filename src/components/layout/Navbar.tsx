@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
       {/* Desktop & Tablet Navbar */}
       <nav
         className={`
-          bg-primaryWhite fixed left-1/2 transform -translate-x-1/2 z-50
+          bg-primaryWhite fixed font-primaryFont left-1/2 transform -translate-x-1/2 z-50
           py-3 flex justify-between items-center px-4 sm:px-6 lg:px-6 
           border border-gray-200 dark:bg-primaryBlack dark:border-gray-700
           transition-all duration-300 ease-in-out
@@ -85,9 +85,7 @@ const Navbar: React.FC = () => {
               ? "translate-y-0 opacity-100"
               : "-translate-y-full opacity-0 pointer-events-none"
           }
-          w-[calc(100%-2rem)] sm:w-[calc(100%-4rem)] lg:w-[calc(100%)]
-          backdrop-blur-sm
-          hidden md:flex
+          w-full backdrop-blur-sm hidden md:flex
         `}
       >
         {/* Brand logo */}

@@ -292,7 +292,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={interTight.className}>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={interTight.className}
+    >
       <head>
         {/* Structured Data */}
         <Script
@@ -308,14 +312,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }}
         />
       </head>
-      <body className="antialiased" cz-shortcut-listen="true">
-        {/* Accessibility Skip Link */}
-        {/* <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50"
-        >
-          Skip to main content
-        </a> */}
+      <body className="antialiased font-primaryFont" cz-shortcut-listen="true">
         <Theme>
           <Navbar />
           <main id="main-content">{children}</main>

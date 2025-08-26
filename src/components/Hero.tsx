@@ -5,7 +5,6 @@ import Image from "next/image";
 import { heroContent } from "@/constants/hero";
 import Button from "./ui/Button";
 import { PiHandHeartFill } from "react-icons/pi";
-import { HiArrowRight } from "react-icons/hi2";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 // Animation keyframes for zoom effect
@@ -20,7 +19,13 @@ const zoomAnimation: string = `
     }
   `;
 
-const Hero: React.FC = () => {
+interface contentProps {
+  title: string;
+  description: string;
+  button?: React.ReactNode;
+}
+
+const Hero: React.FC<contentProps> = ({ title, description, button }) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [isAutoSliding, setIsAutoSliding] = useState<boolean>(true);
 
@@ -81,7 +86,7 @@ const Hero: React.FC = () => {
       <style jsx>{zoomAnimation}</style>
 
       <section
-        className="relative h-screen w-full overflow-hidden flex flex-col md:flex-row items-center justify-center md:justify-start px-4 sm:px-6 md:px-8"
+        className="relative h-screen w-full font-primaryFont overflow-hidden flex flex-col md:flex-row items-center justify-center md:justify-start px-4 sm:px-4 md:px-4"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -115,47 +120,53 @@ const Hero: React.FC = () => {
         {/* Hero Content */}
         <div className="relative z-20 text-center md:text-left text-white lg:max-w-8xl max-w-4xl mt-16 md:mt-20">
           <h1 className="text-4xl sm:text-5xl tracking-tight md:text-7xl lg:text-7xl uppercase leading-tight sm:leading-20 font-bold mb-6 animate-fade-in-up">
-            {heroContent.title}
+            {title}
           </h1>
 
           <p className="text-lg md:hidden sm:text-lg md:text-xl font-light leading-relaxed mb-8 animate-fade-in-up animation-delay-300 px-2 sm:px-0">
-            {heroContent.description}
+            {description}
           </p>
 
           <div className="flex flex-col md:mt-10 sm:flex-row gap-4 justify-center md:justify-start items-center animate-fade-in-up animation-delay-600">
-            <Button
-              primaryText="Donate Now"
-              hoverText="Donate Now"
-              icon={PiHandHeartFill}
-              iconPosition="left"
-              onClick={() =>
-                window.open(
-                  "https://flutterwave.com/donate/lbl9iwpnhpyw",
-                  "_blank",
-                  "noopener,noreferrer"
-                )
-              }
-              className="gap-2 w-full sm:w-auto bg-primaryRed hover:bg-primaryRed/90"
-              aria-label="Donation button"
-              variant="red"
-            />
+            {button ? (
+              button
+            ) : (
+              <>
+                <Button
+                  primaryText="Donate Now"
+                  hoverText="Donate Now"
+                  icon={PiHandHeartFill}
+                  iconPosition="left"
+                  onClick={() =>
+                    window.open(
+                      "https://flutterwave.com/donate/lbl9iwpnhpyw",
+                      "_blank",
+                      "noopener,noreferrer"
+                    )
+                  }
+                  className="gap-2 w-full sm:w-auto bg-primaryRed hover:bg-primaryRed/90"
+                  aria-label="Donation button"
+                  variant="red"
+                />
 
-            <Button
-              primaryText="Join Our Community"
-              hoverText="Join Our Community"
-              icon={ArrowRightIcon}
-              iconPosition="right"
-              onClick={() => alert("Button Clicked")}
-              className="gap-2 w-full sm:w-64"
-              aria-label="Join button"
-              variant="black"
-            />
+                <Button
+                  primaryText="Join Our Community"
+                  hoverText="Join Our Community"
+                  icon={ArrowRightIcon}
+                  iconPosition="right"
+                  onClick={() => alert("Button Clicked")}
+                  className="gap-2 w-full sm:w-64"
+                  aria-label="Join button"
+                  variant="black"
+                />
+              </>
+            )}
           </div>
         </div>
 
-        {/* Controls */}
+        {/* slide click Controls */}
         <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 z-30">
-          <div className="flex gap-3 mb-4 justify-end">
+          {/* <div className="flex gap-3 mb-4 justify-end">
             <button
               type="button"
               onClick={prevSlide}
@@ -172,7 +183,7 @@ const Hero: React.FC = () => {
             >
               ⟶
             </button>
-          </div>
+          </div> */}
 
           {/* Slide Indicators */}
           <div className="flex gap-2 justify-end">
