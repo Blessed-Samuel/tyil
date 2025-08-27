@@ -18,7 +18,7 @@ export const Heading: React.FC<HeadingProps> = ({
   return (
     <Tag
       className={twMerge(
-        "text-base font-poppins tracking-tighter mx-auto font-extrabold",
+        "text-base font-poppins tracking-tighter font-extrabold",
         className
       )}
       {...props}
