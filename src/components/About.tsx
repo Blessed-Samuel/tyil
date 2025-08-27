@@ -95,7 +95,7 @@ const About = () => {
               viewport={{ once: true, amount: 0.2 }}
               className="text-center md:text-left"
             >
-              <p className="text-base sm:text-lg font-normal text-primaryBlack/70 leading-relaxed mb-8 max-w-sm mx-auto md:mx-0">
+              <p className="text-base sm:text-lg font-normal text-primaryBlack/60 leading-relaxed mb-8 max-w-sm mx-auto md:mx-0">
                 Raising young transformational leaders who will occupy every
                 sector of Africa by 2050
               </p>
@@ -114,7 +114,7 @@ const About = () => {
                   icon={ArrowRightIcon}
                   iconPosition="right"
                   onClick={handleClick}
-                  className="gap-2 px-8 py-3 bg-primaryRed hover:bg-primaryRed/90 text-sm sm:text-base"
+                  className="gap-2 px-8 py-3 text-sm sm:text-base"
                   aria-label="Registration button"
                   variant="red"
                 />

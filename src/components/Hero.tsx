@@ -107,7 +107,7 @@ const Hero: React.FC<contentProps> = ({ title, description, button }) => {
                 fill
                 className="object-cover"
                 priority={index === 0}
-                quality={90}
+                quality={100}
                 sizes="100vw"
               />
             </div>
