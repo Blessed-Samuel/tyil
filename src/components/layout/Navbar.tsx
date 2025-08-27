@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
         className={`
           bg-primaryWhite fixed font-primaryFont left-1/2 transform -translate-x-1/2 z-50
           py-3 flex justify-between items-center px-4 sm:px-6 lg:px-6 
-          border border-gray-200 dark:bg-primaryBlack dark:border-gray-700
+          border border-gray-200
           transition-all duration-300 ease-in-out
           ${
             isVisible
@@ -206,10 +206,8 @@ const Navbar: React.FC = () => {
       <div
         className={`
           fixed top-0 h-screen w-full z-50
-          bg-primaryRed dark:bg-primaryBlack
-          transform transition-transform duration-300 ease-in-out
-          md:hidden
-          ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}
+          bg-primaryRed transform transition-transform duration-300 ease-in-out
+          md:hidden ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}
         `}
       >
         {/* Mobile menu header */}

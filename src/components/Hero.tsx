@@ -115,7 +115,7 @@ const Hero: React.FC<contentProps> = ({ title, description, button }) => {
         </div>
 
         {/* Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-800/20 via-slate-800/50 to-slate-900 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-l from-gray-400/20 via-gray-900/70 to-slate-900 z-10" />
 
         {/* Hero Content */}
         <div className="relative z-20 text-center md:text-left text-white lg:max-w-8xl max-w-4xl mt-16 md:mt-20">
@@ -144,7 +144,7 @@ const Hero: React.FC<contentProps> = ({ title, description, button }) => {
                       "noopener,noreferrer"
                     )
                   }
-                  className="gap-2 w-full sm:w-auto bg-primaryRed hover:bg-primaryRed/90"
+                  className="gap-2 w-full sm:w-auto"
                   aria-label="Donation button"
                   variant="red"
                 />

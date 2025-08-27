@@ -14,7 +14,7 @@ const Container: React.FC<ContainerProps> = ({
   return (
     <div
       className={twMerge(
-        `max-w-[75rem] mx-auto px-4 sm:px-6 lg:px-6`,
+        `max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-6`,
         className
       )}
       {...props}

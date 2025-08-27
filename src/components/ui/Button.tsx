@@ -25,8 +25,8 @@ const Button = ({
   const [isHovered, setIsHovered] = useState(false);
 
   const variantStyles = {
-    red: "bg-primaryRed hover:bg-primaryRed/90 dark:bg-primaryRed",
-    black: "bg-primaryBlack hover:bg-primaryBlack/90 dark:bg-primaryBlack",
+    red: "bg-primaryRed hover:bg-red-700",
+    black: "bg-primaryBlack hover:bg-black",
   };
 
   return (
