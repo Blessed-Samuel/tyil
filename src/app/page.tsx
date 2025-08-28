@@ -3,6 +3,7 @@ import ImpactMetric from "@/components/ImpactMetrics";
 import Image from "next/image";
 import { heroContent } from "@/constants/hero";
 import About from "@/components/About";
+import Programme from "@/components/Programme";
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
         description={heroContent.description as string}
       />
       <ImpactMetric />
-      <About/>
+      <About />
+      <Programme/>
 
       <footer className="row-start-3 mt-40 flex gap-[24px] flex-wrap items-center justify-center">
         <a
