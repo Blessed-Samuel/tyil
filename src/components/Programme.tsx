@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Badge from "./ui/Badge";
 import { Heading } from "./layout/Heading";
 import Image from "next/image";
@@ -10,9 +10,11 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { motion, Variants } from "framer-motion";
 import { RxVideo } from "react-icons/rx";
 import { useRouter } from "next/navigation";
+import VideoModal from "./ui/VideoModal";
 
 const Programme = () => {
   const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
     router.push("/programmes");
@@ -43,7 +45,7 @@ const Programme = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <Badge />
+            <Badge title="Our Programmes" />
           </motion.div>
           <div className="flex flex-col justify-center items-center my-8 px-4">
             <motion.div
@@ -68,7 +70,7 @@ const Programme = () => {
               <p className="text-base sm:text-lg text-center text-primaryBlack/60 mt-4 max-w-2xl">
                 Our programs are more than just courses - they are immersive
                 experiences that provide practical leadership skills through
-                education, empowerment, collaboration and community building
+                education, empowerment, collaboration and community building.
               </p>
             </motion.div>
           </div>
@@ -122,7 +124,7 @@ const Programme = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="border border-gray-200 px-5 md:px-10 pt-5 md:pt-10 rounded-xl"
+              className="border border-gray-200 bg-gradient-to-br from-primaryRed/15 via-primaryWhite to-primaryWhite px-5 md:px-10 pt-5 md:pt-10 rounded-xl"
             >
               <div className="flex md:flex-row flex-col gap-8 items-start mb-8">
                 <Image
@@ -159,7 +161,7 @@ const Programme = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="border border-gray-200 px-5 md:px-10 pt-5 md:pt-10 rounded-xl"
+              className="border bg-gradient-to-br from-primaryRed/15 via-primaryWhite to-primaryWhite border-gray-200 px-5 md:px-10 pt-5 md:pt-10 rounded-xl"
             >
               <div className="flex md:flex-row flex-col gap-8 items-start mb-10">
                 <Image
@@ -201,9 +203,9 @@ const Programme = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="w-full flex justify-center mt-10"
+            className="w-full flex justify-center"
           >
-            <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto mt-10">
               <Button
                 primaryText="Find Out More"
                 hoverText="Find Out More"
@@ -218,6 +220,7 @@ const Programme = () => {
                 primaryText="Learn More About TYIL"
                 hoverText="Learn More About TYIL"
                 icon={RxVideo}
+                onClick={() => setIsOpen(true)}
                 iconPosition="left"
                 className="gap-2 px-8 py-3 sm:w-64 text-sm sm:text-base w-full"
                 aria-label="youtube video button"
@@ -227,6 +230,9 @@ const Programme = () => {
           </motion.div>
         </div>
       </Container>
+
+      {/* video modal */}
+      {isOpen && <VideoModal onClick={() => setIsOpen(false)} />}
     </section>
   );
 };
