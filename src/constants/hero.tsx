@@ -44,25 +44,7 @@ export const HERO_IMAGES = [
     url: "/hero/HERO_IMG_6.jpg",
     alt: "Commercial Building Facade - Glass and aluminum",
     title: "Building Solutions",
-  },
-  {
-    id: 8,
-    url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2076&q=80",
-    alt: "Industrial Construction - Steel and aluminum framework",
-    title: "Industrial Projects",
-  },
-  {
-    id: 9,
-    url: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2058&q=80",
-    alt: "Modern Entrance Doors - Commercial aluminum doors",
-    title: "Entrance Systems",
-  },
-  {
-    id: 10,
-    url: "https://images.unsplash.com/photo-1565182999561-18d7dc61c393?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    alt: "Architectural Details - Modern aluminum and glass",
-    title: "Architectural Details",
-  },
+  }
 ] as const;
 
 export type HeroImage = (typeof HERO_IMAGES)[number];

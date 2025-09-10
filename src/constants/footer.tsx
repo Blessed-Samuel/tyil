@@ -39,7 +39,7 @@ export const contactLinks = {
   },
   phoneNumber: {
     label: "Phone",
-    number: "+234-8162-0125-05",
+    number: "+234 8162-0125-05",
     href: "tel:+2348162012505",
   },
 };

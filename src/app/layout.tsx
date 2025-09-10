@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import "@radix-ui/themes/styles.css";
@@ -33,8 +33,8 @@ const organizationSchema = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+234-xxx-xxx-xxxx",
-    contactType: "customer service",
+    telephone: "+234 8162-0125-05",
+    contactType: "Support",
     availableLanguage: "English",
   },
   sameAs: [
@@ -74,18 +74,6 @@ const webpageSchema = {
     courseMode: "blended",
     educationalLevel: "Professional",
   },
-};
-
-// Viewport
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
-  ],
-  colorScheme: "light dark",
 };
 
 // Metadata
@@ -204,19 +192,6 @@ export const metadata: Metadata = {
       "en-NG": "/en-NG",
     },
   },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
   icons: {
     icon: [
       { url: "/tyil-logo.svg", sizes: "any" },
@@ -275,15 +250,7 @@ export const metadata: Metadata = {
     capable: true,
     title: "TYIL Leadership",
     statusBarStyle: "default",
-  },
-  other: {
-    "msapplication-TileColor": "#2b5797",
-    "msapplication-config": "/browserconfig.xml",
-    "google-site-verification": "your-google-verification-code",
-    "mobile-web-app-capable": "yes",
-    "apple-mobile-web-app-capable": "yes",
-    "apple-mobile-web-app-status-bar-style": "black-translucent",
-  },
+  }
 };
 
 export default function RootLayout({
@@ -320,20 +287,6 @@ export default function RootLayout({
           <BackToTop />
           <Footer />
         </Theme>
-
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'GA_MEASUREMENT_ID');
-          `}
-        </Script>
       </body>
     </html>
   );

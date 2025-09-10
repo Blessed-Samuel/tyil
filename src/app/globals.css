@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import "tailwindcss";
 /* =========================z=====
    Root variables (Light mode default)
@@ -8,11 +8,11 @@
   --foreground: #181818;
 
   /* custom fonts */
-  --font-inter: 'Inter Tight', sans-serif;
-  --font-playfair: 'Playfair Display', serif;
+  --font-inter: "Inter Tight", sans-serif;
+  --font-playfair: "Playfair Display", serif;
 
   /* custom colors */
-  --primaryRed: #D91D1D;
+  --primaryRed: #d91d1d;
   --primaryBlack: #181818;
   --primaryWhite: #fdfdfd;
 }
@@ -43,24 +43,25 @@
 /* ==============================
    Global HTML Styles
    ============================== */
+
 html {
   scroll-behavior: smooth;
-}
 
-/* ==============================
+  /* ==============================
    Custom Scrollbar Styling
    ============================== */
-html::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
-}
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
 
-html::-webkit-scrollbar-track {
-  background: #f0f0f0; /* Track color */
-}
+  ::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Track color */
+  }
 
-html::-webkit-scrollbar-thumb {
-  background-color: var(--primaryRed); /* Thumb color */ 
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--primaryRed); /* Thumb color */
+  }
 }
 
 /* ==============================
