@@ -67,7 +67,7 @@ const Programme = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
             >
-              <p className="text-base sm:text-lg text-center text-primaryBlack/60 mt-4 max-w-2xl">
+              <p className="text-base sm:text-lg text-center text-gray-600 mt-4 max-w-2xl">
                 Our programs are more than just courses - they are immersive
                 experiences that provide practical leadership skills through
                 education, empowerment, collaboration and community building.
@@ -97,13 +97,11 @@ const Programme = () => {
                   <h3 className="uppercase font-bold text-lg sm:text-2xl text-center text-primaryBlack">
                     Tyil Fellowship
                   </h3>
-                  <p className="text-base sm:text-lg text-start text-primaryBlack/60">
-                    The Fellowship is a unique and collaborative program that
-                    provides a platform for individuals who have been trained
-                    and certified as a fellow of the TYIL program. This program
-                    is designed to provide a supportive community for fellows to
-                    connect and share their knowledge, experiences, and
-                    insights.
+                  <p className="text-base sm:text-lg text-start text-gray-600">
+                    The TYIL Fellowship is an eight-week program designed for
+                    post-secondary and college level youth to engage in
+                    practice-based leadership, collaborate and connect with
+                    other fellows in solving social and community problems.
                   </p>
                 </div>
               </div>
@@ -135,13 +133,12 @@ const Programme = () => {
                 />
                 <div className="flex flex-col gap-2 items-start">
                   <h3 className="uppercase font-bold text-lg sm:text-2xl text-center text-primaryBlack">
-                    Community Development
+                    LeadSmart Project
                   </h3>
                   <p className="text-base sm:text-lg text-start text-primaryBlack/60">
-                    Our projects are designed to have a lasting impact on our
-                    community, and we are committed to not only delivering
-                    immediate results but also ensuring that our efforts will
-                    have a ripple effect that will be felt for years to come.
+                    The LeadSmart Project is a four-week in-school and hands-on
+                    leadership development program targeted at educating and
+                    empowering secondary school youth.
                   </p>
                 </div>
               </div>
@@ -172,16 +169,12 @@ const Programme = () => {
                 />
                 <div className="flex flex-col gap-2 items-start">
                   <h3 className="uppercase font-bold text-lg sm:text-2xl text-center text-primaryBlack">
-                    Leadquest Conference
+                    Climate Change Education
                   </h3>
                   <p className="text-base sm:text-lg text-start text-primaryBlack/60">
-                    We recognize the critical importance of investing in the
-                    futures of young leaders, and as such, we are pleased to
-                    regularly host informative and empowering conferences aimed
-                    at instilling necessary knowledge and skills from a young
-                    age, thus ensuring that our next generation of leaders is
-                    equipped with the tools and expertise they need to help
-                    Africa continue to thrive and flourish for years to come.
+                    Designed to provide participatory learning experience,
+                    hands-on activities and exposure to real-world climate
+                    change problems and solutions.
                   </p>
                 </div>
               </div>

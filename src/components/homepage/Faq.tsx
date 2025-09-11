@@ -72,7 +72,7 @@ const Faq = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-base text-primaryBlack/60 sm:text-lg text-start mt-4 max-w-xl">
+                <p className="text-base text-gray-600 sm:text-lg text-start mt-4 max-w-xl">
                   Find answers to common questions about TYIL&apos;s services,
                   products, and processes.
                 </p>
@@ -129,43 +129,43 @@ const Faq = () => {
           </div>
 
           {/* Content Section - Right Side */}
-            <div className="space-y-4">
-              {FAQ_CONTENT.map(faq => (
-                <div
-                  key={faq.id}
-                  className="bg-white border border-gray-200 rounded-lg"
+          <div className="space-y-4">
+            {FAQ_CONTENT.map(faq => (
+              <div
+                key={faq.id}
+                className="bg-white border border-gray-200 rounded-lg"
+              >
+                {/* Button / Title */}
+                <button
+                  onClick={() => toggleItem(faq.id)}
+                  className="w-full px-6 py-5 text-left flex items-center justify-between cursor-pointer rounded-lg"
                 >
-                  {/* Button / Title */}
-                  <button
-                    onClick={() => toggleItem(faq.id)}
-                    className="w-full px-6 py-5 text-left flex items-center justify-between cursor-pointer rounded-lg"
-                  >
-                    <h3 className="text-lg font-semibold text-gray-900 pr-4">
-                      {faq.title}
-                    </h3>
-                    <HiChevronDown
-                      className={`w-5 h-5 text-gray-500 transform transition-transform duration-300 ${
-                        expandedItem === faq.id ? "rotate-180" : "rotate-0"
-                      }`}
-                    />
-                  </button>
-
-                  {/* Sliding Content */}
-                  <div
-                    className={`px-6 transition-all duration-300 ease-in-out overflow-hidden ${
-                      expandedItem === faq.id ? "max-h-40 pb-5" : "max-h-0"
+                  <h3 className="text-lg font-semibold text-primaryBlack pr-4">
+                    {faq.title}
+                  </h3>
+                  <HiChevronDown
+                    className={`w-5 h-5 text-gray-600 transform transition-transform duration-300 ${
+                      expandedItem === faq.id ? "rotate-180" : "rotate-0"
                     }`}
-                  >
-                    <div className="border-t border-gray-100 pt-4">
-                      <p className="text-gray-700 leading-relaxed">
-                        {faq.description}
-                      </p>
-                    </div>
+                  />
+                </button>
+
+                {/* Sliding Content */}
+                <div
+                  className={`px-6 transition-all duration-300 ease-in-out overflow-hidden ${
+                    expandedItem === faq.id ? "max-h-40 pb-5" : "max-h-0"
+                  }`}
+                >
+                  <div className="border-t border-gray-100 pt-4">
+                    <p className="text-gray-600 leading-relaxed">
+                      {faq.description}
+                    </p>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
+        </div>
       </Container>
     </section>
   );

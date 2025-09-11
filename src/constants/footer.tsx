@@ -22,7 +22,7 @@ export const footerLinks = [
     ],
   },
   {
-    title: "Helpful Links",
+    title: "Other Links",
     links: [
       { label: "Podcasts", href: "/podcasts" },
       { label: "Integrations", href: "/integrations" },

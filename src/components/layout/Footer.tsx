@@ -44,7 +44,7 @@ const Footer = () => {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="inline-block transition-all duration-300 hover:translate-x-1 hover:text-primaryPurple font-mono hover:underline"
+                      className="inline-block transition-all duration-300 hover:translate-x-1 hover:text-primaryPurple hover:underline"
                     >
                       {link.label}
                     </Link>

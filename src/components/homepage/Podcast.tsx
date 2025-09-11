@@ -44,10 +44,7 @@ const Podcast = () => {
   };
 
   return (
-    <section
-      className="py-16 sm:py-20 bg-[url('/podcast_bg.svg')] bg-no-repeat bg-cover bg-center"
-      //   style={{ backgroundImage: "url('/podcast_bg.svg')" }}
-    >
+    <section className="py-16 sm:py-20 bg-[url('/podcast_bg.svg')] bg-no-repeat bg-cover bg-center">
       <Container>
         {/* Flex wrapper with equal columns on desktop */}
         <div className="flex flex-col md:flex-row items-center gap-5">
@@ -87,14 +84,9 @@ const Podcast = () => {
                 viewport={{ once: true, amount: 0.2 }}
               >
                 <p className="text-base text-white/50 sm:text-lg text-start mt-4 max-w-xl">
-                  Dive into conversations that spark ideas, challenge
-                  perspectives, and inspire growth. Our podcast brings together
-                  thought leaders, innovators, and everyday people with
-                  extraordinary stories to share. Whether it&apos;s insights on
-                  technology, business, creativity, or personal development,
-                  each episode is designed to help you rise above mediocrity and
-                  make better decisions in life and work. Plug in, stay
-                  inspired, and join the journey toward becoming your best self.
+                  Learn from seasoned leadership professionals and scholars on
+                  topics related to youth leadership, followership, and change
+                  making.
                 </p>
               </motion.div>
               <motion.div

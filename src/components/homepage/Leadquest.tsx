@@ -44,12 +44,11 @@ const Leadquest = () => {
   };
 
   const handleClick = () => {
-    console.log("Get in touch clicked");
-    // router.push("/publications");
+    window.location.href = "mailto:tyilcommunity@gmail.com";
   };
 
   return (
-    <section className="py-16 sm:py-5">
+    <section className="py-16 sm:py-5 border-t border-gray-200">
       <Container>
         {/* Flex wrapper with equal columns on desktop */}
         <div className="flex flex-col-reverse md:flex-row items-center gap-5">
@@ -106,7 +105,7 @@ const Leadquest = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-base sm:text-lg text-start text-primaryBlack/60 mt-4 max-w-xl">
+                <p className="text-base sm:text-lg text-start text-gray-600 mt-4 max-w-xl">
                   Connect with Your Audience: Tailoring experiences to build
                   trust through empathy and effective communication.
                 </p>
