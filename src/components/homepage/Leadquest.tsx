@@ -105,7 +105,7 @@ const Leadquest = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-base sm:text-lg text-start text-gray-600 mt-4 max-w-xl">
+                <p className="text-sm sm:text-base text-start text-gray-600 mt-4 max-w-xl">
                   Connect with Your Audience: Tailoring experiences to build
                   trust through empathy and effective communication.
                 </p>

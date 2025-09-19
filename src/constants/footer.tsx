@@ -12,7 +12,7 @@ export const footerLinks = [
   },
 
   {
-    title: "Company",
+    title: "Quick Links",
     links: [
       { label: "Home", href: "/" },
       { label: "About Us", href: "/about" },

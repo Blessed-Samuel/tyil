@@ -68,7 +68,7 @@ const RollingCounter: React.FC<MetricProps> = ({ target, suffix, label }) => {
       className="flex flex-col items-center justify-between"
     >
       {/* Rolling number */}
-      <div className="text-8xl md:text-9xl font-bold text-white overflow-hidden">
+      <div className="text-6xl md:text-9xl font-bold text-white overflow-hidden">
         <span className="inline-block tracking-tight animate-[roll_0.2s_ease-in-out]">
           {count}
         </span>

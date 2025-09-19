@@ -119,11 +119,11 @@ const Hero: React.FC<contentProps> = ({ title, description, button }) => {
 
         {/* Hero Content */}
         <div className="relative z-20 text-center md:text-left text-white lg:max-w-8xl max-w-4xl mt-16 md:mt-20">
-          <h1 className="text-4xl sm:text-5xl tracking-tight md:text-7xl lg:text-7xl uppercase leading-tight sm:leading-20 font-bold mb-6 animate-fade-in-up">
+          <h1 className="text-3xl sm:text-5xl tracking-tight md:text-7xl lg:text-7xl uppercase leading-tight sm:leading-20 font-bold mb-6 animate-fade-in-up">
             {title}
           </h1>
 
-          <p className="text-lg md:hidden sm:text-lg md:text-xl font-light leading-relaxed mb-8 animate-fade-in-up animation-delay-300 px-2 sm:px-0">
+          <p className="text-sm md:hidden sm:text-lg md:text-xl font-light leading-relaxed mb-8 animate-fade-in-up animation-delay-300 px-2 sm:px-0">
             {description}
           </p>
 

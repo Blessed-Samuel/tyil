@@ -67,7 +67,7 @@ const Programme = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
             >
-              <p className="text-base sm:text-lg text-center text-gray-600 mt-4 max-w-2xl">
+              <p className="text-sm sm:text-base text-center text-gray-600 mt-4 max-w-2xl">
                 Our programs are more than just courses - they are immersive
                 experiences that provide practical leadership skills through
                 education, empowerment, collaboration and community building.
@@ -97,7 +97,7 @@ const Programme = () => {
                   <h3 className="uppercase font-bold text-lg sm:text-2xl text-center text-primaryBlack">
                     Tyil Fellowship
                   </h3>
-                  <p className="text-base sm:text-lg text-start text-gray-600">
+                  <p className="text-sm sm:text-base text-start text-gray-600">
                     The TYIL Fellowship is an eight-week program designed for
                     post-secondary and college level youth to engage in
                     practice-based leadership, collaborate and connect with
@@ -135,7 +135,7 @@ const Programme = () => {
                   <h3 className="uppercase font-bold text-lg sm:text-2xl text-center text-primaryBlack">
                     LeadSmart Project
                   </h3>
-                  <p className="text-base sm:text-lg text-start text-primaryBlack/60">
+                  <p className="text-sm sm:text-base text-start text-primaryBlack/60">
                     The LeadSmart Project is a four-week in-school and hands-on
                     leadership development program targeted at educating and
                     empowering secondary school youth.
@@ -171,7 +171,7 @@ const Programme = () => {
                   <h3 className="uppercase font-bold text-lg sm:text-2xl text-center text-primaryBlack">
                     Climate Change Education
                   </h3>
-                  <p className="text-base sm:text-lg text-start text-primaryBlack/60">
+                  <p className="text-sm sm:text-base text-start text-primaryBlack/60">
                     Designed to provide participatory learning experience,
                     hands-on activities and exposure to real-world climate
                     change problems and solutions.

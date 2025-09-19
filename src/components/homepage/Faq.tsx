@@ -72,7 +72,7 @@ const Faq = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-base text-gray-600 sm:text-lg text-start mt-4 max-w-xl">
+                <p className="text-sm text-gray-600 sm:text-base text-start mt-4 max-w-xl">
                   Find answers to common questions about TYIL&apos;s services,
                   products, and processes.
                 </p>
@@ -81,7 +81,7 @@ const Faq = () => {
 
             {/* support section */}
             <div className="mt-12 text-start">
-              <div className="bg-gray-50 rounded-lg p-8">
+              <div className="bg-gray-50 rounded-lg p-6">
                 <motion.div
                   custom={0}
                   variants={slideLeft}
@@ -101,7 +101,7 @@ const Faq = () => {
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}
                 >
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-600 mb-4 text-sm sm:text-base">
                     Can&apos;t find the answer you&apos;re looking for? Our team
                     is here to help.
                   </p>
@@ -153,11 +153,11 @@ const Faq = () => {
                 {/* Sliding Content */}
                 <div
                   className={`px-6 transition-all duration-300 ease-in-out overflow-hidden ${
-                    expandedItem === faq.id ? "max-h-40 pb-5" : "max-h-0"
+                    expandedItem === faq.id ? "max-h-50 pb-5" : "max-h-0"
                   }`}
                 >
                   <div className="border-t border-gray-100 pt-4">
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                       {faq.description}
                     </p>
                   </div>

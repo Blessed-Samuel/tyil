@@ -49,7 +49,8 @@ const Outcomes = () => {
     <section className="py-10 sm:py-20 bg-[url('/outcomes_bg_img.svg')] bg-no-repeat bg-cover bg-center">
       <div className="pl-4 sm:pl-6 pr-4">
         <div className="flex flex-col md:flex-row items-start justify-between gap-12 md:gap-20">
-          <div className="w-full md:w-auto">
+          {/* Left column (Text) */}
+          <div className="w-full md:w-1/2">
             <motion.div
               custom={0}
               variants={slideLeft}
@@ -103,7 +104,7 @@ const Outcomes = () => {
                       <h3 className="uppercase font-bold text-lg sm:text-2xl text-white">
                         {outcome.title}
                       </h3>
-                      <p className="text-white leading-relaxed max-w-full sm:max-w-md">
+                      <p className="text-white leading-relaxed max-w-full sm:max-w-md text-sm sm:text-base">
                         {outcome.description}
                       </p>
                     </motion.div>
@@ -113,20 +114,21 @@ const Outcomes = () => {
             )}
           </div>
 
+          {/* Right column (Image) */}
           <motion.div
             custom={0}
             variants={slideRight}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="w-full md:w-auto mt-3 md:mt-0"
+            className="w-full md:w-1/2 mt-3 md:mt-0 flex justify-center md:justify-end"
           >
             <Image
-              src="/outcomes_img.svg"
+              src="/outcomes_img.png"
               alt="outcomes image"
-              width={100}
-              height={100}
-              className="h-auto w-full"
+              width={1000}
+              height={1000}
+              className="h-auto w-[80%] md:w-full object-contain"
               priority={true}
             />
           </motion.div>

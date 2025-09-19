@@ -73,7 +73,7 @@ const Story = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
             >
-              <p className="text-base text-gray-600 sm:text-lg text-start mt-4 max-w-xl">
+              <p className="text-sm text-gray-600 sm:text-base text-start mt-0 max-w-xl">
                 We believe that every young person has the potential to lead. At
                 TYIL, we&apos;re dedicated to transforming that potential into
                 purpose by providing a platform for growth, collaboration, and
@@ -117,15 +117,15 @@ const Story = () => {
                 <Image
                   src="/icons/story_mission_icon.svg"
                   alt="mission icon"
-                  width={70}
-                  height={70}
+                  width={60}
+                  height={60}
                   priority={true}
                 />
                 <div className="flex flex-col gap-2 items-start">
                   <h3 className="uppercase font-bold text-lg sm:text-2xl text-center text-primaryBlack">
                     Our Mission
                   </h3>
-                  <p className="text-base sm:text-lg text-start text-primaryBlack/60">
+                  <p className="text-sm sm:text-base text-start text-primaryBlack/60">
                     To educate all African youth in the area of leadership,
                     empower them through the provision of resources to be
                     change-makers in their communities, foster collaboration
@@ -147,15 +147,15 @@ const Story = () => {
                 <Image
                   src="/icons/story_vision_icon.svg"
                   alt="mission icon"
-                  width={70}
-                  height={70}
+                  width={60}
+                  height={60}
                   priority={true}
                 />
                 <div className="flex flex-col gap-2 items-start">
                   <h3 className="uppercase font-bold text-lg sm:text-2xl text-center text-primaryBlack">
                     Our Vision
                   </h3>
-                  <p className="text-base sm:text-lg text-start text-primaryBlack/60">
+                  <p className="text-sm sm:text-base text-start text-primaryBlack/60">
                     The vision of TYIL is to raise leaders who embody
                     transformational leadership as they occupy every sector of
                     Africa by 2050.

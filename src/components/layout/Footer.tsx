@@ -21,8 +21,8 @@ const Footer = () => {
 
   return (
     <div className="bg-primaryRed">
-      <footer className="bg-primaryWhite translate-y-2 border-t border-t-gray-200 py-5 text-sm text-primaryBlack">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 px-4 sm:px-6 lg:px-4 py-24">
+      <footer className="bg-primaryWhite translate-y-1 border-t border-t-gray-200 py-5 text-sm text-primaryBlack">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-16 px-4 sm:px-6 lg:px-4 py-20">
           {/* brand logo */}
           <Image
             src="/tyil-logo.svg"

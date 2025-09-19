@@ -84,9 +84,9 @@ const BoardOfDirectors = () => {
                     <Image
                       src={member.image}
                       alt={member.name}
-                      width={300}
-                      height={300}
-                      className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+                      width={100}
+                      height={100}
+                      className="w-[80%] sm:w-full max-w-[250px] mx-auto h-auto group-hover:scale-105 transition-transform duration-300"
                       priority={true}
                     />
                   </div>

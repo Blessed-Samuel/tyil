@@ -44,7 +44,7 @@ const About = () => {
               viewport={{ once: true, amount: 0.2 }}
               className="relative text-center md:text-left"
             >
-              <Heading className="text-6xl sm:text-4xl md:text-5xl leading-tight">
+              <Heading className="text-4xl sm:text-4xl md:text-5xl leading-tight">
                 Where Great
                 <br /> Leader{" "}
                 <span className="italic font-secondaryFont">Grow</span>
@@ -54,7 +54,7 @@ const About = () => {
                 alt="star_Image"
                 width={20}
                 height={20}
-                className="absolute top-22 md:top-16 right-10"
+                className="absolute -top-40 md:top-16 right-10"
               />
               <Image
                 src="/rectangle.svg"
@@ -95,7 +95,7 @@ const About = () => {
               viewport={{ once: true, amount: 0.2 }}
               className="text-center md:text-left"
             >
-              <p className="text-base sm:text-lg font-normal text-gray-600 leading-relaxed mb-8 max-w-sm mx-auto md:mx-0">
+              <p className="text-sm sm:text-base font-normal text-gray-600 leading-relaxed mb-8 max-w-sm mx-auto md:mx-0">
                 Raising young transformational leaders who will occupy every
                 sector of Africa by 2050
               </p>
