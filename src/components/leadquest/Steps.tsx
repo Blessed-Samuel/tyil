@@ -19,7 +19,8 @@ const Steps = () => {
     }),
   };
 
-  const steps = [
+  // Steps data
+  const steps: { number: string; title: string; desc: string }[] = [
     {
       number: "1",
       title: "Fill in and submit the form",
@@ -32,8 +33,8 @@ const Steps = () => {
     },
     {
       number: "3",
-      title: "I",
-      desc: "Access resources, join sessions, and grow with expert-led guidance.",
+      title: "Interactive Quests",
+      desc: "Complete challenges and simulations to apply your skills in real-world scenarios.",
     },
   ];
 
@@ -66,6 +67,7 @@ const Steps = () => {
                 </span>
               </Heading>
             </motion.div>
+
             <motion.div
               custom={0}
               variants={slideUp}
@@ -73,7 +75,7 @@ const Steps = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
             >
-              <p className="text-sm sm:text-base text-center text-primaryBlack/60 mt-4 max-w-2xl">
+              <p className="text-sm text-center text-primaryBlack/60 mt-4 max-w-xl">
                 Our modular approach guides you through every step of your
                 development with expert-led content and actionable insights.
               </p>
@@ -82,9 +84,9 @@ const Steps = () => {
         </div>
 
         {/* Steps Timeline */}
-        <div className="relative mt-12 max-w-4xl mx-auto">
-          {/* Divider line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-gray-200"></div>
+        <div className="relative sm:mt-20 mt-10 max-w-4xl mx-auto">
+          {/* Divider line (hidden on mobile, visible on md+) */}
+          <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 h-full w-[1px] bg-gradient-to-b from-white via-gray-300 to-white"></div>
 
           {steps.map((step, i) => (
             <motion.div
@@ -94,25 +96,23 @@ const Steps = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className={`mb-12 flex flex-col sm:flex-row items-center sm:items-start ${
+              className={`mb-12 flex flex-col sm:flex-row items-start ${
                 i % 2 === 0 ? "sm:justify-start" : "sm:justify-end"
               }`}
             >
               {/* Number Circle */}
-              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold z-10">
+              <div className="flex items-center justify-start text-6xl text-gray-100 font-bold z-10">
                 {step.number}
               </div>
 
               {/* Content */}
               <div
-                className={`mt-4 sm:mt-0 sm:max-w-sm px-6 ${
-                  i % 2 === 0
-                    ? "sm:ml-6 text-left"
-                    : "sm:mr-6 text-left sm:text-right"
+                className={`-mt-10 sm:mt-4 ml-4 sm:ml-0 sm:max-w-sm z-10 ${
+                  i % 2 === 0 ? "sm:-ml-2 text-left" : "sm:-ml-2 text-left"
                 }`}
               >
-                <h3 className="text-xl font-semibold">{step.title}</h3>
-                <p className="text-sm text-primaryBlack/70 mt-2">{step.desc}</p>
+                <h3 className="text-2xl font-semibold">{step.title}</h3>
+                <p className="text-sm text-primaryBlack/60 mt-2">{step.desc}</p>
               </div>
             </motion.div>
           ))}

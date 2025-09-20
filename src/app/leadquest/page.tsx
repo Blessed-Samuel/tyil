@@ -6,6 +6,8 @@ import { leadquestHeroContent } from "@/constants/hero";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Button from "@/components/ui/Button";
 import Steps from "@/components/leadquest/Steps";
+import Details from "@/components/leadquest/Details";
+import RegistrationForm from "@/components/leadquest/Form";
 
 const Leadquest = () => {
   const handleClick = () => {
@@ -17,7 +19,7 @@ const Leadquest = () => {
   };
 
   return (
-    <section>
+    <section className="font-primaryFont">
       <Hero
         title={leadquestHeroContent.title as string}
         description={leadquestHeroContent.description as string}
@@ -34,7 +36,9 @@ const Leadquest = () => {
           />
         }
       />
-      <Steps/>
+      <Steps />
+      <Details />
+      <RegistrationForm/>
     </section>
   );
 };
