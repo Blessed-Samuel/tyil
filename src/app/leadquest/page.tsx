@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import { leadquestHeroContent } from "@/constants/hero";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Button from "@/components/ui/Button";
+import Steps from "@/components/leadquest/Steps";
 
 const Leadquest = () => {
   const handleClick = () => {
@@ -16,7 +17,7 @@ const Leadquest = () => {
   };
 
   return (
-    <div>
+    <section>
       <Hero
         title={leadquestHeroContent.title as string}
         description={leadquestHeroContent.description as string}
@@ -33,7 +34,8 @@ const Leadquest = () => {
           />
         }
       />
-    </div>
+      <Steps/>
+    </section>
   );
 };
 

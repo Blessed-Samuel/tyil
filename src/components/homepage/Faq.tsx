@@ -129,18 +129,14 @@ const Faq = () => {
           </div>
 
           {/* Content Section - Right Side */}
-          <div className="space-y-4">
+          <div className="space-y-2">
             {FAQ_CONTENT.map(faq => (
-              <div
-                key={faq.id}
-                className="bg-white border border-gray-200 rounded-lg"
-              >
-                {/* Button / Title */}
+              <div key={faq.id} className="bg-white border-b border-gray-200">
                 <button
                   onClick={() => toggleItem(faq.id)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between cursor-pointer rounded-lg"
+                  className="w-full px-6 py-5 text-left flex items-center justify-between cursor-pointer"
                 >
-                  <h3 className="text-lg font-semibold text-primaryBlack pr-4">
+                  <h3 className="text-base font-semibold text-primaryBlack pr-4">
                     {faq.title}
                   </h3>
                   <HiChevronDown
@@ -153,14 +149,12 @@ const Faq = () => {
                 {/* Sliding Content */}
                 <div
                   className={`px-6 transition-all duration-300 ease-in-out overflow-hidden ${
-                    expandedItem === faq.id ? "max-h-50 pb-5" : "max-h-0"
+                    expandedItem === faq.id ? "max-h-96 pb-5" : "max-h-0"
                   }`}
                 >
-                  <div className="border-t border-gray-100 pt-4">
-                    <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                      {faq.description}
-                    </p>
-                  </div>
+                  <p className="text-gray-600 leading-relaxed text-sm">
+                    {faq.description}
+                  </p>
                 </div>
               </div>
             ))}

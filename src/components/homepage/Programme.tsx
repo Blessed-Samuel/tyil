@@ -11,6 +11,9 @@ import { motion, Variants } from "framer-motion";
 import { RxVideo } from "react-icons/rx";
 import { useRouter } from "next/navigation";
 import VideoModal from "../ui/VideoModal";
+import { FaPeopleRoof } from "react-icons/fa6";
+import { MdOutlineCastForEducation } from "react-icons/md";
+import { IoGitNetworkOutline } from "react-icons/io5";
 
 const Programme = () => {
   const router = useRouter();
@@ -35,7 +38,7 @@ const Programme = () => {
   };
 
   return (
-    <section className="py-16 sm:py-5">
+    <section className="py-8 sm:py-2">
       <Container>
         <div className="flex flex-col justify-center items-center">
           <motion.div
@@ -76,7 +79,7 @@ const Programme = () => {
           </div>
 
           {/* image grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 my-10">
             {/* First image spanning full width */}
             <motion.div
               custom={0}
@@ -84,20 +87,18 @@ const Programme = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="md:col-span-2 border border-gray-200 px-5 md:px-10 pt-5 md:pt-10 rounded-xl"
+              className="border border-gray-200 bg-gradient-to-br from-primaryRed/10 via-primaryWhite to-primaryWhite px-5 md:px-10 pt-5 md:pt-10 rounded-xl"
             >
-              <div className="flex md:flex-row flex-col gap-8 items-start mb-8">
-                <Image
-                  src="/icons/fellowship.svg"
-                  alt="fellowship_icon"
-                  width={70}
-                  height={70}
-                />
+              <div className="flex flex-col gap-3 items-start mb-8">
+                <div className="rounded-full bg-primaryRed/10 p-3">
+                  <FaPeopleRoof className="w-5 h-5" />
+                </div>
+
                 <div className="flex flex-col gap-2 items-start">
-                  <h3 className="uppercase font-bold text-lg sm:text-2xl text-center text-primaryBlack">
+                  <h3 className="uppercase font-bold text-lg sm:text-xl text-center text-primaryBlack">
                     Tyil Fellowship
                   </h3>
-                  <p className="text-sm sm:text-base text-start text-gray-600">
+                  <p className="text-sm text-start text-gray-600">
                     The TYIL Fellowship is an eight-week program designed for
                     post-secondary and college level youth to engage in
                     practice-based leadership, collaborate and connect with
@@ -110,32 +111,30 @@ const Programme = () => {
                 alt="card_image_1"
                 width={100}
                 height={100}
-                className="h-auto w-full"
+                className="h-auto w-auto"
                 priority
               />
             </motion.div>
 
-            {/* Two images below side by side */}
+            {/* Second card */}
             <motion.div
               custom={1}
               variants={slideUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="border border-gray-200 bg-gradient-to-br from-primaryRed/15 via-primaryWhite to-primaryWhite px-5 md:px-10 pt-5 md:pt-10 rounded-xl"
+              className="border border-gray-200 bg-gradient-to-br from-primaryRed/10 via-primaryWhite to-primaryWhite px-5 md:px-10 pt-5 md:pt-10 rounded-xl"
             >
-              <div className="flex md:flex-row flex-col gap-8 items-start mb-8">
-                <Image
-                  src="/icons/development.svg"
-                  alt="development_icon"
-                  width={70}
-                  height={70}
-                />
+              <div className="flex flex-col gap-2 items-start mb-8">
+                <div className="rounded-full bg-primaryRed/10 p-3">
+                  <IoGitNetworkOutline className="w-5 h-5" />
+                </div>
+
                 <div className="flex flex-col gap-2 items-start">
-                  <h3 className="uppercase font-bold text-lg sm:text-2xl text-center text-primaryBlack">
+                  <h3 className="uppercase font-bold text-lg sm:text-xl text-center text-primaryBlack">
                     LeadSmart Project
                   </h3>
-                  <p className="text-sm sm:text-base text-start text-primaryBlack/60">
+                  <p className="text-sm text-start text-primaryBlack/60">
                     The LeadSmart Project is a four-week in-school and hands-on
                     leadership development program targeted at educating and
                     empowering secondary school youth.
@@ -152,26 +151,25 @@ const Programme = () => {
               />
             </motion.div>
 
+            {/* Third card */}
             <motion.div
               custom={2}
               variants={slideUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="border bg-gradient-to-br from-primaryRed/15 via-primaryWhite to-primaryWhite border-gray-200 px-5 md:px-10 pt-5 md:pt-10 rounded-xl"
+              className="border bg-gradient-to-br from-primaryRed/10 via-primaryWhite to-primaryWhite border-gray-200 px-5 md:px-10 pt-5 md:pt-10 rounded-xl"
             >
-              <div className="flex md:flex-row flex-col gap-8 items-start mb-10">
-                <Image
-                  src="/icons/conference.svg"
-                  alt="conference_icon"
-                  width={70}
-                  height={70}
-                />
+              <div className="flex flex-col gap-2 justify-between items-start mb-10">
+                <div className="rounded-full bg-primaryRed/10 p-3">
+                  <MdOutlineCastForEducation className="w-5 h-5" />
+                </div>
+
                 <div className="flex flex-col gap-2 items-start">
-                  <h3 className="uppercase font-bold text-lg sm:text-2xl text-center text-primaryBlack">
+                  <h3 className="uppercase font-bold text-lg sm:text-xl text-start text-primaryBlack">
                     Climate Change Education
                   </h3>
-                  <p className="text-sm sm:text-base text-start text-primaryBlack/60">
+                  <p className="text-sm text-start text-primaryBlack/60">
                     Designed to provide participatory learning experience,
                     hands-on activities and exposure to real-world climate
                     change problems and solutions.
@@ -198,7 +196,7 @@ const Programme = () => {
             viewport={{ once: true, amount: 0.2 }}
             className="w-full flex justify-center"
           >
-            <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto mt-10">
+            <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto mt-5">
               <Button
                 primaryText="Find Out More"
                 hoverText="Find Out More"
