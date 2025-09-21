@@ -11,6 +11,7 @@ import BackToTop from "@/components/ui/BackToTop";
 const interTight = Inter_Tight({
   subsets: ["latin"],
   display: "swap",
+  fallback: ["system-ui", "sans-serif"],
 });
 
 // Moved schemas outside to avoid re-declaring
@@ -23,7 +24,7 @@ const organizationSchema = {
     "Premier leadership development and teens training organization offering comprehensive programs for emerging and young leaders",
   url: "https://tyil.org.ng",
   logo: "https://tyil.org.ng/tyil-logo.svg",
-  image: "https://tyil.org.ng/og-image.jpg",
+  image: "https://tyil.org.ng/tyil-logo.svg",
   foundingDate: "2020",
   address: {
     "@type": "PostalAddress",
@@ -195,6 +196,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/tyil-logo.svg", sizes: "any" },
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/tyil-logo.svg", sizes: "16x16", type: "image/svg" },
       { url: "/tyil-logo.svg", sizes: "32x32", type: "image/svg" },
     ],
@@ -218,7 +220,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "TYIL Leadership Development Programs",
-        type: "image/jpeg",
+        type: "image/svg",
       },
       {
         url: "/tyil-logo.svg",

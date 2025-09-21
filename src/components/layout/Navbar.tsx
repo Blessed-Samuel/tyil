@@ -94,11 +94,12 @@ const Navbar: React.FC = () => {
           className="font-black tracking-tighter text-base flex items-center justify-center gap-2"
         >
           <Image
-            src="/tyil-logo.svg"
+            src="/tyil_logo.svg"
             alt="TYIL Logo"
             priority
             width={40}
             height={40}
+            className="w-auto h-auto"
           />
         </Link>
 
@@ -134,7 +135,7 @@ const Navbar: React.FC = () => {
           primaryText="Join the WaitList"
           hoverText="Join the WaitList"
           icon={HiExternalLink}
-          iconPosition="right"
+          iconPosition="left"
           onClick={() => alert("Button Clicked!")}
           className="gap-2"
           aria-label="WaitList button"
@@ -164,11 +165,12 @@ const Navbar: React.FC = () => {
           onClick={handleLinkClick}
         >
           <Image
-            src="/tyil-logo.svg"
+            src="/tyil_logo.svg"
             alt="TYIL Logo"
             priority
             width={32}
             height={32}
+            className="w-auto h-auto"
           />
         </Link>
 

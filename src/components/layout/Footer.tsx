@@ -22,10 +22,10 @@ const Footer = () => {
   return (
     <div className="bg-primaryRed">
       <footer className="bg-primaryWhite translate-y-1 border-t border-t-gray-200 py-5 text-sm text-primaryBlack">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-16 px-4 sm:px-6 lg:px-4 py-20">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-14 px-4 sm:px-6 lg:px-4 py-20">
           {/* brand logo */}
           <Image
-            src="/tyil-logo.svg"
+            src="/tyil_logo.svg"
             alt="tyil-logo"
             width={60}
             height={60}
@@ -229,7 +229,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-5 border-t border-gray-200 pt-6 font-mono text-center text-xs text-gray-500 px-4">
-          &copy; {new Date().getFullYear()} TYIL. All rights reserved.
+          &copy; {new Date().getFullYear()} <a href="https://tyil.org.ng" className="underline">TYIL</a>. All rights reserved.
         </div>
       </footer>
     </div>

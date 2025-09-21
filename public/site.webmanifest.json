@@ -1,5 +1,5 @@
 {
-  "name": "TYIL Leadership Development",
+  "name": "TYIL | Teens And Youth In Leadership",
   "short_name": "TYIL",
   "description": "Transform your leadership potential with TYIL's comprehensive leadership development programs. Expert executive coaching and organizational leadership training.",
   "start_url": "/",
@@ -8,14 +8,35 @@
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/tyil-logo.svg",
-      "sizes": "192x192",
-      "type": "image/svg+xml"
+      "src": "/tyil_logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     },
     {
-      "src": "/tyil-logo.svg",
+      "src": "/icons/tyil-logo-48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/tyil-logo-72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/tyil-logo-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/tyil-logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/tyil-logo-512.png",
       "sizes": "512x512",
-      "type": "image/svg+xml"
+      "type": "image/png"
     }
   ]
 }
