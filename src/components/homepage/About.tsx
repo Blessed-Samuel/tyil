@@ -114,7 +114,7 @@ const About = () => {
                   icon={ArrowRightIcon}
                   iconPosition="right"
                   onClick={handleClick}
-                  className="gap-2 px-8 py-3 text-sm sm:text-base"
+                  className="gap-2 px-8 py-3 text-sm"
                   aria-label="Registration button"
                   variant="red"
                 />

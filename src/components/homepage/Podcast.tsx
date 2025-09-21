@@ -50,16 +50,6 @@ const Podcast = () => {
         <div className="flex flex-col md:flex-row items-center gap-5">
           {/* Left side - text */}
           <div className="flex-1">
-            {/* <motion.div
-              custom={0}
-              variants={slideLeft}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-            >
-              <Badge title="Publications" />
-            </motion.div> */}
-
             <div className="flex flex-col justify-start items-start my-8">
               <motion.div
                 custom={0}
@@ -103,7 +93,7 @@ const Podcast = () => {
                   icon={ArrowRightIcon}
                   iconPosition="right"
                   onClick={handleClick}
-                  className="gap-2 px-8 py-3 text-sm sm:text-base w-full sm:w-auto"
+                  className="gap-2 px-8 py-3 text-sm w-full sm:w-auto"
                   aria-label="podcast button"
                   variant="red"
                 />

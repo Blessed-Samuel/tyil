@@ -87,7 +87,7 @@ const Programme = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="border border-gray-200 bg-gradient-to-br from-primaryRed/10 via-primaryWhite to-primaryWhite px-5 md:px-10 pt-5 md:pt-10 rounded-xl"
+              className="border border-gray-200 bg-gradient-to-br from-primaryRed/10 via-primaryWhite to-primaryWhite p-8 rounded-xl"
             >
               <div className="flex flex-col gap-3 items-start mb-8">
                 <div className="rounded-full bg-primaryRed/10 p-3">
@@ -123,7 +123,7 @@ const Programme = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="border border-gray-200 bg-gradient-to-br from-primaryRed/10 via-primaryWhite to-primaryWhite px-5 md:px-10 pt-5 md:pt-10 rounded-xl"
+              className="border border-gray-200 bg-gradient-to-br from-primaryRed/10 via-primaryWhite to-primaryWhite p-8 rounded-xl"
             >
               <div className="flex flex-col gap-2 items-start mb-8">
                 <div className="rounded-full bg-primaryRed/10 p-3">
@@ -158,7 +158,7 @@ const Programme = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="border bg-gradient-to-br from-primaryRed/10 via-primaryWhite to-primaryWhite border-gray-200 px-5 md:px-10 pt-5 md:pt-10 rounded-xl"
+              className="border bg-gradient-to-br from-primaryRed/10 via-primaryWhite to-primaryWhite border-gray-200 p-8 rounded-xl"
             >
               <div className="flex flex-col gap-2 justify-between items-start mb-10">
                 <div className="rounded-full bg-primaryRed/10 p-3">
@@ -203,7 +203,7 @@ const Programme = () => {
                 icon={ArrowRightIcon}
                 iconPosition="right"
                 onClick={handleClick}
-                className="gap-2 px-8 py-3 text-sm sm:text-base w-full sm:w-auto"
+                className="gap-2 px-8 py-3 text-sm w-full sm:w-auto"
                 aria-label="programme button"
                 variant="black"
               />
@@ -213,7 +213,7 @@ const Programme = () => {
                 icon={RxVideo}
                 onClick={() => setIsOpen(true)}
                 iconPosition="left"
-                className="gap-2 px-8 py-3 sm:w-64 text-sm sm:text-base w-full"
+                className="gap-2 px-8 py-3 sm:w-64 text-sm w-full"
                 aria-label="youtube video button"
                 variant="red"
               />

@@ -79,7 +79,7 @@ const webpageSchema = {
 // Metadata
 export const metadata: Metadata = {
   title: {
-    default: "TYIL Leadership Development | Teens Training & Coaching Programs",
+    default: "TYIL  | Leadership Development",
     template: "%s | TYIL Leadership",
   },
   description:
@@ -208,8 +208,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://tyil.org.ng",
-    siteName: "TYIL Leadership Development",
-    title: "TYIL Leadership Development | Teens Training & Coaching Programs",
+    siteName: "TYIL",
+    title: "TYIL | Leadership Development",
     description:
       "Transform your leadership potential with TYIL's comprehensive leadership development programs. Expert teens coaching and young leadership training.",
     images: [
@@ -250,7 +250,7 @@ export const metadata: Metadata = {
     capable: true,
     title: "TYIL Leadership",
     statusBarStyle: "default",
-  }
+  },
 };
 
 export default function RootLayout({

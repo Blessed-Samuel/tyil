@@ -82,7 +82,7 @@ const Publication = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-sm sm:text-base text-start text-gray-600 mt-4 max-w-xl">
+                <p className="text-sm text-start text-gray-600 mt-4 max-w-xl">
                   Dive into our latest reports, research papers, and case
                   studies that are shaping the future of youth leadership.
                 </p>
@@ -101,7 +101,7 @@ const Publication = () => {
                   icon={ArrowRightIcon}
                   iconPosition="right"
                   onClick={handleClick}
-                  className="gap-2 px-8 py-3 text-sm sm:text-base w-full sm:w-auto"
+                  className="gap-2 px-8 py-3 text-sm w-full sm:w-auto"
                   aria-label="programme button"
                   variant="red"
                 />

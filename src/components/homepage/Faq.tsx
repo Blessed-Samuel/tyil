@@ -72,7 +72,7 @@ const Faq = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-sm text-gray-600 sm:text-base text-start mt-4 max-w-xl">
+                <p className="text-sm text-gray-600 text-start mt-4 max-w-xl">
                   Find answers to common questions about TYIL&apos;s services,
                   products, and processes.
                 </p>
@@ -101,7 +101,7 @@ const Faq = () => {
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}
                 >
-                  <p className="text-gray-600 mb-4 text-sm sm:text-base">
+                  <p className="text-gray-600 mb-4 text-sm">
                     Can&apos;t find the answer you&apos;re looking for? Our team
                     is here to help.
                   </p>
@@ -119,7 +119,7 @@ const Faq = () => {
                     icon={ArrowRightIcon}
                     iconPosition="right"
                     onClick={handleClick}
-                    className="gap-2 px-8 py-3 text-sm sm:text-base"
+                    className="gap-2 px-8 py-3 text-sm"
                     aria-label="Registration button"
                     variant="red"
                   />
