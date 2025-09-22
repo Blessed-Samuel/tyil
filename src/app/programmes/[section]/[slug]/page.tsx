@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: ProgrammePageProps) {
-  const { section, slug } = await params;
+  const { section, slug } = params;
   const programme = programmes.find(
     p => p.section === section && p.slug === slug
   );
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: ProgrammePageProps) {
 }
 
 export default async function ProgrammePage({ params }: ProgrammePageProps) {
-  const { section, slug } = await params;
+  const { section, slug } = params;
   const programme = programmes.find(
     p => p.section === section && p.slug === slug
   );
