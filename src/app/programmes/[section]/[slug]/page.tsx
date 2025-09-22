@@ -6,10 +6,10 @@ import Container from "@/components/layout/Container";
 import BackButton from "@/components/ui/BackButton";
 
 interface ProgrammePageProps {
-  params: {
+  params: Promise<{
     section: string;
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -20,7 +20,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: ProgrammePageProps) {
-  const { section, slug } = params;
+  const { section, slug } = await params;
+
   const programme = programmes.find(
     p => p.section === section && p.slug === slug
   );
@@ -50,7 +51,8 @@ export async function generateMetadata({ params }: ProgrammePageProps) {
 }
 
 export default async function ProgrammePage({ params }: ProgrammePageProps) {
-  const { section, slug } = params;
+  const { section, slug } = await params;
+
   const programme = programmes.find(
     p => p.section === section && p.slug === slug
   );
@@ -78,13 +80,13 @@ export default async function ProgrammePage({ params }: ProgrammePageProps) {
             <BackButton />
           </div>
 
-          <h1 className="text-4xl font-bold">{programme.title}</h1>
-          <p className="mt-4 text-gray-600 text-sm">{programme.description}</p>
+          <h1 className="text-4xl font-bold">{programme!.title}</h1>
+          <p className="mt-4 text-gray-600 text-sm">{programme!.description}</p>
 
           <div className="relative w-full h-80 mt-6 rounded-2xl overflow-hidden">
             <Image
-              src={programme.imageUrl}
-              alt={programme.title}
+              src={programme!.imageUrl}
+              alt={programme!.title}
               fill
               className="object-cover"
               loading="lazy"
