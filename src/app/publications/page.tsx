@@ -53,7 +53,7 @@ const PublicationsPage = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <Heading className="text-3xl sm:text-7xl text-center font-bold">
+                <Heading className="text-2xl sm:text-7xl text-center font-bold">
                   Publications &{" "}
                   <span className="italic font-secondaryFont">Research</span>
                 </Heading>

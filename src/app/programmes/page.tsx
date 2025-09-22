@@ -7,6 +7,9 @@ import { motion, Variants } from "framer-motion";
 import Badge from "@/components/ui/Badge";
 import { Heading } from "@/components/layout/Heading";
 import Container from "@/components/layout/Container";
+import ProgrammeCard from "@/components/programs/ProgramCard";
+import { programmes } from "@/constants/program";
+import Leadquest from "@/components/homepage/Leadquest";
 
 const Programmes = () => {
   // Animation settings (slide up)
@@ -23,8 +26,15 @@ const Programmes = () => {
     }),
   };
 
+  const secondarySchool = programmes.filter(
+    p => p.section === "secondary-school"
+  );
+  const postSecondary = programmes.filter(
+    p => p.section === "post-secondary-school"
+  );
+
   return (
-    <>
+    <section className="font-primaryFont">
       {" "}
       <Hero
         title={programmesHeroContent.title as string}
@@ -42,7 +52,7 @@ const Programmes = () => {
             >
               <Badge title="Our Programmes" />
             </motion.div>
-            <div className="flex flex-col justify-center items-center my-8 px-4">
+            <div className="flex flex-col justify-center items-center my-4 px-4">
               <motion.div
                 custom={0}
                 variants={slideUp}
@@ -62,7 +72,7 @@ const Programmes = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-base sm:text-lg text-center text-primaryBlack/60 mt-4 max-w-2xl">
+                <p className="text-sm text-center text-primaryBlack/60 mt-4 max-w-2xl">
                   Our programs are more than just courses - they are immersive
                   experiences that provide practical skills, mentorship, and a
                   global network.
@@ -70,9 +80,48 @@ const Programmes = () => {
               </motion.div>
             </div>
           </div>
+
+          {/* Secondary School */}
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold mb-6">Secondary School</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {secondarySchool.map((prog, i) => (
+                <motion.div
+                  key={prog.id}
+                  custom={i}
+                  variants={slideUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.2 }}
+                >
+                  <ProgrammeCard {...prog} />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Secondary School */}
+          <div className="mt-12 mb-12">
+            <h2 className="text-2xl font-bold mb-6">Post-Secondary School</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {postSecondary.map((prog, i) => (
+                <motion.div
+                  key={prog.id}
+                  custom={i}
+                  variants={slideUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.2 }}
+                >
+                  <ProgrammeCard {...prog} />
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </Container>
+        <Leadquest />
       </section>
-    </>
+    </section>
   );
 };
 

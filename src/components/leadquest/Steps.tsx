@@ -52,7 +52,7 @@ const Steps = () => {
           >
             <Badge title="Leadquest 2025" />
           </motion.div>
-          <div className="flex flex-col justify-center items-center my-8 px-4">
+          <div className="flex flex-col justify-center items-center my-4 px-4">
             <motion.div
               custom={0}
               variants={slideUp}
