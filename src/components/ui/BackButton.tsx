@@ -15,7 +15,7 @@ export default function BackButton() {
           router.push("/programmes");
         }
       }}
-      className="inline-flex items-center cursor-pointer gap-4 px-4 py-2 rounded-full bg-primaryRed text-white text-sm font-medium hover:bg-primaryRed/90 transition"
+      className="inline-flex items-center cursor-pointer gap-4 px-4 py-2 rounded-full bg-primaryBlack text-white text-sm font-medium hover:bg-primaryBlack/90 transition"
     >
       <FaArrowLeft size={16} />
       Back

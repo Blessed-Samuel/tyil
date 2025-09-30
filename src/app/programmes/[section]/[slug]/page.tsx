@@ -1,6 +1,5 @@
 import { programmes } from "@/constants/program";
 import Image from "next/image";
-import RegistrationForm from "@/components/leadquest/Form";
 import { notFound } from "next/navigation";
 import Container from "@/components/layout/Container";
 import BackButton from "@/components/ui/BackButton";
@@ -62,7 +61,7 @@ export default async function ProgrammePage({ params }: ProgrammePageProps) {
   }
 
   return (
-    <section className="pt-8 font-primaryFont">
+    <section className="font-primaryFont">
       {/* Banner */}
       <Image
         src="/dynamic_banner.svg"
@@ -94,8 +93,6 @@ export default async function ProgrammePage({ params }: ProgrammePageProps) {
           </div>
         </div>
       </Container>
-
-      <RegistrationForm />
     </section>
   );
 }

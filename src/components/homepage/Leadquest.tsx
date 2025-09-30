@@ -106,7 +106,7 @@ const Leadquest = () => {
                 viewport={{ once: true, amount: 0.2 }}
               >
                 <p className="text-sm text-start text-gray-600 mt-4 max-w-xl">
-                  Connect with Your Audience: Tailoring experiences to build
+                  Connect with your audience: Tailoring experiences to build
                   trust through empathy and effective communication.
                 </p>
               </motion.div>

@@ -7,7 +7,7 @@ import Container from "../layout/Container";
 import { Variants, motion } from "framer-motion";
 import { boardMemberList, BoardMemberInfo } from "@/constants/team";
 import Image from "next/image";
-import { FaLinkedinIn } from "react-icons/fa6";
+// import { FaLinkedinIn } from "react-icons/fa6";
 
 const BoardOfDirectors = () => {
   const slideLeft: Variants = {
@@ -101,7 +101,7 @@ const BoardOfDirectors = () => {
                     </p>
 
                     {/* LinkedIn Icon - Centered at Bottom */}
-                    <div className="flex justify-center">
+                    {/* <div className="flex justify-center">
                       <a
                         href={member.profileUrl}
                         target="_blank"
@@ -111,7 +111,7 @@ const BoardOfDirectors = () => {
                       >
                         <FaLinkedinIn className="w-5 h-5" />
                       </a>
-                    </div>
+                    </div> */}
                   </div>
                 </motion.div>
               ))}

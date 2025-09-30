@@ -229,7 +229,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-5 border-t border-gray-200 pt-6 font-mono text-center text-xs text-gray-500 px-4">
-          &copy; {new Date().getFullYear()} <a href="https://tyil.org.ng" className="underline">TYIL</a>. All rights reserved.
+          &copy; {new Date().getFullYear()} <a href="https://tyil.org.ng" className="hover:underline font-bold text-primaryRed">TYIL</a>. All rights reserved.
         </div>
       </footer>
     </div>

@@ -7,7 +7,6 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Button from "@/components/ui/Button";
 import Steps from "@/components/leadquest/Steps";
 import Details from "@/components/leadquest/Details";
-import RegistrationForm from "@/components/leadquest/Form";
 
 const Leadquest = () => {
   const handleClick = () => {
@@ -38,7 +37,6 @@ const Leadquest = () => {
       />
       <Steps />
       <Details />
-      <RegistrationForm/>
     </section>
   );
 };

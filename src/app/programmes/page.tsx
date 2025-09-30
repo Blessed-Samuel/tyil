@@ -10,6 +10,7 @@ import Container from "@/components/layout/Container";
 import ProgrammeCard from "@/components/programs/ProgramCard";
 import { programmes } from "@/constants/program";
 import Leadquest from "@/components/homepage/Leadquest";
+import Testimonials from "@/components/programs/Testimonials";
 
 const Programmes = () => {
   // Animation settings (slide up)
@@ -83,7 +84,7 @@ const Programmes = () => {
 
           {/* Secondary School */}
           <div className="mt-12">
-            <h2 className="text-2xl font-bold mb-6">Secondary School</h2>
+            <h2 className="text-2xl font-bold mb-6">Secondary School Youth</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {secondarySchool.map((prog, i) => (
                 <motion.div
@@ -102,7 +103,7 @@ const Programmes = () => {
 
           {/* Secondary School */}
           <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6">Post-Secondary School</h2>
+            <h2 className="text-2xl font-bold mb-6">Collage Level Youth</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {postSecondary.map((prog, i) => (
                 <motion.div
@@ -119,6 +120,7 @@ const Programmes = () => {
             </div>
           </div>
         </Container>
+        <Testimonials/>
         <Leadquest />
       </section>
     </section>

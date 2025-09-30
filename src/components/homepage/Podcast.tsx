@@ -47,7 +47,7 @@ const Podcast = () => {
     <section className="py-16 sm:py-20 bg-[url('/podcast_bg.svg')] bg-no-repeat bg-cover bg-center">
       <Container>
         {/* Flex wrapper with equal columns on desktop */}
-        <div className="flex flex-col md:flex-row items-center gap-5">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-3 max-w-6xl mx-auto">
           {/* Left side - text */}
           <div className="flex-1">
             <div className="flex flex-col justify-start items-start my-8">
@@ -73,7 +73,7 @@ const Podcast = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-sm text-white/50 sm:text-base text-start mt-4 max-w-xl">
+                <p className="text-sm text-white/50 text-start mt-4 max-w-xl">
                   Learn from seasoned leadership professionals and scholars on
                   topics related to youth leadership, followership, and change
                   making.
@@ -108,13 +108,13 @@ const Podcast = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="flex-1 flex justify-end"
+            className="flex-1 flex justify-start"
           >
             <Image
-              src="/podcast_img.svg"
+              src="https://media.licdn.com/dms/image/v2/D4E22AQFTsypBBAKprg/feedshare-shrink_800/feedshare-shrink_800/0/1724520792986?e=1761782400&v=beta&t=f2Waeo6nFUPbVz4cGfMaAQ_KMqRI1Y-G1R6biNK1ZPE"
               alt="feature Image"
-              width={450}
-              height={450}
+              width={400}
+              height={400}
               className="max-w-full h-auto"
               priority
             />

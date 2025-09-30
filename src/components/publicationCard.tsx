@@ -32,18 +32,18 @@ const PublicationCard = ({
       {/* Content */}
       <div className="p-4 flex flex-col flex-1">
         <div className="flex-1">
-          <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+          <h3 className="text-[15px] font-bold text-gray-800">{title}</h3>
           <p className="mt-2 text-sm text-primaryBlack/60">{description}</p>
         </div>
 
         {/* Actions */}
-        <div className="flex items-center gap-3 mt-6">
+        <div className="flex items-center gap-3 mt-3">
           {isPDF && (
             <a
               href={pdfUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primaryRed text-white text-sm font-medium hover:bg-primaryRed/90 transition"
+              className="flex items-center gap-2 px-4 py-3 rounded-lg bg-primaryRed text-white text-xs font-medium hover:bg-primaryRed/90 transition"
             >
               <FiFileText size={16} />
               View PDF
@@ -52,7 +52,7 @@ const PublicationCard = ({
           <a
             href={pdfUrl}
             download
-            className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 text-gray-700 text-sm font-medium hover:bg-gray-100 transition"
+            className="flex items-center gap-2 px-4 py-3 rounded-lg border border-gray-300 text-gray-700 text-xs font-medium hover:bg-gray-100 transition"
           >
             <FaFileDownload size={16} />
             {isPDF ? "Download PDF" : "Download File"}

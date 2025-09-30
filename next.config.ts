@@ -11,6 +11,12 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "media.licdn.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
     // Cache optimized images for longer (reduce repeated fetches)
     minimumCacheTTL: 60 * 60, // 1 hour

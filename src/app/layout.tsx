@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import "@radix-ui/themes/styles.css";
-import Navbar from "@/components/layout/Navbar";
+import AppNavbar from "@/components/AppNavBar";
 import Footer from "@/components/layout/Footer";
 import Script from "next/script";
 import { Theme } from "@radix-ui/themes";
@@ -283,7 +283,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased font-primaryFont" cz-shortcut-listen="true">
         <Theme>
-          <Navbar />
+          <AppNavbar />
           <main id="main-content">{children}</main>
           {/* scroll back to top button */}
           <BackToTop />
