@@ -95,19 +95,10 @@ const About = () => {
               viewport={{ once: true, amount: 0.2 }}
               className="text-center md:text-left"
             >
-              <p className="text-sm sm:text-base font-normal text-gray-600 leading-relaxed mb-8 max-w-sm mx-auto md:mx-0">
+              <p className="text-sm sm:text-base font-normal text-gray-600 leading-relaxed mb-4 max-w-sm mx-auto md:mx-0">
                 Raising young transformational leaders who will occupy every
                 sector of Africa by 2050
               </p>
-              <div className="flex flex-col sm:flex-row items-center gap-8 sm:gap-6">
-                <Image
-                  src="/about-avartar.svg"
-                  alt="about avatar"
-                  width={120}
-                  height={120}
-                  className="max-w-[120px] w-full h-auto"
-                  draggable={false}
-                />
                 <Button
                   primaryText="About Us"
                   hoverText="About Us"
@@ -118,7 +109,6 @@ const About = () => {
                   aria-label="Registration button"
                   variant="red"
                 />
-              </div>
             </motion.div>
           </div>
 
@@ -129,7 +119,7 @@ const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="mt-10 sm:mt-16 flex justify-center"
+            className="mt-10 sm:mt-0 flex justify-center"
           >
             <Image
               src="/about-img.svg"

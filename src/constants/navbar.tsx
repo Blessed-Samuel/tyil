@@ -3,7 +3,7 @@ export const navLinks = [
   { label: "About Us", href: "/about" },
   { label: "Programmes", href: "/programmes" },
   { label: "Publications", href: "/publications" },
-  { label: "Leadquest 25", href: "/leadquest" },
+  { label: "Tyil Academy", href: "/tyil-academy" },
 ] as const;
 
 // derived from navLinks automatically

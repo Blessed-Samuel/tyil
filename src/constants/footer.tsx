@@ -18,14 +18,14 @@ export const footerLinks = [
       { label: "About Us", href: "/about" },
       { label: "Programmes", href: "/programmes" },
       { label: "Publications", href: "/publications" },
-      { label: "Leadquest 25", href: "/leadquest" },
+      { label: "Tyil Academy", href: "/tyil-academy" },
     ],
   },
   {
     title: "Other Links",
     links: [
       { label: "Podcasts", href: "/podcasts" },
-      { label: "Integrations", href: "/integrations" },
+      { label: "Resources", href: "#/" },
     ],
   },
 ] as const;

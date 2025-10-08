@@ -7,10 +7,12 @@ import { motion, Variants } from "framer-motion";
 import Badge from "@/components/ui/Badge";
 import { Heading } from "@/components/layout/Heading";
 import Container from "@/components/layout/Container";
-import ProgrammeCard from "@/components/programs/ProgramCard";
+import ProgrammeCard from "./components/ProgramCard";
 import { programmes } from "@/constants/program";
-import Leadquest from "@/components/homepage/Leadquest";
-import Testimonials from "@/components/programs/Testimonials";
+import Leadquest from "@/components/homepage/TyilAcademy";
+import Testimonials from "./components/Testimonials";
+import TyilFellows from "./components/TyilFellows";
+import { IoSchool } from "react-icons/io5";
 
 const Programmes = () => {
   // Animation settings (slide up)
@@ -28,10 +30,10 @@ const Programmes = () => {
   };
 
   const secondarySchool = programmes.filter(
-    p => p.section === "secondary-school"
+    p => p.section === "Secondary-School"
   );
   const postSecondary = programmes.filter(
-    p => p.section === "post-secondary-school"
+    p => p.section === "Collegiate-level"
   );
 
   return (
@@ -84,8 +86,11 @@ const Programmes = () => {
 
           {/* Secondary School */}
           <div className="mt-12">
-            <h2 className="text-2xl font-bold mb-6">Secondary School Youth</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <IoSchool className="text-primaryRed" /> Secondary School{" "}
+              <span className="font-secondaryFont italic">Youth</span>
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-2">
               {secondarySchool.map((prog, i) => (
                 <motion.div
                   key={prog.id}
@@ -103,8 +108,13 @@ const Programmes = () => {
 
           {/* Secondary School */}
           <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6">Collage Level Youth</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <h2 className="text-2xl font-primaryFont font-bold mb-6 flex items-center gap-3">
+              <IoSchool className="text-primaryRed" />
+              Collegiate level{" "}
+              <span className="font-secondaryFont italic">Youth</span>
+            </h2>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-2">
               {postSecondary.map((prog, i) => (
                 <motion.div
                   key={prog.id}
@@ -120,7 +130,8 @@ const Programmes = () => {
             </div>
           </div>
         </Container>
-        <Testimonials/>
+        <Testimonials />
+        <TyilFellows />
         <Leadquest />
       </section>
     </section>

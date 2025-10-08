@@ -1,11 +1,11 @@
 import React from "react";
 import Hero from "@/components/Hero";
 import { aboutHeroContent } from "@/constants/hero";
-import Story from "@/components/about/Story";
-import Outcomes from "@/components/about/Outcomes";
-import Team from "@/components/about/Team";
-import BoardOfDirectors from "@/components/about/BoardOfDirectors";
-import Leadquest from "@/components/homepage/Leadquest";
+import Story from "./components/Story";
+import Outcomes from "./components/Outcomes";
+import Team from "./components/Team";
+import BoardOfDirectors from "./components/BoardOfDirectors";
+import TyilAcademy from "@/components/homepage/TyilAcademy";
 
 const About = () => {
   return (
@@ -18,7 +18,7 @@ const About = () => {
       <Outcomes />
       <Team />
       <BoardOfDirectors />
-      <Leadquest />
+      <TyilAcademy />
     </div>
   );
 };

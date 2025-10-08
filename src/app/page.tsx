@@ -2,7 +2,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/homepage/About";
 import Faq from "@/components/homepage/Faq";
 import ImpactMetrics from "@/components/homepage/ImpactMetrics";
-import Leadquest from "@/components/homepage/Leadquest";
+import Leadquest from "@/components/homepage/TyilAcademy";
 import Podcast from "@/components/homepage/Podcast";
 import Programme from "@/components/homepage/Programme";
 import Publication from "@/components/homepage/Publication";

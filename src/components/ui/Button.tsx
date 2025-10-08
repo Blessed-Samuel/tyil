@@ -5,7 +5,7 @@ import { useState } from "react";
 type ButtonProps = {
   icon?: React.ComponentType<{ size?: number; className?: string }>;
   primaryText: string;
-  variant?: "red" | "black";
+  variant?: "red" | "black" | "none";
   hoverText?: string;
   iconPosition?: "left" | "right";
   onClick?: () => void;
@@ -27,6 +27,7 @@ const Button = ({
   const variantStyles = {
     red: "bg-primaryRed hover:bg-primaryRed/90",
     black: "bg-primaryBlack hover:primaryBlack/90",
+    none: "bg-none hover:underline",
   };
 
   return (

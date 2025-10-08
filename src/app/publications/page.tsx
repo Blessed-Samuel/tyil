@@ -7,7 +7,7 @@ import { motion, Variants } from "framer-motion";
 import { Heading } from "@/components/layout/Heading";
 import Badge from "@/components/ui/Badge";
 import Container from "@/components/layout/Container";
-import PublicationCard from "@/components/publicationCard";
+import PublicationCard from "./components/publicationCard";
 import { publications } from "@/constants/publications";
 
 // Animation settings

@@ -7,7 +7,7 @@ export const teamMemberList = [
   {
     id: 1,
     name: "Israel Oyedare",
-    role: "Ph.D. - Founder & Executive Director",
+    role: "Founder & Executive Director",
     image: "/team/israel.svg",
     profileUrl: "https://www.linkedin.com/in/israel-oyedare/",
   },
@@ -69,25 +69,25 @@ export const teamMemberList = [
   },
   {
     id: 11,
-    name: "Jenipher Poller",
-    role: "Coordinator, LeadSmart in Tanzania",
-    image: "/team/jenipher.svg",
+    name: "Precious Obukowho",
+    role: "Communications Officer",
+    image: "/team/precious_pic.jpg",
     profileUrl: "https://www.linkedin.com/in/jenipher-peter-mollel-71652721a/",
   },
-  {
-    id: 12,
-    name: "Sophie Manneh",
-    role: "Co-Coordinator LeadSmart in The Gambia",
-    image: "/team/sophie.svg",
-    profileUrl: "https://www.linkedin.com/in/sophie-manneh-49a4a7247/",
-  },
-  {
-    id: 13,
-    name: "Essah Sanneh",
-    role: "Co-Coordinator LeadSmart in The Gambia",
-    image: "/team/essah.svg",
-    profileUrl: "https://www.linkedin.com/in/honorable-essa-sanneh-438812192/",
-  },
+  // {
+  //   id: 12,
+  //   name: "Sophie Manneh",
+  //   role: "Co-Coordinator LeadSmart in The Gambia",
+  //   image: "/team/sophie.svg",
+  //   profileUrl: "https://www.linkedin.com/in/sophie-manneh-49a4a7247/",
+  // },
+  // {
+  //   id: 13,
+  //   name: "Essah Sanneh",
+  //   role: "Co-Coordinator LeadSmart in The Gambia",
+  //   image: "/team/essah.svg",
+  //   profileUrl: "https://www.linkedin.com/in/honorable-essa-sanneh-438812192/",
+  // },
 ] as const;
 
 export type TeamProfileInfo = (typeof teamMemberList)[number];
