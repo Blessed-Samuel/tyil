@@ -72,3 +72,66 @@ body {
   color: var(--foreground);
   overflow-x: hidden;
 }
+
+/* Gradient border around button (no animation) */
+.gradient-border {
+  position: relative;
+  border-radius: 9999px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px; /* thickness of the border */
+  background: linear-gradient(90deg, #ff0000, #ff9900, #ff00ff, #00ffff, #ff0000);
+  background-size: 300% 300%;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Spotify-themed gradient border */
+.spotify-border {
+  position: relative;
+  border-radius: 9999px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.spotify-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px; /* border thickness */
+  background: linear-gradient(
+    90deg,
+    #1db954,
+    #00ff9d,
+    #00ffaa,
+    #1db954,
+    #00ffcc
+  );
+  background-size: 300% 300%;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+}

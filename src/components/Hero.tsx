@@ -5,7 +5,7 @@ import Image from "next/image";
 import { heroContent } from "@/constants/hero";
 import Button from "./ui/Button";
 import { PiHandHeartFill } from "react-icons/pi";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+// import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 // Animation keyframes for zoom effect
 const zoomAnimation: string = `
@@ -119,7 +119,7 @@ const Hero: React.FC<contentProps> = ({ title, description, button }) => {
 
         {/* Hero Content */}
         <div className="relative z-20 text-center md:text-left text-white lg:max-w-8xl max-w-4xl mt-16 md:mt-20">
-          <h1 className="text-3xl sm:text-5xl tracking-tight md:text-7xl lg:text-7xl uppercase leading-tight sm:leading-20 font-bold mb-6 animate-fade-in-up">
+          <h1 className="text-3xl sm:text-5xl tracking-tight md:text-7xl lg:text-7xl uppercase leading-tight sm:leading-18  font-bold mb-6 animate-fade-in-up">
             {title}
           </h1>
 
@@ -149,7 +149,7 @@ const Hero: React.FC<contentProps> = ({ title, description, button }) => {
                   variant="red"
                 />
 
-                <Button
+                {/* <Button
                   primaryText="Join Our Community"
                   hoverText="Join Our Community"
                   icon={ArrowRightIcon}
@@ -158,7 +158,7 @@ const Hero: React.FC<contentProps> = ({ title, description, button }) => {
                   className="gap-2 w-full sm:w-64"
                   aria-label="Join button"
                   variant="black"
-                />
+                /> */}
               </>
             )}
           </div>

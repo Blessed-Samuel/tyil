@@ -118,14 +118,15 @@ const Publication = () => {
             viewport={{ once: true, amount: 0.2 }}
             className="flex-1 flex justify-center"
           >
-            <Image
-              src="/feature_img.svg"
-              alt="feature Image"
-              width={700}
-              height={700}
-              className="max-w-full h-auto"
-              priority
-            />
+            <div className="relative w-[80%] sm:w-full max-w-[700px] h-72 sm:h-80 md:h-96">
+              <Image
+                src="/feature_img.svg"
+                alt="Feature Image"
+                fill
+                className="object-contain sm:object-cover duration-300"
+                priority
+              />
+            </div>
           </motion.div>
         </div>
       </Container>

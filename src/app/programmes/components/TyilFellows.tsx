@@ -82,7 +82,7 @@ const TyilFellows = () => {
                   className="group overflow-hidden transition-all duration-300 transform hover:-translate-y-2 text-center max-w-sm w-full"
                 >
                   {/* Image Container */}
-                  <div className="relative overflow-hidden mb-4">
+                  <div className="relative overflow-hidden mb-4 h-72">
                     <Image
                       src={member.image}
                       alt={member.name}
