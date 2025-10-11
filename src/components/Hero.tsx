@@ -5,7 +5,6 @@ import Image from "next/image";
 import { heroContent } from "@/constants/hero";
 import Button from "./ui/Button";
 import { PiHandHeartFill } from "react-icons/pi";
-// import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 // Animation keyframes for zoom effect
 const zoomAnimation: string = `

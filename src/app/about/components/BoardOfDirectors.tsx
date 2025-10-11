@@ -9,11 +9,11 @@ import { boardMemberList, BoardMemberInfo } from "@/constants/team";
 import Image from "next/image";
 
 const BoardOfDirectors = () => {
-  const slideLeft: Variants = {
-    hidden: { opacity: 0, x: -50 },
+  const slideUp: Variants = {
+    hidden: { opacity: 0, y: 50 },
     visible: (i: number = 0) => ({
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         delay: i * 0.2,
         duration: 0.6,
@@ -43,7 +43,7 @@ const BoardOfDirectors = () => {
             <div>
               <motion.div
                 custom={0}
-                variants={slideLeft}
+                variants={slideUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -52,7 +52,7 @@ const BoardOfDirectors = () => {
               </motion.div>
               <motion.div
                 custom={0}
-                variants={slideLeft}
+                variants={slideUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
@@ -98,19 +98,6 @@ const BoardOfDirectors = () => {
                     <p className="text-gray-600 text-sm uppercase tracking-wide mb-4 text-center">
                       {member.role}
                     </p>
-
-                    {/* LinkedIn Icon - Centered at Bottom */}
-                    {/* <div className="flex justify-center">
-                      <a
-                        href={member.profileUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-primaryRed hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
-                        onClick={e => e.stopPropagation()}
-                      >
-                        <FaLinkedinIn className="w-5 h-5" />
-                      </a>
-                    </div> */}
                   </div>
                 </motion.div>
               ))}

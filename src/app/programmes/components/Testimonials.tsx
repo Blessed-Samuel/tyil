@@ -6,18 +6,18 @@ import { Heading } from "@/components/layout/Heading";
 import TestimonialSlider from "./TestimonialSlider";
 
 const Testimonials = () => {
-  const slideLeft: Variants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: (i: number = 0) => ({
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: i * 0.2,
-        duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1],
-      },
-    }),
-  };
+    const slideUp: Variants = {
+      hidden: { opacity: 0, y: 50 },
+      visible: (i: number = 0) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+          delay: i * 0.2,
+          duration: 0.6,
+          ease: [0.25, 0.1, 0.25, 1], // cubic-bezier "easeOut"
+        },
+      }),
+    };
 
   return (
     <section className="py-5 sm:py-10">
@@ -27,7 +27,7 @@ const Testimonials = () => {
         <div className="text-start">
           <motion.div
             custom={0}
-            variants={slideLeft}
+            variants={slideUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -37,7 +37,7 @@ const Testimonials = () => {
           <div className="mt-4">
             <motion.div
               custom={0}
-              variants={slideLeft}
+              variants={slideUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -52,7 +52,7 @@ const Testimonials = () => {
 
             <motion.div
               custom={0}
-              variants={slideLeft}
+              variants={slideUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}

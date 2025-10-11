@@ -25,7 +25,7 @@ const Programme = () => {
 
   // Animation settings (slide up)
   const slideUp: Variants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 80 },
     visible: (i: number = 0) => ({
       opacity: 1,
       y: 0,

@@ -17,18 +17,18 @@ const Faq = () => {
     setExpandedItem(expandedItem === id ? null : id);
   };
 
-  const slideLeft: Variants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: (i: number = 0) => ({
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: i * 0.2,
-        duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1],
-      },
-    }),
-  };
+  const slideUp: Variants = {
+      hidden: { opacity: 0, y: 60 },
+      visible: (i: number = 0) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+          delay: i * 0.2,
+          duration: 0.6,
+          ease: [0.25, 0.1, 0.25, 1],
+        },
+      }),
+    };
 
   const handleClick = () => {
     window.location.href = "mailto:tyilcommunity@gmail.com";
@@ -42,7 +42,7 @@ const Faq = () => {
           <div className="text-start">
             <motion.div
               custom={0}
-              variants={slideLeft}
+              variants={slideUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -52,7 +52,7 @@ const Faq = () => {
             <div className="mt-4 space-y-3">
               <motion.div
                 custom={0}
-                variants={slideLeft}
+                variants={slideUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -67,7 +67,7 @@ const Faq = () => {
 
               <motion.div
                 custom={0}
-                variants={slideLeft}
+                variants={slideUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -84,7 +84,7 @@ const Faq = () => {
               <div className="bg-gray-50 rounded-lg p-6">
                 <motion.div
                   custom={0}
-                  variants={slideLeft}
+                  variants={slideUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}
@@ -96,7 +96,7 @@ const Faq = () => {
 
                 <motion.div
                   custom={0}
-                  variants={slideLeft}
+                  variants={slideUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}
@@ -108,7 +108,7 @@ const Faq = () => {
                 </motion.div>
                 <motion.div
                   custom={0}
-                  variants={slideLeft}
+                  variants={slideUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}

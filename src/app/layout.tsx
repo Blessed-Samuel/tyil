@@ -7,6 +7,8 @@ import Footer from "@/components/layout/Footer";
 import Script from "next/script";
 import { Theme } from "@radix-ui/themes";
 import BackToTop from "@/components/ui/BackToTop";
+import LiveChat from "@/components/AiLivecChat";
+// import AdvertSlider from "@/components/AdvertSlider";
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
@@ -283,10 +285,12 @@ export default function RootLayout({
       </head>
       <body className="antialiased font-primaryFont" cz-shortcut-listen="true">
         <Theme>
+          {/* <AdvertSlider/> */}
           <AppNavbar />
           <main id="main-content">{children}</main>
           {/* scroll back to top button */}
           <BackToTop />
+          <LiveChat/>
           <Footer />
         </Theme>
       </body>

@@ -12,21 +12,8 @@ import Image from "next/image";
 const TyilAcademy = () => {
   const router = useRouter();
 
-  const slideLeft: Variants = {
+  const slideUp: Variants = {
     hidden: { opacity: 0, x: -50 },
-    visible: (i: number = 0) => ({
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: i * 0.2,
-        duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1],
-      },
-    }),
-  };
-
-  const slideRight: Variants = {
-    hidden: { opacity: 0, x: 50 },
     visible: (i: number = 0) => ({
       opacity: 1,
       x: 0,
@@ -54,7 +41,7 @@ const TyilAcademy = () => {
           {/* Left side - image */}
           <motion.div
             custom={0}
-            variants={slideLeft}
+            variants={slideUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -74,7 +61,7 @@ const TyilAcademy = () => {
           <div className="flex-1">
             <motion.div
               custom={0}
-              variants={slideLeft}
+              variants={slideUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -85,7 +72,7 @@ const TyilAcademy = () => {
             <div className="flex flex-col justify-start items-start my-10">
               <motion.div
                 custom={0}
-                variants={slideLeft}
+                variants={slideUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -99,7 +86,7 @@ const TyilAcademy = () => {
               </motion.div>
               <motion.div
                 custom={0}
-                variants={slideRight}
+                variants={slideUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -113,7 +100,7 @@ const TyilAcademy = () => {
               <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-0 w-full mt-10">
                 <motion.div
                   custom={0}
-                  variants={slideRight}
+                  variants={slideUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}
@@ -142,7 +129,7 @@ const TyilAcademy = () => {
 
                 <motion.div
                   custom={0}
-                  variants={slideRight}
+                  variants={slideUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}

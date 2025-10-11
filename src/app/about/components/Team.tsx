@@ -10,7 +10,7 @@ import Image from "next/image";
 import { FaLinkedinIn } from "react-icons/fa6";
 
 const Team = () => {
-  const slideLeft: Variants = {
+  const slideUp: Variants = {
     hidden: { opacity: 0, x: -50 },
     visible: (i: number = 0) => ({
       opacity: 1,
@@ -44,7 +44,7 @@ const Team = () => {
             <div>
               <motion.div
                 custom={0}
-                variants={slideLeft}
+                variants={slideUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -53,7 +53,7 @@ const Team = () => {
               </motion.div>
               <motion.div
                 custom={0}
-                variants={slideLeft}
+                variants={slideUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}

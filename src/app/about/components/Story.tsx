@@ -8,24 +8,11 @@ import { Heading } from "@/components/layout/Heading";
 import Image from "next/image";
 
 const Story = () => {
-  const slideLeft: Variants = {
-    hidden: { opacity: 0, x: -50 },
+  const slideUp: Variants = {
+    hidden: { opacity: 0, y: 50 },
     visible: (i: number = 0) => ({
       opacity: 1,
-      x: 0,
-      transition: {
-        delay: i * 0.2,
-        duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1],
-      },
-    }),
-  };
-
-  const slideRight: Variants = {
-    hidden: { opacity: 0, x: 50 },
-    visible: (i: number = 0) => ({
-      opacity: 1,
-      x: 0,
+      skewY: 0,
       transition: {
         delay: i * 0.2,
         duration: 0.6,
@@ -42,7 +29,7 @@ const Story = () => {
             <div>
               <motion.div
                 custom={0}
-                variants={slideLeft}
+                variants={slideUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -51,7 +38,7 @@ const Story = () => {
               </motion.div>
               <motion.div
                 custom={0}
-                variants={slideLeft}
+                variants={slideUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
@@ -68,7 +55,7 @@ const Story = () => {
 
             <motion.div
               custom={0}
-              variants={slideRight}
+              variants={slideUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -88,7 +75,7 @@ const Story = () => {
             {/* First card spanning full height */}
             <motion.div
               custom={0}
-              variants={slideLeft}
+              variants={slideUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -107,7 +94,7 @@ const Story = () => {
             {/* Two images below side by side */}
             <motion.div
               custom={1}
-              variants={slideRight}
+              variants={slideUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -137,7 +124,7 @@ const Story = () => {
 
             <motion.div
               custom={2}
-              variants={slideRight}
+              variants={slideUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
