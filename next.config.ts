@@ -1,9 +1,14 @@
 import type { NextConfig } from "next";
+import createMDX from "@next/mdx";
+
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+});
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true, // recommended
+  reactStrictMode: true,
+  pageExtensions: ["ts", "tsx", "mdx"],
   images: {
-    // Allow Unsplash as a safe external domain
     remotePatterns: [
       {
         protocol: "https",
@@ -17,12 +22,15 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "i.pinimg.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
-    // Cache optimized images for longer (reduce repeated fetches)
     minimumCacheTTL: 60 * 60, // 1 hour
-    // If images are still timing out, you can fallback:
-    // unoptimized: true,
   },
 };
 
-export default nextConfig;
+export default withMDX(nextConfig);

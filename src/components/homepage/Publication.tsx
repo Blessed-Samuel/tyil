@@ -97,24 +97,25 @@ const Publication = () => {
           </div>
 
           {/* Right side - image */}
-          <motion.div
-            custom={0}
-            variants={slideUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+          <div
+            // custom={0}
+            // variants={slideUp}
+            // initial="hidden"
+            // whileInView="visible"
+            // viewport={{ once: false, amount: 0.1 }}
             className="flex-1 flex justify-center"
           >
-            <div className="relative w-[80%] sm:w-full max-w-[700px] h-72 sm:h-80 md:h-96">
+            <div className="relative z-10 w-full max-w-[400px] sm:max-w-[700px] h-64 sm:h-80 md:h-96 mx-auto">
               <Image
-                src="/feature_img.svg"
+                src="https://i.pinimg.com/1200x/4c/fd/b9/4cfdb9b7e5ab4917482accee76781461.jpg"
                 alt="Feature Image"
                 fill
-                className="object-contain sm:object-cover duration-300"
+                className="object-cover duration-300"
                 priority
+                quality={100}
               />
             </div>
-          </motion.div>
+          </div>
         </div>
       </Container>
     </section>

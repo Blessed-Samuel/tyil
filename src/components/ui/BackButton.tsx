@@ -3,7 +3,7 @@
 import { FaArrowLeft } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 
-export default function BackButton() {
+export default function BackButton({label}: {label: string}) {
   const router = useRouter();
 
   return (
@@ -15,10 +15,10 @@ export default function BackButton() {
           router.push("/programmes");
         }
       }}
-      className="inline-flex items-center cursor-pointer gap-4 px-4 py-2 rounded-full bg-primaryBlack text-white text-sm font-medium hover:bg-primaryBlack/90 transition"
+      className="inline-flex items-center cursor-pointer gap-4 px-4 py-2 rounded-full bg-primaryBlack text-white text-sm font-mono hover:bg-primaryBlack/90 transition"
     >
       <FaArrowLeft size={16} />
-      Back
+      {label}
     </button>
   );
 }

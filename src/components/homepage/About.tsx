@@ -99,16 +99,16 @@ const About = () => {
                 Raising young transformational leaders who will occupy every
                 sector of Africa by 2050
               </p>
-                <Button
-                  primaryText="About Us"
-                  hoverText="About Us"
-                  icon={ArrowRightIcon}
-                  iconPosition="right"
-                  onClick={handleClick}
-                  className="gap-2 px-8 py-3 text-sm"
-                  aria-label="Registration button"
-                  variant="red"
-                />
+              <Button
+                primaryText="About Us"
+                hoverText="About Us"
+                icon={ArrowRightIcon}
+                iconPosition="right"
+                onClick={handleClick}
+                className="gap-2 px-8 py-3 text-sm"
+                aria-label="Registration button"
+                variant="red"
+              />
             </motion.div>
           </div>
 
@@ -122,7 +122,7 @@ const About = () => {
             className="mt-10 sm:mt-0 flex justify-center"
           >
             <Image
-              src="/about-img.svg"
+              src="/register.svg"
               alt="about Image"
               width={400}
               height={300}

@@ -85,7 +85,7 @@ const Hero: React.FC<contentProps> = ({ title, description, button }) => {
       <style jsx>{zoomAnimation}</style>
 
       <section
-        className="relative h-[600px] w-full font-primaryFont overflow-hidden flex flex-col md:flex-row items-center justify-center md:justify-start px-4 sm:px-4 md:px-4"
+        className="relative h-[650px] w-full font-primaryFont overflow-hidden flex flex-col md:flex-row items-center justify-center md:justify-start px-4 sm:px-4 md:px-4"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >

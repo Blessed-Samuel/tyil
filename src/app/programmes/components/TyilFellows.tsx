@@ -5,7 +5,6 @@ import { Heading } from "@/components/layout/Heading";
 import Container from "@/components/layout/Container";
 import { Variants, motion } from "framer-motion";
 import { tyilFellowsLists, tyilFellows } from "@/constants/tyil-fellows";
-import Image from "next/image";
 import { HiExternalLink } from "react-icons/hi";
 
 const TyilFellows = () => {
@@ -70,7 +69,7 @@ const TyilFellows = () => {
           </div>
 
           {tyilFellowsLists.length > 0 && (
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-5 justify-items-center">
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-5 justify-items-center">
               {tyilFellowsLists.map((member: tyilFellows, index: number) => (
                 <motion.div
                   key={member.id}
@@ -81,16 +80,13 @@ const TyilFellows = () => {
                   viewport={{ once: true, amount: 0.3 }}
                   className="group overflow-hidden transition-all duration-300 transform hover:-translate-y-2 text-center max-w-sm w-full"
                 >
-                  {/* Image Container */}
-                  <div className="relative overflow-hidden mb-4 h-72">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      width={100}
-                      height={100}
-                      className="w-[80%] sm:w-full max-w-[300px] mx-auto h-auto duration-300"
-                      priority={true}
-                    />
+                  {/* Initials Container */}
+                  <div className="relative flex items-center justify-center mb-4 h-40 w-40 mx-auto rounded-full bg-gradient-to-br from-red-100 to-red-200 text-primaryRed font-bold text-4xl sm:text-5xl">
+                    {member.name
+                      .split(" ")
+                      .map(word => word[0])
+                      .join("")
+                      .toUpperCase()}
                   </div>
 
                   {/* Content */}

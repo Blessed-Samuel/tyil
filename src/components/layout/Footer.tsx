@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { footerLinks, socialLinks, contactLinks } from "@/constants/footer";
@@ -9,7 +11,6 @@ import {
 import * as Tooltip from "@radix-ui/react-tooltip";
 import { FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
-import { MdCall, MdMarkEmailUnread } from "react-icons/md";
 
 const Footer = () => {
   // Separate socials and Contacts from other links
@@ -61,61 +62,23 @@ const Footer = () => {
                 {contactSection.title}
               </h4>
 
-              <Tooltip.Provider>
-                <div className="flex flex-col space-y-4">
-                  <Tooltip.Root>
-                    <Tooltip.Trigger asChild>
-                      <a
-                        href={contactLinks.email.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Email"
-                        className="hover:text-primaryRed flex items-center gap-1 transition-transform hover:translate-x-1 hover:underline"
-                      >
-                        <MdMarkEmailUnread className="w-4 h-4" />{" "}
-                        {contactLinks.email.email}
-                      </a>
-                    </Tooltip.Trigger>
+              <div className="flex flex-col items-start gap-3 sm:items-start sm:justify-start">
+                {/* Email Card */}
+                <a
+                  href={contactLinks.email.href}
+                  className="inline-block px-3 py-1 border border-primaryRed/30 rounded-md text-primaryRed font-mono hover:bg-primaryRed/10 transition w-auto text-center"
+                >
+                  {contactLinks.email.email}
+                </a>
 
-                    <Tooltip.Portal>
-                      <Tooltip.Content
-                        side="top"
-                        className="bg-gray-800 text-white text-xs px-2 py-1 rounded-md shadow-md z-50"
-                        sideOffset={5}
-                      >
-                        Email
-                        <Tooltip.Arrow className="fill-gray-800" />
-                      </Tooltip.Content>
-                    </Tooltip.Portal>
-                  </Tooltip.Root>
-
-                  <Tooltip.Root>
-                    <Tooltip.Trigger asChild>
-                      <a
-                        href={contactLinks.phoneNumber.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Phone number"
-                        className="hover:text-primaryRed flex items-center gap-1 transition-transform hover:translate-x-1 hover:underline"
-                      >
-                        <MdCall className="w-4 h-4" />
-                        {contactLinks.phoneNumber.number}{" "}
-                      </a>
-                    </Tooltip.Trigger>
-
-                    <Tooltip.Portal>
-                      <Tooltip.Content
-                        side="top"
-                        className="bg-gray-800 text-white text-xs px-2 py-1 rounded-md shadow-md z-50"
-                        sideOffset={5}
-                      >
-                        <Tooltip.Arrow className="fill-gray-800" />{" "}
-                        {contactLinks.phoneNumber.label}
-                      </Tooltip.Content>
-                    </Tooltip.Portal>
-                  </Tooltip.Root>
-                </div>
-              </Tooltip.Provider>
+                {/* Phone Card */}
+                <a
+                  href={contactLinks.phoneNumber.href}
+                  className="inline-block px-3 py-1 border border-primaryRed/30 rounded-md text-primaryRed font-mono hover:bg-primaryRed/10 transition w-auto text-center"
+                >
+                  {contactLinks.phoneNumber.number}
+                </a>
+              </div>
             </div>
           )}
 
@@ -229,7 +192,14 @@ const Footer = () => {
         </div>
 
         <div className="mt-5 border-t border-gray-200 pt-6 font-mono text-center text-xs text-gray-500 px-4">
-          &copy; {new Date().getFullYear()} <a href="https://tyil.org.ng" className="hover:underline font-bold text-primaryRed">TYIL</a>. All rights reserved.
+          &copy; {new Date().getFullYear()}{" "}
+          <a
+            href="https://tyil.org.ng"
+            className="hover:underline font-bold text-primaryRed"
+          >
+            TYIL
+          </a>
+          . All rights reserved.
         </div>
       </footer>
     </div>

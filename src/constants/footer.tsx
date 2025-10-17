@@ -24,7 +24,10 @@ export const footerLinks = [
   {
     title: "Other Links",
     links: [
-      { label: "Podcasts", href: "/podcasts" },
+      {
+        label: "Podcasts",
+        href: "https://podcasts.apple.com/us/podcast/the-future-of-leadership/id1761205163",
+      },
       { label: "Resources", href: "#/" },
     ],
   },

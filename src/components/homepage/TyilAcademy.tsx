@@ -66,7 +66,7 @@ const TyilAcademy = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
             >
-              <Badge title="Tyil Academy" />
+              <Badge title="TYIL Academy" />
             </motion.div>
 
             <div className="flex flex-col justify-start items-start my-10">
@@ -97,18 +97,18 @@ const TyilAcademy = () => {
                 </p>
               </motion.div>
 
-              <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-0 w-full mt-10">
+              <div className="flex flex-col sm:flex-row gap-1 w-full mt-10">
                 <motion.div
                   custom={0}
                   variants={slideUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}
-                  className="relative inline-block w-full sm:w-auto"
+                  className="flex-1"
                 >
                   <button
                     onClick={goToLeadquest}
-                    className="relative inline-block focus:outline-none w-full sm:w-auto"
+                    className="relative w-full focus:outline-none"
                     aria-label="Go to leadquest page"
                   >
                     <Image
@@ -119,25 +119,24 @@ const TyilAcademy = () => {
                       className="w-full h-auto hover:opacity-90 transition-opacity"
                       priority
                     />
-                    <span className="absolute leading-5 text-left inset-0 gap-3 flex items-center justify-center text-sm sm:text-base font-medium text-white cursor-pointer hover:translate-x-4 transition-all duration-300">
+                    <span className="absolute text-start inset-0 flex items-center justify-center text-sm font-medium text-white cursor-pointer hover:translate-x-4 transition-all duration-300">
                       JOIN OUR <br />
                       LEADERSHIP ACADEMY
                       <ArrowRightIcon className="ml-3 w-5 h-5" />
                     </span>
                   </button>
                 </motion.div>
-
                 <motion.div
                   custom={0}
                   variants={slideUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}
-                  className="relative inline-block w-full sm:w-auto"
+                  className="flex-1"
                 >
                   <button
                     onClick={handleClick}
-                    className="relative inline-block focus:outline-none w-full sm:w-auto"
+                    className="relative w-full focus:outline-none"
                     aria-label="Go to publications page"
                   >
                     <Image
@@ -148,7 +147,7 @@ const TyilAcademy = () => {
                       className="w-full h-auto hover:opacity-90 transition-opacity"
                       priority
                     />
-                    <span className="absolute inset-0 flex items-center justify-center text-sm sm:text-base font-medium text-white cursor-pointer hover:translate-x-4 transition-all duration-300">
+                    <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-white cursor-pointer hover:translate-x-4 transition-all duration-300">
                       GET IN TOUCH
                       <ArrowRightIcon className="ml-4 w-5 h-5" />
                     </span>

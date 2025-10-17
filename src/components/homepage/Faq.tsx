@@ -134,7 +134,7 @@ const Faq = () => {
               <div key={faq.id} className="bg-white border-b border-gray-200">
                 <button
                   onClick={() => toggleItem(faq.id)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between cursor-pointer"
+                  className="w-full px-0 py-5 text-left flex items-center justify-between cursor-pointer"
                 >
                   <h3 className="text-base font-semibold text-primaryBlack pr-4">
                     {faq.title}
@@ -148,7 +148,7 @@ const Faq = () => {
 
                 {/* Sliding Content */}
                 <div
-                  className={`px-6 transition-all duration-300 ease-in-out overflow-hidden ${
+                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
                     expandedItem === faq.id ? "max-h-96 pb-5" : "max-h-0"
                   }`}
                 >

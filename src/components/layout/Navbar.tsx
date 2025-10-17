@@ -234,7 +234,7 @@ const Navbar: React.FC = () => {
                 key={link.label}
                 onClick={handleLinkClick}
                 className={`
-                   py-5 px-8 text-base transition-all duration-200 ease-out border-b border-b-white/30
+                   py-5 px-8 text-base transition-all font-mono duration-200 ease-out border-b border-b-white/30
                   ${
                     isActive
                       ? "font-medium hover:text-white/70 text-white"

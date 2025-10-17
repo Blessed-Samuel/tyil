@@ -10,7 +10,7 @@ export const programmes = [
   {
     id: 2,
     section: "Secondary-School",
-    slug: "climate-awareness-project",
+    slug: "climate-awareness-project-1",
     title: "Climate Awareness Project",
     description:
       "This initiative responds to a recognized gap in early-stage climate education...",
@@ -19,7 +19,7 @@ export const programmes = [
   {
     id: 3,
     section: "Secondary-School",
-    slug: "climate-awareness-project",
+    slug: "climate-awareness-project-2",
     title: "Climate Awareness Project",
     description:
       "This initiative responds to a recognized gap in early-stage climate education...",
@@ -28,7 +28,7 @@ export const programmes = [
   {
     id: 4,
     section: "Secondary-School",
-    slug: "climate-awareness-project",
+    slug: "climate-awareness-project-3",
     title: "Climate Awareness Project",
     description:
       "This initiative responds to a recognized gap in early-stage climate education...",
@@ -37,7 +37,7 @@ export const programmes = [
   {
     id: 5,
     section: "Secondary-School",
-    slug: "climate-awareness-project",
+    slug: "climate-awareness-project-4",
     title: "Climate Awareness Project",
     description:
       "This initiative responds to a recognized gap in early-stage climate education...",
@@ -46,7 +46,7 @@ export const programmes = [
   {
     id: 6,
     section: "Collegiate-level",
-    slug: "yals-program",
+    slug: "yals-program-1",
     title: "Young Aspiring Leadership Scholar (YALS) program",
     description:
       "The YALS program is a year long training that equips and prepares...",
@@ -55,12 +55,10 @@ export const programmes = [
   {
     id: 7,
     section: "Collegiate-level",
-    slug: "yals-program",
+    slug: "yals-program-2",
     title: "Young Aspiring Leadership Scholar (YALS) program",
     description:
       "The YALS program is a year long training that equips and prepares...",
     imageUrl: "/dynamic_img_1.svg",
   },
 ] as const;
-
-export type program_content = (typeof programmes)[number];
