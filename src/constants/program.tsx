@@ -62,3 +62,5 @@ export const programmes = [
     imageUrl: "/dynamic_img_1.svg",
   },
 ] as const;
+
+export type program_content = (typeof programmes)[number]
