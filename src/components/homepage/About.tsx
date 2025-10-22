@@ -95,7 +95,7 @@ const About = () => {
               viewport={{ once: true, amount: 0.2 }}
               className="text-center md:text-left"
             >
-              <p className="text-sm sm:text-base font-normal text-gray-600 leading-relaxed mb-4 max-w-sm mx-auto md:mx-0">
+              <p className="text-base font-normal text-gray-600 leading-relaxed mb-4 max-w-sm mx-auto md:mx-0">
                 Raising young transformational leaders who will occupy every
                 sector of Africa by 2050
               </p>

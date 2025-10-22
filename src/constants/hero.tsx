@@ -5,7 +5,7 @@
 export const HERO_IMAGES = [
   {
     id: 1,
-    url: "/hero/HERO_IMG_0.jpg",
+    url: "/hero/HERO_IMG_2.jpg",
     alt: "Modern Aluminum Windows - Large residential windows",
     title: "Residential Windows",
   },
@@ -17,7 +17,7 @@ export const HERO_IMAGES = [
   },
   {
     id: 3,
-    url: "/hero/HERO_IMG_2.jpg",
+    url: "/hero/HERO_IMG_0.jpg",
     alt: "Aluminum Door Installation - Professional storefront",
     title: "Door Systems",
   },

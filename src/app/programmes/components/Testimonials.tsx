@@ -57,7 +57,7 @@ const Testimonials = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
             >
-              <p className="text-sm text-gray-600 text-start max-w-xl">
+              <p className="text-base text-gray-600 text-start max-w-xl">
                 Hear from the leaders we&apos;ve helped shape. Our testimonials
                 are firsthand accounts of the impact TYIL has had on personal
                 growth and professional success.

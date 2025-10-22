@@ -19,10 +19,10 @@ export const programmes = [
   {
     id: 3,
     section: "Secondary-School",
-    slug: "climate-awareness-project-2",
-    title: "Climate Awareness Project",
+    slug: "leadsmart-project",
+    title: "LeadSmart Project",
     description:
-      "This initiative responds to a recognized gap in early-stage climate education...",
+      "We equip teenagers in secondary schools with the mindset...",
     imageUrl: "/images/_MG_0012.jpg",
   },
   {
@@ -46,7 +46,7 @@ export const programmes = [
   {
     id: 6,
     section: "Collegiate-level",
-    slug: "yals-program-1",
+    slug: "yals-program",
     title: "Young Aspiring Leadership Scholar (YALS) program",
     description:
       "The YALS program is a year long training that equips and prepares...",

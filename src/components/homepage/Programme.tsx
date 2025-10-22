@@ -70,7 +70,7 @@ const Programme = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
             >
-              <p className="text-sm sm:text-base text-center text-gray-600 mt-4 max-w-2xl">
+              <p className="text-base text-center text-gray-600 mt-4 max-w-2xl">
                 Our programs are more than just courses - they are immersive
                 experiences that provide practical leadership skills through
                 education, empowerment, collaboration and community building.

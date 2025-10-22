@@ -44,7 +44,7 @@ const Partners = () => {
           <Heading className="text-2xl sm:text-3xl lg:text-4xl text-primaryBlack font-bold mb-2">
             Our Partners
           </Heading>
-          <p className="text-primaryBlack/60 max-w-md mx-auto text-sm sm:text-base">
+          <p className="text-primaryBlack/60 max-w-md mx-auto text-base">
             Collaborating with industry leaders to deliver exceptional results.
           </p>
         </div>

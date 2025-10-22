@@ -69,7 +69,7 @@ const Publication = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-sm text-start text-gray-600 mt-4 max-w-xl">
+                <p className="text-base text-start text-gray-600 mt-4 max-w-xl">
                   Dive into our latest reports, research papers, and case
                   studies that are shaping the future of youth leadership.
                 </p>

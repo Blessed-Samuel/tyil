@@ -215,7 +215,7 @@ const LiveChat = () => {
   // If closed — only show chat bubble + WhatsApp
   if (!isOpen) {
     return (
-      <div className="fixed z-50 flex flex-col items-end space-y-3 bottom-22 right-6">
+      <div className="fixed z-50 flex flex-col items-end font-primaryFont space-y-3 bottom-22 right-6">
         {/* WhatsApp Button */}
         <a
           href="https://wa.me/+2348162012505"
@@ -245,7 +245,7 @@ const LiveChat = () => {
 
   // Chat Window
   return (
-    <div className="fixed z-50 bottom-24 right-6">
+    <div className="fixed z-50 bottom-24 right-6 font-primaryFont">
       <div
         className={`bg-slate-900 border border-white/10 rounded-2xl shadow-2xl transition-all duration-300 ${
           isMinimized ? "w-80 h-16" : "w-80 h-96"

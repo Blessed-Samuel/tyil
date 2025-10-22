@@ -95,7 +95,7 @@ const BoardOfDirectors = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">
                       {member.name}
                     </h3>
-                    <p className="text-gray-600 text-sm uppercase tracking-wide mb-4 text-center">
+                    <p className="text-gray-600 text-base uppercase tracking-wide mb-4 text-center">
                       {member.role}
                     </p>
                   </div>

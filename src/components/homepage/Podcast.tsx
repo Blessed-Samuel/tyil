@@ -50,7 +50,7 @@ const Podcast = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-sm text-white/70 text-start mt-4 max-w-xl leading-relaxed">
+                <p className="text-base text-white/70 text-start mt-4 max-w-xl leading-relaxed">
                   Learn from seasoned leadership professionals and scholars on
                   topics related to youth leadership, followership, and change
                   making.

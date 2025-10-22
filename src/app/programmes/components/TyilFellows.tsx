@@ -60,7 +60,7 @@ const TyilFellows = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-sm text-center text-primaryBlack/60 mt-4 max-w-2xl">
+                <p className="text-base text-center text-primaryBlack/60 mt-4 max-w-2xl">
                   Meet the fellows who have walked this path and are now shaping
                   their world.
                 </p>

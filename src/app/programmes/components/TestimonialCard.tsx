@@ -17,16 +17,16 @@ const TestimonialCard = ({ testimonial }: CardProps) => {
             {initialName}
           </div>
           <div className="flex flex-col items-center">
-            <h4 className="font-bold text-sm sm:text-base">
+            <h4 className="font-bold text-base">
               {testimonial.name}
             </h4>
-            <p className="text-xs sm:text-sm text-primaryBlack/60 dark:text-gray-400">
+            <p className="text-base text-primaryBlack/60 dark:text-gray-400">
               {testimonial.role}
             </p>
           </div>
         </div>
 
-        <p className="text-gray-600 text-center italic dark:text-gray-300 text-xs sm:text-sm leading-relaxed line-clamp-5">
+        <p className="text-gray-600 text-center italic dark:text-gray-300 text-base leading-relaxed line-clamp-5">
           {testimonial.description}
         </p>
       </div>

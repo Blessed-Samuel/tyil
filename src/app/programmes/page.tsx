@@ -29,11 +29,15 @@ const Programmes = () => {
     }),
   };
 
+  const normalizedSection = (section: string) =>
+    section.toLowerCase().replace(/\s+/g, "-");
+  
   const secondarySchool = programmes.filter(
-    p => p.section === "Secondary-School"
+    p => normalizedSection(p.section) === normalizedSection("Secondary-School")
   );
+
   const postSecondary = programmes.filter(
-    p => p.section === "Collegiate-level"
+    p => normalizedSection(p.section) === normalizedSection("Collegiate-level")
   );
 
   return (
@@ -75,7 +79,7 @@ const Programmes = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-sm text-center text-primaryBlack/60 mt-4 max-w-2xl">
+                <p className="text-base text-center text-primaryBlack/60 mt-4 max-w-2xl">
                   Our programs are more than just courses - they are immersive
                   experiences that provide practical skills, mentorship, and a
                   global network.

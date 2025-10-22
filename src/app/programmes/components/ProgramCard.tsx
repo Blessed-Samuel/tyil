@@ -15,9 +15,13 @@ const ProgrammeCard = ({
   section,
   slug,
 }: ProgrammeCardProps) => {
+  // Convert section and slug to lowercase for URL
+  const sectionSlug = section.toLowerCase().replace(/\s+/g, "-");
+  const slugLower = slug.toLowerCase();
+
   return (
     <Link
-      href={`/programmes/${section}/${slug}`}
+      href={`/programmes/${sectionSlug}/${slugLower}`}
       className="group relative rounded-3xl overflow-hidden h-full transition-all hover:shadow-2xl duration-500"
     >
       {/* Background Image with Overlay */}
@@ -48,20 +52,22 @@ const ProgrammeCard = ({
             </h3>
 
             {/* Description */}
-            <p className="text-gray-200 text-sm sm:text-sm leading-relaxed mb-4 line-clamp-2 group-hover:line-clamp-3 transition-all duration-300 text-left">
+            <p className="text-gray-200 text-base leading-relaxed mb-4 line-clamp-2 group-hover:line-clamp-3 transition-all duration-300 text-left">
               {description}
             </p>
 
             {/* Button - Desktop (hover to show) */}
             <div className="hidden sm:block transform translate-y-4 mb-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 w-full sm:w-auto">
               <button
-                className="gap-2 bg-primaryRed px-4 py-3 w-full sm:w-auto bg-opacity-0 text-white hover:underline cursor-pointer transition-all duration-300 inline-flex items-center font-medium text-sm"
+                className="gap-2 bg-primaryRed px-4 py-3 w-full sm:w-auto bg-opacity-0 text-white hover:underline cursor-pointer transition-all duration-300 inline-flex items-center font-medium text-base"
                 aria-label="programme details button"
-              >Explore Programmes <IoArrowRedo/></button>
+              >
+                Explore Programmes <IoArrowRedo />
+              </button>
             </div>
 
             {/* Helper Text - Mobile (always visible) */}
-            <div className="sm:hidden flex items-center hover:underline hover:translate-x-1 transition-all duration-300 gap-2 text-white/80 text-xs mt-3">
+            <div className="sm:hidden flex items-center hover:underline hover:translate-x-1 transition-all duration-300 gap-2 text-white/80 text-base mt-3">
               <span>Tap to view more</span>
               <IoArrowRedo className="w-3 h-3" />
             </div>

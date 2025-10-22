@@ -72,7 +72,7 @@ const Faq = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-sm text-gray-600 text-start mt-4 max-w-xl">
+                <p className="text-base text-gray-600 text-start mt-4 max-w-xl">
                   Find answers to common questions about TYIL&apos;s services,
                   products, and processes.
                 </p>
@@ -101,7 +101,7 @@ const Faq = () => {
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}
                 >
-                  <p className="text-gray-600 mb-4 text-sm">
+                  <p className="text-gray-600 mb-4 text-base">
                     Can&apos;t find the answer you&apos;re looking for? Our team
                     is here to help.
                   </p>
@@ -152,7 +152,7 @@ const Faq = () => {
                     expandedItem === faq.id ? "max-h-96 pb-5" : "max-h-0"
                   }`}
                 >
-                  <p className="text-gray-600 leading-relaxed text-sm">
+                  <p className="text-gray-600 leading-relaxed text-base">
                     {faq.description}
                   </p>
                 </div>
