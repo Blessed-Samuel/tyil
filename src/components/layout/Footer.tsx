@@ -66,7 +66,7 @@ const Footer = () => {
                 {/* Email Card */}
                 <a
                   href={contactLinks.email.href}
-                  className="inline-block px-3 py-1 border border-primaryRed/30 rounded-md text-primaryRed font-mono hover:bg-primaryRed/10 transition w-auto text-center"
+                  className="inline-block px-3 py-1 border border-primaryRed/30 rounded-md text-primaryRed hover:bg-primaryRed/10 transition w-auto text-center"
                 >
                   {contactLinks.email.email}
                 </a>
@@ -74,7 +74,7 @@ const Footer = () => {
                 {/* Phone Card */}
                 <a
                   href={contactLinks.phoneNumber.href}
-                  className="inline-block px-3 py-1 border border-primaryRed/30 rounded-md text-primaryRed font-mono hover:bg-primaryRed/10 transition w-auto text-center"
+                  className="inline-block px-3 py-1 border border-primaryRed/30 rounded-md text-primaryRed hover:bg-primaryRed/10 transition w-auto text-center"
                 >
                   {contactLinks.phoneNumber.number}
                 </a>

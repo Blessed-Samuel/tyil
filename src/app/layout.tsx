@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter_Tight } from "next/font/google";
+// import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import "@radix-ui/themes/styles.css";
 import AppNavbar from "@/components/AppNavBar";
@@ -10,11 +10,11 @@ import BackToTop from "@/components/ui/BackToTop";
 import LiveChat from "@/components/AiLivecChat";
 // import AdvertSlider from "@/components/AdvertSlider";
 
-const interTight = Inter_Tight({
-  subsets: ["latin"],
-  display: "swap",
-  fallback: ["system-ui", "sans-serif"],
-});
+// const interTight = Inter_Tight({
+//   subsets: ["latin"],
+//   display: "swap",
+//   fallback: ["system-ui", "sans-serif"],
+// });
 
 // Moved schemas outside to avoid re-declaring
 const organizationSchema = {
@@ -266,7 +266,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={interTight.className}
+      // className={interTight.className}
     >
       <head>
         {/* Structured Data */}

@@ -18,8 +18,9 @@ interface ProgrammePageProps {
 const slugMap: Record<string, keyof typeof programContents> = {
   "leadsmart-project": "leadsmart",
   "tyil-fellowship": "fellowship",
-  "climate-awareness-project-1": "academy",
+  "climate-awareness-project": "climate",
   "yals-program": "yals",
+  "leadquest-conference": "leadquest",
 };
 
 export default async function ProgrammePage({ params }: ProgrammePageProps) {
@@ -57,7 +58,9 @@ export default async function ProgrammePage({ params }: ProgrammePageProps) {
         {content.carousel && <Carousel items={content.carousel} />}
         {content.featureCard && <FeatureCard {...content.featureCard} />}
         {content.curriculum && <Curricullum {...content.curriculum} />}
-        {content.impact && <ImpactSection stats={content.impact} />}
+        {content.impact && content.headers && (
+          <ImpactSection stats={content.impact} headers={content.headers} />
+        )}
       </BlogLayout>
     </div>
   );

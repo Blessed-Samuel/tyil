@@ -1,23 +1,25 @@
 "use client";
 
-import { ImpactStat } from "@/constants/programDetails";
+import { ImpactStat  } from "@/constants/programDetails";
 
 interface ImpactSectionProps {
   stats: ImpactStat[];
+  headers: {
+    title: string;
+    description: string;
+  }
 }
 
-export default function ImpactSection({ stats }: ImpactSectionProps) {
+export default function ImpactSection({ stats, headers }: ImpactSectionProps) {
   return (
     <section className="py-16 relative">
       <div className="max-w-6xl mx-auto text-start">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our Impact
+            {headers.title}
           </h2>
           <p className="text-gray-600 max-w-xl mx-auto text-base">
-            Empowering the next generation of leaders across Africa through
-            mentorship, innovation, and purpose-driven initiatives that create
-            measurable impact.
+            {headers.description}
           </p>
         </div>
 
@@ -32,7 +34,7 @@ export default function ImpactSection({ stats }: ImpactSectionProps) {
                   {impact.icon}
                 </div>
                 <h3
-                  className={`text-5xl font-extrabold text-${impact.color}-600 mb-3`}
+                  className={`text-2xl font-extrabold text-${impact.color}-600 mb-3`}
                 >
                   {impact.stat}
                 </h3>
