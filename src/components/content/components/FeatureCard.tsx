@@ -2,14 +2,16 @@ import React from "react";
 
 interface Phase {
   icon: React.ElementType;
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
 }
 
 interface MissionAndProcessProps {
   heading?: string;
   icon: React.ReactNode;
   subText?: string;
+  optHeader?: string;
+  optDescription?: string;
   phases: Phase[];
 }
 
@@ -18,6 +20,8 @@ export default function MissionAndProcess({
   subText,
   icon,
   phases,
+  optHeader,
+  optDescription,
 }: MissionAndProcessProps) {
   return (
     <div className="w-full mt-20">
@@ -59,12 +63,10 @@ export default function MissionAndProcess({
       <section className="py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            How It Works
+            {optHeader}
           </h2>
           <p className="text-gray-600 max-w-xl mx-auto text-base">
-            To equip young people with the knowledge, mindset, and mentorship
-            they need to become courageous, innovative, and socially responsible
-            leaders
+            {optDescription}
           </p>
         </div>
 
@@ -79,7 +81,7 @@ export default function MissionAndProcess({
                     className="group relative bg-white rounded-xl p-6 border border-gray-200 hover:border-transparent hover:-translate-y-2 transition-all duration-500"
                   >
                     <div className="w-14 h-14 rounded-xl bg-primaryRed flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-transform duration-500">
-                      <Icon className="w-8 h-8 text-white" strokeWidth={2.5} />
+                      <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-3">
                       {phase.title}

@@ -4,7 +4,7 @@ import { formatDate } from "@/lib/formatDate";
 import { Prose } from "@/components/layout/Prose";
 import Container from "@/components/layout/Container";
 import { Heading } from "@/components/layout/Heading";
-import { Paragraph } from "@/components/layout/Paragraph";
+// import { Paragraph } from "@/components/layout/Paragraph";
 import { useRouter } from "next/navigation";
 
 interface BlogLayoutProps {
@@ -49,11 +49,11 @@ export function BlogLayout({ children, meta }: BlogLayoutProps) {
           </Heading>
 
           <time dateTime={meta.date} className="text-xs">
-            <Paragraph className="md:text-xs text-xs flex items-center text-primaryBlack/10 gap-2">
+            <div className="md:text-xs text-xs flex items-center text-primaryBlack/50 gap-2">
               5 Min Read{" "}
               <div className="w-1.5 h-1.5 rounded-full bg-gray-400"></div>{" "}
               {formatDate(meta.date)}
-            </Paragraph>
+            </div>
           </time>
         </header>
 

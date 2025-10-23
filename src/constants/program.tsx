@@ -10,7 +10,7 @@ export const programmes = [
   {
     id: 2,
     section: "Secondary-School",
-    slug: "climate-awareness-project-1",
+    slug: "climate-awareness-project",
     title: "Climate Awareness Project",
     description:
       "This initiative responds to a recognized gap in early-stage climate education...",
@@ -21,26 +21,7 @@ export const programmes = [
     section: "Secondary-School",
     slug: "leadsmart-project",
     title: "LeadSmart Project",
-    description:
-      "We equip teenagers in secondary schools with the mindset...",
-    imageUrl: "/images/_MG_0012.jpg",
-  },
-  {
-    id: 4,
-    section: "Secondary-School",
-    slug: "climate-awareness-project-3",
-    title: "Climate Awareness Project",
-    description:
-      "This initiative responds to a recognized gap in early-stage climate education...",
-    imageUrl: "/images/_MG_0012.jpg",
-  },
-  {
-    id: 5,
-    section: "Secondary-School",
-    slug: "climate-awareness-project-4",
-    title: "Climate Awareness Project",
-    description:
-      "This initiative responds to a recognized gap in early-stage climate education...",
+    description: "We equip teenagers in secondary schools with the mindset...",
     imageUrl: "/images/_MG_0012.jpg",
   },
   {
@@ -55,10 +36,10 @@ export const programmes = [
   {
     id: 7,
     section: "Collegiate-level",
-    slug: "yals-program-2",
-    title: "Young Aspiring Leadership Scholar (YALS) program",
+    slug: "leadquest-conference",
+    title: "Lead Quest Conference",
     description:
-      "The YALS program is a year long training that equips and prepares...",
+      "Empowering the next generation of leaders and raising young people for...",
     imageUrl: "/dynamic_img_1.svg",
   },
 ] as const;

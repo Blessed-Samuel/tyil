@@ -5,8 +5,8 @@ import { LandPlot } from "lucide-react";
 interface CardItem {
   id: number;
   label: string;
-  title: string;
-  text: string;
+  title?: string;
+  text?: string;
 }
 
 interface CurricullumProps {
@@ -37,7 +37,7 @@ export default function Curricullum({
         <div className="absolute -top-10 -left-10 w-56 h-56 bg-white/10 blur-3xl rounded-full"></div>
         <div className="absolute bottom-0 right-0 w-72 h-72 bg-yellow-400/10 blur-2xl rounded-full"></div>
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
+        <div className="relative z-10 max-w-4xl mx-auto text-center px-0 md:px-4">
           {/* Icon */}
           <div className="flex justify-center mb-6">
             <div className="w-20 h-20 flex items-center justify-center rounded-2xl bg-white/15 border border-white/20 backdrop-blur-sm">
