@@ -86,7 +86,7 @@ const Story = () => {
                 alt="story image"
                 width={100}
                 height={100}
-                className="h-auto w-auto rounded-xl"
+                className="h-auto w-auto"
                 priority={true}
               />
             </motion.div>
@@ -98,7 +98,7 @@ const Story = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="border border-gray-200 bg-gradient-to-br from-primaryRed/15 via-primaryWhite to-primaryWhite px-5 md:px-10 pt-5 md:pt-10 rounded-xl"
+              className="border border-gray-200 bg-gradient-to-br from-primaryRed/15 via-primaryWhite to-primaryWhite px-5 md:px-10 pt-5 md:pt-10"
             >
               <div className="flex md:flex-row flex-col gap-8 items-start mb-8">
                 <Image
@@ -128,7 +128,7 @@ const Story = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="border bg-gradient-to-br from-primaryRed/15 via-primaryWhite to-primaryWhite border-gray-200 px-5 md:px-10 pt-5 md:pt-10 rounded-xl"
+              className="border bg-gradient-to-br from-primaryRed/15 via-primaryWhite to-primaryWhite border-gray-200 px-5 md:px-10 pt-5 md:pt-10"
             >
               <div className="flex md:flex-row flex-col gap-8 items-start mb-10">
                 <Image

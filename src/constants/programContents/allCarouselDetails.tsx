@@ -62,13 +62,43 @@ export const tyilCarousel = [
 export const climateCarousel = [
   {
     id: 1,
-    src: "/contents/academy/academy_banner1.jpg",
+    src: "/contents/climate/climate_banner1.jpg",
     alt: "Climate Banner 1",
   },
   {
     id: 2,
-    src: "/contents/academy/academy_banner2.jpg",
+    src: "/contents/climate/climate_banner2.jpg",
     alt: "Climate Banner 2",
+  },
+  {
+    id: 3,
+    src: "/contents/climate/climate_banner3.jpg",
+    alt: "Climate Banner 3",
+  },
+  {
+    id: 4,
+    src: "/contents/climate/climate_banner4.jpg",
+    alt: "Climate Banner 4",
+  },
+  {
+    id: 5,
+    src: "/contents/climate/climate_banner5.jpg",
+    alt: "Climate Banner 5",
+  },
+  {
+    id: 6,
+    src: "/contents/climate/climate_banner6.jpg",
+    alt: "Climate Banner 6",
+  },
+  {
+    id: 7,
+    src: "/contents/climate/climate_banner7.jpg",
+    alt: "Climate Banner 7",
+  },
+  {
+    id: 8,
+    src: "/contents/climate/climate_banner8.jpg",
+    alt: "Climate Banner 8",
   },
 ];
 

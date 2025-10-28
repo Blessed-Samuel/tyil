@@ -1,11 +1,11 @@
 export const programmes = [
-  {
+    {
     id: 1,
     section: "Secondary-School",
-    slug: "tyil-fellowship",
-    title: "TYIL Fellowship",
-    description: "The TYIL Fellowship is a leadership development program...",
-    imageUrl: "/images/_MG_0010.jpg",
+    slug: "leadsmart-project",
+    title: "LeadSmart Project",
+    description: "We equip teenagers in secondary schools with the mindset...",
+    imageUrl: "/images/_MG_0012.jpg",
   },
   {
     id: 2,
@@ -19,13 +19,14 @@ export const programmes = [
   {
     id: 3,
     section: "Secondary-School",
-    slug: "leadsmart-project",
-    title: "LeadSmart Project",
-    description: "We equip teenagers in secondary schools with the mindset...",
-    imageUrl: "/images/_MG_0012.jpg",
+    slug: "leadquest-conference",
+    title: "Lead Quest Conference",
+    description:
+      "Empowering the next generation of leaders and raising young people for...",
+    imageUrl: "/dynamic_img_1.svg",
   },
   {
-    id: 6,
+    id: 4,
     section: "Collegiate-level",
     slug: "yals-program",
     title: "Young Aspiring Leadership Scholar (YALS) program",
@@ -34,13 +35,12 @@ export const programmes = [
     imageUrl: "/dynamic_img_1.svg",
   },
   {
-    id: 7,
+    id: 5,
     section: "Collegiate-level",
-    slug: "leadquest-conference",
-    title: "Lead Quest Conference",
-    description:
-      "Empowering the next generation of leaders and raising young people for...",
-    imageUrl: "/dynamic_img_1.svg",
+    slug: "tyil-fellowship",
+    title: "TYIL Fellowship",
+    description: "The TYIL Fellowship is a leadership development program...",
+    imageUrl: "/images/_MG_0010.jpg",
   },
 ] as const;
 

@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
       <nav
         className={`
           bg-primaryWhite fixed font-primaryFont left-1/2 transform -translate-x-1/2 z-50
-          py-3 flex justify-between items-center px-4 sm:px-6 lg:px-6 
+          py-6 flex justify-between items-center px-4 sm:px-6 lg:px-6 
           border border-gray-200
           transition-all duration-300 ease-in-out
           ${
