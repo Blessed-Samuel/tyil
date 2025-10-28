@@ -11,7 +11,7 @@ import {
   leadquestCarousel,
   leadsmartCarousel,
   tyilCarousel,
-  // climateCarousel,
+  climateCarousel,
   yalsCarousel,
 } from "./programContents/allCarouselDetails";
 import {
@@ -77,7 +77,8 @@ export interface ProgramContent {
   headers?: {
     title: string;
     description: string;
-  }
+  };
+  showFellows?: boolean;
 }
 
 // ---- DATA ---- //
@@ -85,7 +86,7 @@ export interface ProgramContent {
 export const programContents: Record<string, ProgramContent> = {
   leadsmart: {
     description: (
-      <p className="text-gray-500 leading-relaxed text-sm md:text-base mb-6">
+      <p className="text-gray-500 leading-relaxed text-base md:text-lg mb-6">
         We equip teenagers in secondary schools with the mindset, mentorship,
         and skills to lead with courage, innovation, and social responsibility.
         Through interactive sessions, storytelling, and community projects,
@@ -116,7 +117,7 @@ export const programContents: Record<string, ProgramContent> = {
 
   fellowship: {
     description: (
-      <p className="text-gray-500 leading-relaxed text-sm md:text-base mb-6">
+      <p className="text-gray-500 leading-relaxed text-base md:text-lg mb-6">
         The TYIL Fellowship program is designed to equip post-secondary youth
         with core leadership skills and competencies needed to make significant
         change and impact within their local communities. The key aspect of the
@@ -143,12 +144,13 @@ export const programContents: Record<string, ProgramContent> = {
       description:
         "The TYIL Fellowship Training Model is built on a transformative framework that nurtures purpose-driven leaders through spiritual grounding, practical mentorship, and real-life leadership experiences designed to inspire lasting impact.",
     },
+    showFellows: true
   },
 
   climate: {
     description: (
       <div className="space-y-12">
-        <p className="text-gray-500 leading-relaxed text-lg mb-8">
+        <p className="text-gray-500 leading-relaxed text-base md:text-lg mb-8">
           Africa stands at a critical juncture in its journey toward sustainable
           development, with the growing climate crisis posing significant
           challenges to livelihoods, ecosystems, and economic resilience across
@@ -198,13 +200,13 @@ export const programContents: Record<string, ProgramContent> = {
     //     "Our comprehensive four-phase journey transforms students into confident leaders.",
     //   phases: climateChangePhases,
     // },
-    // carousel: climateCarousel,
+    carousel: climateCarousel,
     // impact: climateImpact,
   },
 
   yals: {
     description: (
-      <p className="text-gray-500 leading-relaxed text-lg mb-8">
+      <p className="text-gray-500 leading-relaxed text-base md:text-lg mb-8">
         We are searching for motivated individuals who are eager to explore the
         foundations of research writing. This program is designed for beginners,
         with or without prior research experience. Individuals with curiosity,
@@ -224,7 +226,7 @@ export const programContents: Record<string, ProgramContent> = {
 
   leadquest: {
     description: (
-      <p className="text-gray-500 leading-relaxed text-lg mb-8">
+      <p className="text-gray-500 leading-relaxed text-base md:text-lg mb-8">
         Every year, TYIL commits to organizing the LeadQuest conference, a
         leadership-based conference targeted at empowering secondary school
         students in Africa with public speaking and change making skills. Since

@@ -122,7 +122,7 @@ const Hero: React.FC<contentProps> = ({ title, description, button }) => {
             {title}
           </h1>
 
-          <p className="text-base md:hidden sm:text-lg md:text-xl font-light leading-relaxed mb-8 animate-fade-in-up animation-delay-300 px-2 sm:px-0">
+          <p className="text-lg md:hidden sm:text-lg md:text-xl font-light leading-relaxed mb-8 animate-fade-in-up animation-delay-300 px-2 sm:px-0">
             {description}
           </p>
 

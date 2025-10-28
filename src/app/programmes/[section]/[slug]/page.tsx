@@ -6,6 +6,7 @@ import FeatureCard from "@/components/content/components/FeatureCard";
 import Curricullum from "@/components/content/components/Curricullum";
 import Carousel from "@/components/content/components/Carousel";
 import { programContents } from "@/constants/programDetails";
+import TyilFellows from "../../components/TyilFellows";
 
 interface ProgrammePageProps {
   params: Promise<{
@@ -61,6 +62,7 @@ export default async function ProgrammePage({ params }: ProgrammePageProps) {
         {content.impact && content.headers && (
           <ImpactSection stats={content.impact} headers={content.headers} />
         )}
+        {content.showFellows && <TyilFellows/>}
       </BlogLayout>
     </div>
   );

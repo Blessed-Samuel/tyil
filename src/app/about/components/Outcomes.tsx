@@ -104,7 +104,7 @@ const Outcomes = () => {
                       <h3 className="uppercase font-bold text-lg sm:text-2xl text-white">
                         {outcome.title}
                       </h3>
-                      <p className="text-white leading-relaxed max-w-full sm:max-w-md text-base">
+                      <p className="text-white/70 leading-relaxed max-w-full sm:max-w-md text-base">
                         {outcome.description}
                       </p>
                     </motion.div>

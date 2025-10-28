@@ -288,9 +288,8 @@ export default function RootLayout({
           {/* <AdvertSlider/> */}
           <AppNavbar />
           <main id="main-content">{children}</main>
-          {/* scroll back to top button */}
           <BackToTop />
-          <LiveChat/>
+          <LiveChat />
           <Footer />
         </Theme>
       </body>

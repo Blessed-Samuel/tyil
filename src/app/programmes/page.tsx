@@ -11,7 +11,6 @@ import ProgrammeCard from "./components/ProgramCard";
 import { programmes } from "@/constants/program";
 import Leadquest from "@/components/homepage/TyilAcademy";
 import Testimonials from "./components/Testimonials";
-import TyilFellows from "./components/TyilFellows";
 import { IoSchool } from "react-icons/io5";
 
 const Programmes = () => {
@@ -135,7 +134,6 @@ const Programmes = () => {
           </div>
         </Container>
         <Testimonials />
-        <TyilFellows />
         <Leadquest />
       </section>
     </section>
