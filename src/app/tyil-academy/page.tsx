@@ -99,6 +99,20 @@ const TyilAcademy = () => {
     },
   ];
 
+  useEffect(() => {
+    // check if there's a hash in the URL
+    const hash = window.location.hash;
+    if (hash === "#waitlist") {
+      // Wait a bit for the page to render and then scroll to that section.
+      setTimeout(() => {
+        const element = document.getElementById("waitlist");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }, 100);
+    }
+  }, []);
+
   return (
     <section className="font-primaryFont">
       <Hero
@@ -206,7 +220,10 @@ const TyilAcademy = () => {
                   className="text-center p-6 rounded-xl hover:bg-red-50 transition-colors group"
                 >
                   <div className="inline-flex items-center justify-center w-16 h-16 mb-4 bg-primaryRed/5 rounded-full group-hover:bg-primaryRed/20 transition-colors">
-                    <feature.icon strokeWidth={1.5} className="w-8 h-8 text-primaryRed" />
+                    <feature.icon
+                      strokeWidth={1.5}
+                      className="w-8 h-8 text-primaryRed"
+                    />
                   </div>
                   <h4 className="text-xl font-bold mb-2 text-gray-900">
                     {feature.title}
@@ -219,6 +236,7 @@ const TyilAcademy = () => {
 
           {/* Notify Me Form */}
           <motion.div
+            id="waitlist"
             custom={12}
             variants={fadeIn}
             initial="hidden"
@@ -250,7 +268,7 @@ const TyilAcademy = () => {
                 disabled={isSubmitting}
                 className="px-6 py-3 bg-primaryRed text-white rounded-full flex gap-3 items-center hover:bg-red-700 transition-all duratrion-300 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
               >
-                <BellDot/> {isSubmitting ? "Submitting..." : "Notify Me"}
+                <BellDot /> {isSubmitting ? "Submitting..." : "Notify Me"}
               </button>
             </form>
             {message && (

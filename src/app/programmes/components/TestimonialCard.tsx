@@ -26,7 +26,7 @@ const TestimonialCard = ({ testimonial }: CardProps) => {
           </div>
         </div>
 
-        <p className="text-gray-600 text-center italic dark:text-gray-300 text-base leading-relaxed line-clamp-5">
+        <p className="text-gray-600 text-center italic dark:text-gray-300 text-base leading-relaxed line-clamp-6">
           {testimonial.description}
         </p>
       </div>

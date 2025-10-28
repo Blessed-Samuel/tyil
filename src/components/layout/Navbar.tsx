@@ -5,12 +5,13 @@ import { navLinks } from "@/constants/navbar";
 import Link from "next/link";
 import Button from "../ui/Button";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Cross1Icon, TextAlignLeftIcon } from "@radix-ui/react-icons";
 import { HiExternalLink } from "react-icons/hi";
 
 const Navbar: React.FC = () => {
   const pathname = usePathname();
+  const router = useRouter();
   const [isVisible, setIsVisible] = useState<boolean>(true);
   const [lastScrollY, setLastScrollY] = useState<number>(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -71,6 +72,19 @@ const Navbar: React.FC = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handleWaitlistClick = (): void => {
+    // if user is already on this page, scroll into view
+    if (pathname === "/tyil-academy") {
+      const waitlistSection = document.getElementById("waitlist");
+      if (waitlistSection) {
+        waitlistSection.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    } else {
+      // otherwise, navigate to that section from wherever
+      router.push("/tyil-academy#waitlist");
+    }
+  };
+
   return (
     <>
       {/* Desktop & Tablet Navbar */}
@@ -112,7 +126,7 @@ const Navbar: React.FC = () => {
               <Link
                 href={link.href}
                 key={link.label}
-                className={`mx-2 text-xs relative transition-all duration-300 ease-out ${
+                className={`mx-2 text-xs relative text-gray-500 font-semibold transition-all duration-300 ease-out ${
                   isActive
                     ? "text-white font-bold rounded-full bg-primaryRed px-8 py-3"
                     : "font-normal hover:text-primaryRed"
@@ -136,7 +150,7 @@ const Navbar: React.FC = () => {
           hoverText="Join the WaitList"
           icon={HiExternalLink}
           iconPosition="left"
-          onClick={() => alert("Button Clicked!")}
+          onClick={handleWaitlistClick}
           className="gap-2"
           aria-label="WaitList button"
         />

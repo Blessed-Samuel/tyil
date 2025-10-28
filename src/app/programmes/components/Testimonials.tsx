@@ -45,7 +45,7 @@ const Testimonials = () => {
               <Heading className="text-3xl text-primaryRed sm:text-4xl md:text-5xl leading-snug">
                 What Our{" "}
                 <span className="italic text-primaryBlack font-secondaryFont">
-                  Students Say
+                  Beneficiaries are saying
                 </span>
               </Heading>
             </motion.div>
