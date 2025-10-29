@@ -47,7 +47,7 @@ const ProgrammeCard = ({
             </div>
 
             {/* Title */}
-            <h3 className="text-xl font-bold text-white mb-3 leading-tight text-left">
+            <h3 className="text-xl md:text-4xl font-bold text-white mb-3 leading-tight text-left">
               {title}
             </h3>
 

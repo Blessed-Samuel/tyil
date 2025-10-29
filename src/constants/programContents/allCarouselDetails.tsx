@@ -72,12 +72,12 @@ export const climateCarousel = [
   },
   {
     id: 3,
-    src: "/contents/climate/climate_banner3.jpg",
+    src: "/contents/climate/climate_banner3.JPG",
     alt: "Climate Banner 3",
   },
   {
     id: 4,
-    src: "/contents/climate/climate_banner4.jpg",
+    src: "/contents/climate/climate_banner4.JPG",
     alt: "Climate Banner 4",
   },
   {
@@ -160,30 +160,5 @@ export const leadquestCarousel = [
     id: 9,
     src: "/contents/leadquest/leadquest_banner9.JPG",
     alt: "Leadquest Banner 9",
-  },
-  {
-    id: 10,
-    src: "/contents/leadquest/leadquest_banner10.JPG",
-    alt: "Leadquest Banner 10",
-  },
-  {
-    id: 11,
-    src: "/contents/leadquest/leadquest_banner11.JPG",
-    alt: "Leadquest Banner 11",
-  },
-  {
-    id: 12,
-    src: "/contents/leadquest/leadquest_banner12.JPG",
-    alt: "Leadquest Banner 12",
-  },
-  {
-    id: 13,
-    src: "/contents/leadquest/leadquest_banner13.JPG",
-    alt: "Leadquest Banner 13",
-  },
-  {
-    id: 14,
-    src: "/contents/leadquest/leadquest_banner14.JPG",
-    alt: "Leadquest Banner 14",
   },
 ];

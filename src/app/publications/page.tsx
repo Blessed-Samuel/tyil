@@ -65,7 +65,7 @@ const PublicationsPage = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-sm text-center text-primaryBlack/60 mt-4 max-w-2xl">
+                <p className="text-base text-center text-primaryBlack/60 mt-4 max-w-2xl">
                   A complete archive of our articles, reports, and digital
                   content. Find valuable resources to guide your journey and
                   help you grow as a leader.
@@ -75,7 +75,7 @@ const PublicationsPage = () => {
           </div>
 
           {/* Cards */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 py-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 py-10">
             {publications.map((pub, i) => (
               <motion.div
                 key={pub.id}

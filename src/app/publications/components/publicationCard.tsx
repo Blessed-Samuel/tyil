@@ -18,7 +18,7 @@ const PublicationCard = ({
   const isPDF = fileExtension === "pdf";
 
   return (
-    <div className="group flex flex-col md:flex-row rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden bg-white dark:bg-gray-800 transition-all duration-300 hover:shadow-md hover:-translate-y-1 lg:h-[170px] h-[230px]">
+    <div className="group flex flex-col md:flex-row border border-gray-200 dark:border-gray-700 overflow-hidden bg-white dark:bg-gray-800 transition-all duration-300 hover:shadow-md hover:-translate-y-1 lg:h-[170px] h-[230px]">
       {/* Left Section - Image */}
       <div className="relative w-full md:w-[45%] h-26 md:h-auto">
         <Image

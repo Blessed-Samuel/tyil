@@ -49,8 +49,23 @@ export const publications = [
     title: "YALS Impact Report 2025",
     description: "A practical guide for tomorrow’s leaders.",
     pdfUrl:
-      "/pdfs/946081E5-20A5-4224-8FCF-23E5DAAA435A_YOUNG_ASPIRING LEADERSHIP_SCHOLARS_2025.pdf.pdf",
+      "/pdfs/946081E5-20A5-4224-8FCF-23E5DAAA435A_YOUNG_ASPIRING_LEADERSHIP_SCHOLARS_2025.pdf",
     imageUrl: "/images/_MG_0047.jpg",
+  },
+  {
+    id: 8,
+    title: "Leadsmart 2025",
+    description: "A practical guide for tomorrow’s leaders.",
+    pdfUrl: "/pdfs/946081E5-20A5-4224-8FCF-23E5DAAA435A_LEADSMART_2025.pdf",
+    imageUrl: "/images/_MG_0047.jpg",
+  },
+  {
+    id: 9,
+    title: "Climate Awareness Project by TYIL",
+    description: "A practical guide for tomorrow’s leaders.",
+    pdfUrl:
+      "/pdfs/946081E5-20A5-4224-8FCF-23E5DAAA435A_CLIMATE_AWARENESS_PROJECT_by_TEENS_and_YOUTHS_IN_LEADERSHIP.pdf",
+    imageUrl: "/images/_MG_0013.jpg",
   },
 ] as const;
 

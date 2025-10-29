@@ -29,7 +29,7 @@ export const programmes = [
     id: 4,
     section: "Collegiate-level",
     slug: "yals-program",
-    title: "Young Aspiring Leadership Scholar (YALS) program",
+    title: "YALS program",
     description:
       "The YALS program is a year long training that equips and prepares...",
     imageUrl: "/dynamic_img_1.svg",

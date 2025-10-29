@@ -93,7 +93,7 @@ const Programmes = () => {
               <IoSchool className="text-primaryRed" /> Secondary School{" "}
               <span className="font-secondaryFont italic">Youth</span>
             </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-2">
+            <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-2">
               {secondarySchool.map((prog, i) => (
                 <motion.div
                   key={prog.id}
@@ -109,7 +109,7 @@ const Programmes = () => {
             </div>
           </div>
 
-          {/* Secondary School */}
+          {/* Collegiate Level */}
           <div className="mt-12 mb-12">
             <h2 className="text-2xl font-primaryFont font-bold mb-6 flex items-center gap-3">
               <IoSchool className="text-primaryRed" />
@@ -117,7 +117,7 @@ const Programmes = () => {
               <span className="font-secondaryFont italic">Youth</span>
             </h2>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-2">
+            <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-2">
               {postSecondary.map((prog, i) => (
                 <motion.div
                   key={prog.id}
